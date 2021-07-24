@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="estilos.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Página</title>
+</head>
+<body>
+	<header>
+		<h1>Aprende Ingles</h1>
+	</header>
+	<nav id="menu">
+		<ul>
+			<li>
+				<li><a href="#">Inicio</a></li>
+				<li><a href="#">Niveles</a>
+					<ul>
+						<li><a href="#">Nivel I</a></li>
+						<li><a href="#">Nivel II</a></li>
+						<li><a href="#">Nivel III</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Más</a></li>			
+			</li>
+		</ul>
+	</nav>
+	<section>
+		<h2>INICIO</h2>
+		<article id="articulo1">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure rerum, nam consequatur nostrum aperiam facilis amet officiis soluta magnam ad fuga accusantium delectus est eos! Qui hic quas fugit quidem?</p>
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt dolorem voluptate voluptates amet ad! Voluptatibus inventore earum pariatur quam dignissimos, assumenda. Animi perspiciatis velit corrupti deleniti sunt delectus, possimus dicta?</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error hic nobis assumenda corrupti sequi, voluptates recusandae consequatur quisquam molestiae odio explicabo rem velit adipisci. Minima dolor ut quibusdam quas!
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur amet eaque perspiciatis quam ea nesciunt rem eius consequuntur ratione voluptatum. Minima magni explicabo minus et, unde, vero nam ab placeat.
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati et sit, deleniti reiciendis a, facilis officiis omnis non accusantium ex eveniet vero quo ut? Sint est error nulla porro.
+			lorem</p>
+		</article>
+		<article id="articulo1">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure rerum, nam consequatur nostrum aperiam facilis amet officiis soluta magnam ad fuga accusantium delectus est eos! Qui hic quas fugit quidem?</p>
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt dolorem voluptate voluptates amet ad! Voluptatibus inventore earum pariatur quam dignissimos, assumenda. Animi perspiciatis velit corrupti deleniti sunt delectus, possimus dicta?</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error hic nobis assumenda corrupti sequi, voluptates recusandae consequatur quisquam molestiae odio explicabo rem velit adipisci. Minima dolor ut quibusdam quas!
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur amet eaque perspiciatis quam ea nesciunt rem eius consequuntur ratione voluptatum. Minima magni explicabo minus et, unde, vero nam ab placeat.
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati et sit, deleniti reiciendis a, facilis officiis omnis non accusantium ex eveniet vero quo ut? Sint est error nulla porro.
+			lorem</p>
+		</article>
+		<article id="articulo">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure rerum, nam consequatur nostrum aperiam facilis amet officiis soluta magnam ad fuga accusantium delectus est eos! Qui hic quas fugit quidem?</p>
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt dolorem voluptate voluptates amet ad! Voluptatibus inventore earum pariatur quam dignissimos, assumenda. Animi perspiciatis velit corrupti deleniti sunt delectus, possimus dicta?</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error hic nobis assumenda corrupti sequi, voluptates recusandae consequatur quisquam molestiae odio explicabo rem velit adipisci. Minima dolor ut quibusdam quas!
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur amet eaque perspiciatis quam ea nesciunt rem eius consequuntur ratione voluptatum. Minima magni explicabo minus et, unde, vero nam ab placeat.
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati et sit, deleniti reiciendis a, facilis officiis omnis non accusantium ex eveniet vero quo ut? Sint est error nulla porro.
+			lorem</p>
+		</article>
+		<article id="articulo">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure rerum, nam consequatur nostrum aperiam facilis amet officiis soluta magnam ad fuga accusantium delectus est eos! Qui hic quas fugit quidem?</p>
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt dolorem voluptate voluptates amet ad! Voluptatibus inventore earum pariatur quam dignissimos, assumenda. Animi perspiciatis velit corrupti deleniti sunt delectus, possimus dicta?</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error hic nobis assumenda corrupti sequi, voluptates recusandae consequatur quisquam molestiae odio explicabo rem velit adipisci. Minima dolor ut quibusdam quas!
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur amet eaque perspiciatis quam ea nesciunt rem eius consequuntur ratione voluptatum. Minima magni explicabo minus et, unde, vero nam ab placeat.
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati et sit, deleniti reiciendis a, facilis officiis omnis non accusantium ex eveniet vero quo ut? Sint est error nulla porro.
+			lorem</p>
+		</article>
+		<article id="articulo">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure rerum, nam consequatur nostrum aperiam facilis amet officiis soluta magnam ad fuga accusantium delectus est eos! Qui hic quas fugit quidem?</p>
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt dolorem voluptate voluptates amet ad! Voluptatibus inventore earum pariatur quam dignissimos, assumenda. Animi perspiciatis velit corrupti deleniti sunt delectus, possimus dicta?</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error hic nobis assumenda corrupti sequi, voluptates recusandae consequatur quisquam molestiae odio explicabo rem velit adipisci. Minima dolor ut quibusdam quas!
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur amet eaque perspiciatis quam ea nesciunt rem eius consequuntur ratione voluptatum. Minima magni explicabo minus et, unde, vero nam ab placeat.
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati et sit, deleniti reiciendis a, facilis officiis omnis non accusantium ex eveniet vero quo ut? Sint est error nulla porro.
+			lorem</p>
+		</article>
+		<article id="articulo">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure rerum, nam consequatur nostrum aperiam facilis amet officiis soluta magnam ad fuga accusantium delectus est eos! Qui hic quas fugit quidem?</p>
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt dolorem voluptate voluptates amet ad! Voluptatibus inventore earum pariatur quam dignissimos, assumenda. Animi perspiciatis velit corrupti deleniti sunt delectus, possimus dicta?</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error hic nobis assumenda corrupti sequi, voluptates recusandae consequatur quisquam molestiae odio explicabo rem velit adipisci. Minima dolor ut quibusdam quas!
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur amet eaque perspiciatis quam ea nesciunt rem eius consequuntur ratione voluptatum. Minima magni explicabo minus et, unde, vero nam ab placeat.
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati et sit, deleniti reiciendis a, facilis officiis omnis non accusantium ex eveniet vero quo ut? Sint est error nulla porro.
+			lorem</p>
+		</article>
+		<article id="articulo">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure rerum, nam consequatur nostrum aperiam facilis amet officiis soluta magnam ad fuga accusantium delectus est eos! Qui hic quas fugit quidem?</p>
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt dolorem voluptate voluptates amet ad! Voluptatibus inventore earum pariatur quam dignissimos, assumenda. Animi perspiciatis velit corrupti deleniti sunt delectus, possimus dicta?</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error hic nobis assumenda corrupti sequi, voluptates recusandae consequatur quisquam molestiae odio explicabo rem velit adipisci. Minima dolor ut quibusdam quas!
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur amet eaque perspiciatis quam ea nesciunt rem eius consequuntur ratione voluptatum. Minima magni explicabo minus et, unde, vero nam ab placeat.
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati et sit, deleniti reiciendis a, facilis officiis omnis non accusantium ex eveniet vero quo ut? Sint est error nulla porro.
+			lorem</p>
+		</article>
+		<article id="articulo">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure rerum, nam consequatur nostrum aperiam facilis amet officiis soluta magnam ad fuga accusantium delectus est eos! Qui hic quas fugit quidem?</p>
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt dolorem voluptate voluptates amet ad! Voluptatibus inventore earum pariatur quam dignissimos, assumenda. Animi perspiciatis velit corrupti deleniti sunt delectus, possimus dicta?</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error hic nobis assumenda corrupti sequi, voluptates recusandae consequatur quisquam molestiae odio explicabo rem velit adipisci. Minima dolor ut quibusdam quas!
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur amet eaque perspiciatis quam ea nesciunt rem eius consequuntur ratione voluptatum. Minima magni explicabo minus et, unde, vero nam ab placeat.
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati et sit, deleniti reiciendis a, facilis officiis omnis non accusantium ex eveniet vero quo ut? Sint est error nulla porro.
+			lorem</p>
+		</article>
+	</section>
+	<footer>
+		<p>Copyright©</p>
+	</footer>
+</body>
+</html>
