@@ -1,0 +1,94 @@
+body{
+	margin: 0px;
+}
+
+header{
+    background: blue;
+    display: flex;
+    flex: column;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    padding: 0 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header nav ul li:hover > ul {
+  display:flex;
+  flex-direction: column;
+  background-color: blue;
+
+}
+header nav ul {
+  list-style:none;
+  margin:0px;
+  padding:0px;
+}
+header nav ul a {
+  display:block;
+  text-decoration:none;
+  font-size:25px;
+  padding:15px;
+  color:white;
+}
+header nav ul li {
+  position:relative;
+  float:left;
+}
+header nav ul ul {
+  display:none;
+  position:absolute;
+}
+header nav ul ul li {
+  float:left;
+  width:100%;
+}
+
+header nav ul ul a {
+  line-height:100%;
+  padding:10px;
+}
+
+footer {
+bottom: 0;
+position: fixed;
+width: 100%;
+display: flex;
+flex-direction: row;
+justify-content:center;
+background-color: grey;
+padding: auto;
+}
+
+.logo{
+	width:4%;
+	margin-left:45%;
+	background-attachment: fixed;
+	position: fixed;
+	display: flex;
+}
+h1{
+  margin-top: 80px;
+   margin-left: 15px;
+}
+h2{
+   margin-left: 15px;
+}
+section p{
+   margin-left: 15px;
+}
+table{
+  margin-left: 15px;
+  text-align:center;
+}
+.table3{
+  margin-left: 15px;
+  text-align:center;
+  /*margin-bottom: 20px;*/
+}
+section form input{
+  margin-left: 15px;
+}
