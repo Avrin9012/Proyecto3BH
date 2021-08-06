@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Delius+Unicase&display=swap" rel="stylesheet"> 
+	<script src="archivo.js"></script>
+	<title>Registro</title>
+</head>
+<body>
+	<header>
+		<center>
+		<img src="img/header.png">
+		</center>
+	</header>
+	<nav>
+		
+	</nav>
+	<section>
+		<center>
+		<div id="login">
+			<label id="titulo1">Registro</label>
+			<form action="php/bdedatos.php" id="formregistro" method="post" enctype="multipart/form-data">
+
+				<label for="nombre">Nombre:</label>
+				<input type="text" name="nombre" required>
+				<label for="apellido">Apellido:</label>
+				<input type="text" name="apellido" required>
+				<label for="usuario">Usuario:</label>
+				<input type="text" name="usuario" required>
+				<label for="email">Email:</label>
+				<input type="text" name="email" required>
+				<label for="clave">Contraseña:</label>
+				<input type="text" name="clave" required>
+
+				<input id="enviar" type="submit" value="Enviar">
+
+			</form>
+			<p>
+			¿Ya tienes una cuenta? Entonces <a href="login.html">Ingresa</a></p>
+		</div>
+		</center>
+	</section>
+</body>
+</html>

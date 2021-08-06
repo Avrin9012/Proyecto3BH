@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Delius+Unicase&display=swap" rel="stylesheet"> 
+	<title>Login</title>
+</head>
+<body>
+	<header>
+		<center>
+		<img src="img/header.png">
+		</center>
+	</header>
+	<nav>
+		
+	</nav>
+	<section>
+		<center>
+		<div id="login1">
+			<label id="titulo1">Login</label>
+			<form action="php/login.php" id="formregistro" method="post" enctype="multipart/form-data">
+
+			<label for="clave">Usuario:</label>
+			<input type="text" name="usuariologin" required>
+			<label for="clave">Contraseña:</label>
+			<input type="text" name="clavelogin" required>
+
+			<input id="enviar" type="submit" value="Login">
+
+			</form>
+			<p>¿No tienes una cuenta?<a href="registro.html">Registrate</a></p>
+		</div>
+		</center>
+	</section>
+</body>
+</html>

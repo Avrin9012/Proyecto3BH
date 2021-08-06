@@ -1,0 +1,163 @@
+*{
+	font-family: 'Delius Unicase', cursive;
+}
+body{
+	background-color: #E0E0E0;
+}
+/*---------Registro------------*/
+img{
+	display: block;
+	margin-top: 6%;
+	margin-bottom: 1%;
+}
+section{
+	width: 100%;
+	height: auto;
+}
+#login{
+	display: block;
+	background-color: #00A4FF30;
+	width: 40%;
+	border-radius: 10px;
+}
+#titulo1{
+	display: block;
+	color: #E0E0E0;
+	background-color: #17140C;
+	font-size: 2em;
+	border-radius: 10px;
+}
+#formregistro{
+	margin-top: 7%;
+	height: auto;
+	display: flex;
+	flex-flow: column;
+	width: 80%;
+}
+input{
+	background-color: #17140C;
+	border-radius: 5px;
+	height: 32px;
+	border-style: none;
+	color: #E0E0E0;
+}
+#enviar{
+	margin: 10px;
+	color: #E0E0E0;
+}
+label{
+	font-size: 20px;
+	color: #17140C;
+}
+/*------FINRegistro-----------*/
+/*-----------Login------------*/
+#login1{
+	margin-top: 60px;
+	display: block;
+	background-color: #00A4FF30;
+	width: 40%;
+	border-radius: 10px;
+}
+/*--------FINLogin------------*/
+/*--------Menu----------------*/
+#bodyinicio{
+	width: 100%;
+	height: auto;
+	margin: 0;
+}
+#headerinicio{
+	margin-bottom: 5%;
+}
+#menu{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	background-color: #ffffff50;
+	border-top: 2px #17140C solid;
+	border-bottom: 4px #17140C solid;
+}
+
+#menu ul :hover{
+	background-color: #17140C90;
+	
+}
+
+#menu ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+#menu ul a{
+	font-weight: bold;
+	font-size: 20px;
+	display: block;
+	color: #17140C;
+	text-decoration: none;
+	padding: 10px;
+}
+
+#menu ul li{
+	position: relative;
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#menu ul ul{
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	padding: 0;
+}
+
+#menu ul li:hover > ul{
+	display: block;
+}
+/*--------FINMenu-------------*/
+/*--------Section-------------*/
+
+#sectioninicio{
+	width: 70%;
+	height: 300px;
+	background-color: #00A4FF30;
+	border-radius: 15px;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+/*-----FINSection-------------*/
+/*--------Footer--------------*/
+
+footer{
+	margin: 0;
+	width: 100%;
+	height: 150px;
+	background-color: #00A4FF40;
+}
+ #caja1, #caja2, #caja3{
+	width: 32%;
+	display: inline-flex;
+	justify-content: center;
+	margin-top: 15px;
+}
+#footer{
+	font-size: 1.2em;
+	color: #17140C;
+	display: flex;
+	height: 120px;
+	text-decoration: none;
+	font-weight: bold;
+}
+#caja2{
+	border-left: 1px #17140C solid;
+	border-right: 1px #17140C solid;
+}
+/*-----FINFooter--------------*/
+p a{
+	text-decoration: none;
+}
