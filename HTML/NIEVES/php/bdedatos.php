@@ -7,14 +7,13 @@
  		echo 'si esta conectado';
  	}
 //recibir los datos y almacenar variables
- 	$nombre = $_POST['nombre'];
-	$apellido = $_POST['apellido'];
-	$mail = $_POST['mail'];
-	$usuario = $_POST['usuario'];
-	$contrasena = $_POST['contrasena'];
+ 	$usuario = $_POST['usuario'];
+	$nombre = $_POST['nombre'];
+	$contraseña = $_POST['contraseña'];
+	$email = $_POST['email'];
 	
 //consulta para insertar
-	$insertar = "INSERT INTO usuario(nombre, apellido, mail, usuario, contrasena) VALUES ('$nombre', '$apellido', '$mail', $usuario', '$contrasena')";
+	$insertar = "INSERT INTO usuario (usuario, nombre, contraseña, email) VALUES ('$usuario','$nombre','$contraseña','$email')";
 
 	$verificar_usuario = mysqli_query($conexion, "SELECT * FROM usuario WHERE usuario = '$usuario'");
 		if (mysqli_num_rows($verificar_usuario) > 0){
@@ -34,7 +33,7 @@
 					alert("El usuario ya está registrado");
 					window.history.go(-1);
 					</script>';
-		header('location:../login.html');
+		header('location:../iniciarsesion.html');
 	}
 //Cerrar conexion
 	mysqli_close($conexion);
