@@ -1,9 +1,11 @@
 body{
-  box-sizing: border-box;
+	box-sizing: border-box;
 	margin: 0px;
-  background-color: ;
+	background-color:;
 }
-
+section{
+  margin-left: 15px;
+}
 header{
     background:blue;
     display: flex;
@@ -92,7 +94,7 @@ padding: auto;
 }
 h1{
   text-align: center;
-  margin-top: 80px;
+  margin-top:90px;
   margin-left: 15px;
 }
 .login{
@@ -102,11 +104,8 @@ h1{
 h2{
    margin-left: 15px;
 }
-{
-   margin-left: 15px;
-}
 table{
-  margin-left: 15px;
+  
   text-align:center;
 }
 
@@ -117,23 +116,32 @@ form{
   width: 500px;
   margin-top: 150px;
   border-radius: 2%;
+  border:3px;
+  border-color: black;
+  border-radius: 2%;
+  border-style: solid;
 }
 .registrarse{
   padding: 15px;
   width: 600px;
   margin-top: 150px;
+  border:3px;
+  border-color: black;
   border-radius: 2%;
   border-style: solid;
 }
 p{
-  margin-left: 0px;
+	margin-left: 0px;
+}
+.subtitulo{
+	font-size: 25px;
 }
 .nombre{
   text-align: left;
   margin-right: 10px;
 }
 .contenedor{
-   text-align: center;
+  text-align: center;
 }
 input[type="text"],input[type="email"],input[type="password"],input[type="number"],
 input[name="sexo"]{
@@ -147,7 +155,7 @@ input[name="sexo"]{
 }
 .button{
     border: none;
-    width: 50%;
+    width: 35%;
     color: white;
     font-size: 20px;
     background:  #1a2537;
@@ -160,6 +168,7 @@ input[name="sexo"]{
 }
 .IS{
     text-align: center;
+    font-size: 20px;
 }
 .link{
     text-decoration: none;
@@ -176,6 +185,34 @@ input[name="sexo"]{
   margin-top: 150px;
   border-radius: 2%;
 }
-section{
-  margin-left: 15px;
+
+.dato{
+  display: flex;
+  text-align: center;
+  font-size: 20px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.datos{
+  text-align: center;
+  font-size: 20px;
+}
+.seleccion{
+    margin-left: -50px;
+    width: 20%;
+}
+.seleccion1{
+    margin-left: 5px;
+    width: 20%;
+}
+.select{
+	font-size: 20px;
+	right:10px;
+	position: absolute;
+}
+.select2{
+	font-size: 20px;
+	right:10px;
+	position: absolute;
+	margin-top: 75px;
 }

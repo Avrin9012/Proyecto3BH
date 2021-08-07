@@ -7,16 +7,14 @@
  		echo 'si esta conectado';
  	}
 //recibir los datos y almacenar variables
- 	$id = ["1"];
- 	$usuario = $_POST['usuario'];
-	$nombre = $_POST['nombre'];
+ 	$nombre = $_POST['nombre'];
 	$apellido = $_POST['apellido'];
-	$contraseña = $_POST['contraseña'];
-	$permiso = $_POST['usuario'];
-	$email = $_POST['email'];
+	$mail = $_POST['mail'];
+	$usuario = $_POST['usuario'];
+	$contrasena = $_POST['contrasena'];
 	
 //consulta para insertar
-	$insertar = "INSERT INTO usuario(id, usuario, nombre, apellido, contraseña, permiso, email) VALUES ('$id', $usuario', '$nombre', '$apellido', '$contraseña', '$permiso', '$email')";
+	$insertar = "INSERT INTO usuario(nombre, apellido, mail, usuario, contrasena) VALUES ('$nombre', '$apellido', '$mail', $usuario', '$contrasena')";
 
 	$verificar_usuario = mysqli_query($conexion, "SELECT * FROM usuario WHERE usuario = '$usuario'");
 		if (mysqli_num_rows($verificar_usuario) > 0){

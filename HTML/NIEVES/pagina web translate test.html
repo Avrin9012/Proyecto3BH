@@ -31,8 +31,9 @@
 </header>
 
 <body>
-<a href="en" class="select" data-reload>Enghlish</a>
-<a href="en" class="select" data-reload>Español</a>
+<p><a href="#en" class="select2" data-reload>Enghlish</a></p>
+<br>
+<p><a href="#es" class="select2" data-reload>Español</a></p>
 </select>
   <h1>Bienvenido - Welcome</h1>
   <section>
@@ -53,15 +54,26 @@ Everyone likes travel imagine if you can literally live that country. Talk with 
 <p><b class="subtitulo">5) Gain a wide perspective</b></p>
 When you learn a foreign language not only learns that language but learn their culture, a lot of words and slangs have their own sense about that culture or country. History has also a big role in one language</p>
 <script>
+	var dataReload = document.querySelectorAll("[data-reload]"); 
 	var language = {
-		es:
-		 index:"Probablemente escuchaste sobre aprender lenguajes pero nunca lo intentaste, sea porque parecía difícil, o no tenías demasiado tiempo. Así que para motivarte, tenemos algunos puntos."
+		es: {
+		 inicio:"Probablemente escuchaste sobre aprender lenguajes pero nunca lo intentaste, sea porque parecía difícil, o no tenías demasiado tiempo. Así que para motivarte, tenemos algunos puntos."
+	},
+		en: {
+		 inicio:"Probably you heard about language learning but never try it, because look hard or you don’t have enough time. So, for motivate yourself we have some point… "
 	}
-		en:
-		 index:"Probably you heard about language learning but never try it, because look hard or you don’t have enough time. So, for motivate yourself we have some point… "
+};
+
+if(window.location.hash){
+	if(window.location.hash==="#es"){
+		index.textContent = language.es.inicio;
 	}
-
-
+};
+if(window.location.hash){
+	if(window.location.hash==="#en"){
+		index.textContent = language.en.inicio;
+	}
+}
 
 </script>
   </section>

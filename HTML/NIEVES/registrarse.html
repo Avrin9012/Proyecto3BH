@@ -5,7 +5,8 @@
 	<title>Registrarse</title>
 	<link href="css/estilos.css" rel="stylesheet" />
 </head>
-<header>
+<body>
+	<header>
   <nav>
     <ul>
   <li><a href="pagina web.html">Inicio</a></li>
@@ -16,7 +17,7 @@
       <li><a href="cursos.html">Avanzado</a></li>
     </ul>
   </li>
-  <li><a href="cursos.html">Mas</a>
+  <li><a>Mas</a>
     <ul>
   <li><a href="profesores.html">Profesores</a></li>
   <li><a href="sobrenosotros.html">Sobre nosotros</a></li>
@@ -28,111 +29,30 @@
 </nav> 
 <img src="Logo.png" class="logo">
 </header>
-<body>
 
-<form class="registrarse" action="http://localhost/a/php/bdedatos.php" id="formregistro" method="post" enctype="multipart/form-data">
+<form class="registrarse">
+  <div class="contenedor">
 	<h1 class="login">Registro</h1>
-	<div class="contenedor">
+	
          <div>
 
-  <input  for="nombre" type="text" required placeholder="nombre">
-  <br> <br>
-  <input for="apellido" type="text" required placeholder="apellido">
-  <br> <br>
-  <input for="email" type="email" required placeholder="correo">
-  <br> <br>
-  <input for="usuario" type="text" required placeholder="usuario">
-  <br> <br>
-  <input for="contraseña" type="password" required placeholder="contraseña" />
-  <p>Sexo
-  <select name="sexo">
-    <option selected="selected">Femenino</option>
-    <option>Masculino</option>
-  </select></p>
-  <p>Fecha de nacimiento</p>
-  <p>Dia
-    <select name="dia">
-      <option selected="selected">1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-      <option>6</option>
-      <option>7</option>
-      <option>8</option>
-      <option>9</option>
-      <option>10</option>
-      <option>11</option>
-      <option>12</option>
-      <option>13</option>
-      <option>14</option>
-      <option>15</option>
-      <option>16</option>
-      <option>17</option>
-      <option>18</option>
-      <option>19</option>
-      <option>20</option>
-      <option>21</option>
-      <option>22</option>
-      <option>23</option>
-      <option>24</option>
-      <option>25</option>
-      <option>26</option>
-      <option>27</option>
-      <option>28</option>
-      <option>29</option>
-      <option>30</option>
-      <option>31</option>
-    </select>
-  Mes
-  <select name="mes">
-  	<option selected="selected">Enero</option>
-    <option>Febrero</option>
-    <option>Marzo</option>
-    <option>Abril</option>
-    <option>Mayo</option>
-    <option>Junio</option>
-    <option>Julio</option>
-    <option>Agosto</option>
-    <option>Setiembre</option>
-    <option>Octubre</option>
-    <option>Noviembre</option>
-    <option>Diciembre</option>
-  </select>
-  Año
-  <select name="año">
-  <option selected="selected">2020</option>
-    <option>2019</option>
-    <option>2018</option>
-    <option>2017</option>
-    <option>2016</option>
-    <option>2015</option>
-    <option>2014</option>
-    <option>2013</option>
-    <option>2012</option>
-    <option>2011</option>
-    <option>2010</option>
-    <option>2009</option>
-    <option>2008</option>
-    <option>2007</option>
-    <option>2006</option>
-    <option>2005</option>
-    <option>2004</option>
-    <option>2003</option>
-    <option>2002</option>
-    <option>2001</option>
-    <option>2000</option>
-  </select>
-  </p>
-  <p>
-    <input type="reset" name="restablecer" id="restablecer" value="restablecer" class="button" />
-  </p>
+  <p><input name="nombre" type="text" required placeholder="nombre">  </p>
+  <p><input name="apellido" type="text" required placeholder="apellido"> </p>
+  <p><input name="email" type="email" required placeholder="mail"> </p>
+  <p><input name="usuario" type="text" required placeholder="usuario"> </p>
+  <p><input name="contraseña" type="password" required placeholder="contraseña" /> </p>
+  
+  <!-- el boton enviar no te lleva al login	si le pones type="button" te lleva a login sin los datos-->
+  <p><a href="iniciarsesion.html"> <input class="button" type="submit" name="enviar" value="Enviar" /></a>
+  <input  class="button" type="reset" name="restablecer" value="restablecer" /></p>
   </div>
-         <a href="iniciarsesion.html"><input type="submit" value="Enviar" class="button" id="enviar"></a>
-         <p class="IS"> Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
-         <p class="IS"> ¿Ya tienes una cuenta? <a class="link" href="iniciarsesion.html">Iniciar Sesion </a></p>
+         <p class="IS">Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+         <p class="IS">¿Ya tienes una cuenta? <a class="link" href="iniciarsesion.html">Iniciar Sesion </a></p>
   </div>
 </form>
-
+<br><br>
+<footer>
+     Proyecto de UTU creador por: Bautista Nieves,Yonathan Bengoa,Ismael Zás,Rodrigo Mena,Robert Leal,Angel Cosentino,Name Ape
+  </footer>
 </body>
 </html>
