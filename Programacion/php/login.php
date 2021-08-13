@@ -3,14 +3,14 @@
 	$conexion = mysqli_connect("localhost", "root", "", "proyecto");
 
 
-	$usuariologin= $_POST['usuariologin'];
+	$emailogin= $_POST['emailogin'];
 	$contraseñalogin= $_POST['clavelogin'];
 
- 	$consulta="SELECT * FROM usuario WHERE usuario = '$usuariologin' AND contraseña = '$contraseñalogin'";
+ 	$consulta="SELECT * FROM usuario WHERE email = '$emailogin' AND contraseña = '$contraseñalogin'";
  	$resultado = mysqli_query($conexion, $consulta);
  	$busqueda = mysqli_num_rows($resultado);
  	if($busqueda > 0) {
- 		header('location:../index1.html');
+ 		header('location:../index.html');
  	}
  	else{
  		echo' 	<script>

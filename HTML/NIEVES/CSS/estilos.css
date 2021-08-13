@@ -1,13 +1,15 @@
-body{
-	box-sizing: border-box;
-	margin: 0px;
-	background-color:;
+body {
+    box-sizing: border-box;
+    margin: 0px;
+    background-color: ;
 }
-section{
-  margin-left: 15px;
+
+section {
+    margin-left: 15px;
 }
-header{
-    background:blue;
+
+header {
+    background: blue;
     display: flex;
     flex: column;
     align-items: center;
@@ -20,199 +22,241 @@ header{
     right: 0;
 }
 
-header nav ul li:hover > ul {
-  display:flex;
-  flex-direction: column;
-  background-color: blue;
+header nav ul li:hover>ul {
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+}
 
-}
 header nav ul {
-  list-style:none;
-  margin:0px;
-  padding:0px;
-  margin-right:150px;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    margin-right: 150px;
 }
+
 .registro {
-	font-size:25px;
-	color:white;
-	float: right;
-  display: inline-flex;
-  margin-left:65%;
-	background-attachment: fixed;
-	position: fixed;
+    font-size: 25px;
+    color: white;
+    float: right;
+    display: inline-flex;
+    margin-left: 65%;
+    background-attachment: fixed;
+    position: fixed;
 }
+
 .iniciar {
-	font-size:25px;
-  color:white;
-  float: right;
-  display: inline-flex;
-  margin-left:85%;
-  background-attachment: fixed;
-  position: fixed;
+    font-size: 25px;
+    color: white;
+    float: right;
+    display: inline-flex;
+    margin-left: 85%;
+    background-attachment: fixed;
+    position: fixed;
 }
+
 header nav ul a {
-  display:block;
-  text-decoration:none;
-  font-size:25px;
-  padding:15px;
-  color:white;
+    display: block;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 15px;
+    color: white;
 }
+
 header nav ul li {
-  position:relative;
-  float:left;
+    position: relative;
+    float: left;
 }
+
 header nav ul ul {
-  display:none;
-  position:absolute;
+    display: none;
+    position: absolute;
 }
+
 header nav ul ul li {
-  float:right;
-  width:100%;
+    float: right;
+    width: 100%;
 }
 
 header nav ul ul a {
-  line-height:100%;
-  padding:10px;
+    line-height: 100%;
+    padding: 10px;
 }
 
 footer {
-bottom: 0;
-position: fixed;
-width: 100%;
-display: flex;
-flex-direction: row;
-justify-content:center;
-background-color: grey;
-padding: auto;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: grey;
+    padding: auto;
 }
 
-.logo{
-	width:4%;
-	margin-left:-45%;
-	background-attachment: fixed;
-	position: fixed;
-}
-h1{
-  text-align: center;
-  margin-top:90px;
-  margin-left: 15px;
-}
-.login{
-  text-align: center;
-  margin-top: auto;
-}
-h2{
-   margin-left: 15px;
-}
-table{
-  
-  text-align:center;
+.logo {
+    width: 4%;
+    margin-left: -45%;
+    background-attachment: fixed;
+    position: fixed;
 }
 
-form{
-  background: #fff;
-  padding: 15px;
-  margin: auto;
-  width: 500px;
-  margin-top: 150px;
-  border-radius: 2%;
-  border:3px;
-  border-color: black;
-  border-radius: 2%;
-  border-style: solid;
+h1 {
+    text-align: center;
+    margin-top: 90px;
+    margin-left: 15px;
 }
-.registrarse{
-  padding: 15px;
-  width: 600px;
-  margin-top: 150px;
-  border:3px;
-  border-color: black;
-  border-radius: 2%;
-  border-style: solid;
+
+.login {
+    text-align: center;
+    margin-top: auto;
 }
-p{
-	margin-left: 0px;
+
+h2 {
+    margin-left: 15px;
 }
-.subtitulo{
-	font-size: 25px;
+
+table {
+    text-align: center;
 }
-.nombre{
-  text-align: left;
-  margin-right: 10px;
+
+form {
+    background: #fff;
+    padding: 15px;
+    margin: auto;
+    width: 500px;
+    margin-top: auto;
+    border-radius: 2%;
+    border: 3px;
+    border-color: black;
+    border-radius: 2%;
+    border-style: solid;
 }
-.contenedor{
-  text-align: center;
+
+.carga {
+    background: #fff;
+    padding: 15px;
+    margin: auto;
+    width: 500px;
+    margin-top: 100px;
+    border-radius: 2%;
+    border: 3px;
+    border-color: black;
+    border-radius: 2%;
+    border-style: solid;
 }
-input[type="text"],input[type="email"],input[type="password"],input[type="number"],
-input[name="sexo"]{
+
+.registrarse {
+    padding: 15px;
+    width: 600px;
+    margin-top: 150px;
+    border: 3px;
+    border-color: black;
+    border-radius: 2%;
+    border-style: solid;
+}
+
+p {
+    margin-left: 0px;
+}
+
+.subtitulo {
+    font-size: 25px;
+}
+
+.nombre {
+    text-align: left;
+    margin-right: 10px;
+}
+
+.contenedor {
+    text-align: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[name="sexo"] {
     font-size: 20px;
     width: 80%;
     padding: 10px;
     margin-left: 10px;
-  }
-.input-contenedor{
+}
+
+.input-contenedor {
     margin-bottom: 15px;
 }
-.button{
+
+.button {
     border: none;
     width: 35%;
     color: white;
     font-size: 20px;
-    background:  #1a2537;
+    background: #1a2537;
     padding: 15px 20px;
     border-radius: 5px;
     cursor: pointer;
 }
-.button:hover{
+
+.button:hover {
     background: cadetblue;
 }
-.IS{
+
+.IS {
     text-align: center;
     font-size: 20px;
 }
-.link{
+
+.link {
     text-decoration: none;
-      color: #1a2537;
+    color: #1a2537;
     font-weight: 600;
 }
-.link:hover{
-     color: cadetblue;
+
+.link:hover {
+    color: cadetblue;
 }
 
-.formulario{
-  margin: auto;
-  width: 500px;
-  margin-top: 150px;
-  border-radius: 2%;
+.formulario {
+    margin: auto;
+    width: 500px;
+    margin-top: 150px;
+    border-radius: 2%;
 }
 
-.dato{
-  display: flex;
-  text-align: center;
-  font-size: 20px;
-  flex-direction: row;
-  justify-content: space-between;
+.dato {
+    display: flex;
+    text-align: center;
+    font-size: 20px;
+    flex-direction: row;
+    justify-content: space-between;
 }
-.datos{
-  text-align: center;
-  font-size: 20px;
+
+.datos {
+    text-align: center;
+    font-size: 20px;
 }
-.seleccion{
+
+.seleccion {
     margin-left: -50px;
     width: 20%;
 }
-.seleccion1{
+
+.seleccion1 {
     margin-left: 5px;
     width: 20%;
 }
-.select{
-	font-size: 20px;
-	right:10px;
-	position: absolute;
+
+.select {
+    font-size: 20px;
+    right: 10px;
+    position: absolute;
 }
-.select2{
-	font-size: 20px;
-	right:10px;
-	position: absolute;
-	margin-top: 75px;
+
+.select2 {
+    font-size: 20px;
+    right: 10px;
+    position: absolute;
+    margin-top: 75px;
 }
