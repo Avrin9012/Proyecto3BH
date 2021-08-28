@@ -33,7 +33,7 @@
 					alert("El usuario ya está registrado");
 					window.history.go(-1);
 					</script>';
-		header('location:../iniciarsesion.html');
+		header('location:../index.html');
 	}
 //Cerrar conexion
 	mysqli_close($conexion);
