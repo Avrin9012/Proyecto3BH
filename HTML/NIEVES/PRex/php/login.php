@@ -1,7 +1,7 @@
 <?php
+session_start();
 
 	$conexion = mysqli_connect("localhost", "root", "", "proyecto");
-
 
 	$emailogin= $_POST['emailogin'];
 	$contraseñalogin= $_POST['clavelogin'];
@@ -10,7 +10,9 @@
  	$resultado = mysqli_query($conexion, $consulta);
  	$busqueda = mysqli_num_rows($resultado);
  	if($busqueda > 0) {
- 		header('location:../index.html');
+ 		$_SESSION['email'] = '$emailogin';
+ 		header('location:../index.php');
+
  	}
  	else{
  		echo' 	<script>
@@ -20,3 +22,4 @@
  	}
  	mysqli_free_result($resultado);
  	mysql_close($conexion);
+?>

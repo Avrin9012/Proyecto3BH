@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,6 +11,7 @@
         <meta name="author" content="" />
         <title>Cursos de ingles</title>
         <!-- Favicon-->
+        <link rel="shortcut icon" href="assets/img/favicon.ico">
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
@@ -20,16 +25,17 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top">Aprende Ingles</a>
+                <a class="navbar-brand" href="index.php"><img id="header1" src="assets/img/logoingles.png" ></a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.html">Inicio</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.html">Login</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="register.html">Registrarse</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Inicio</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Login</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="register.php">Registrarse</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -38,24 +44,22 @@
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="assets/img/logo.png" alt="..." />
-                    <form action="/PRex/php/login.php" method="post" class="carga">  
-                        <h1 class="login">Login</h1>
-                                <div class="contenedor">
-                                    <div class="input-contenedor">
-                                        <i class="fas fa-envelope icon"></i>
-                                        <input name="emailogin" type="email" placeholder="Email" required="" class="form-control"> 
-                                    </div>
-                                </div>        
-                                <div class="input-contenedor">
-                                    <i class="fas fa-key icon"></i>
-                                    <input name="clavelogin" type="password" placeholder="Password" required="" class="form-control">
-                                </div>
-                                <div>
-                                    <input type="submit" value="Login" class="btn btn-primary">
-                                    <p class="IS">When you register, you agree with our terms and conditions.</p>
-                                </div>
-                     </form>
+                <img class="masthead-avatar mb-5" src="assets/img/header.png" alt="..." />
+                <form class="registrarse" , action="/PRex/php/bdedatos.php" method="post">
+                    <div class="contenedor">
+                        <h1 class="login">Registro</h1>
+                            <div>
+                                <i class="fal fa-dove" style="color: #28c997;"></i>
+                                <p><input name="usuario" type="text" required placeholder="usuario"> </p>
+                                <p><input name="nombre" type="text" required placeholder="nombre"> </p>
+                                <p><input name='contraseña' type="password" required placeholder="contraseña" /> </p>
+                                <p><input name="email" type="email" required placeholder="mail"> </p>
+                                <a href="login.html"> <input class="button" type="submit" name="enviar" value="Enviar" /></a>
+                                <input class="button" type="reset" name="restablecer" value="restablecer" /></p>
+                            </div>
+            <p class="IS">Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+        </div>
+    </form>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>

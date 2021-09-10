@@ -40,7 +40,7 @@ header nav ul {
     color: white;
     float: right;
     display: inline-flex;
-    margin-left: 35%;
+    margin-left: 65%;
     background-attachment: fixed;
     position: fixed;
 }
@@ -50,7 +50,7 @@ header nav ul {
     color: white;
     float: right;
     display: inline-flex;
-    margin-left: 25%;
+    margin-left: 85%;
     background-attachment: fixed;
     position: fixed;
 }
