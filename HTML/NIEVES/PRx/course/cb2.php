@@ -10,7 +10,7 @@ session_start()
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Cursos de ingles</title>
+    <title>Curso Basico 2</title>
     <!-- Favicon-->
     <link rel="shortcut icon" href="assets/img/favicon.ico">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -20,14 +20,14 @@ session_start()
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
 </head>
 
 <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <a class="navbar-brand" href="../index.php"><img id="header1" src="../assets/img/logoingles.png" ></a>
         <div class="container">
-            <a class="navbar-brand" href="index.php">Aprende Ingles</a>
             <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -49,9 +49,11 @@ session_start()
             <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 <h1>Videos<h1>
-<iframe width="731" height="411" src="https://www.youtube.com/embed/-FVgwyVqhCA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<h2 style="color:white;">Repartido<h2>
-<a href="assets/others/basic.pdf">Repartido</a>
-<h2 style="color:white;">Iniciar Prueba?<h2>
-<a href=".../pb.php">Click aquí para entrar</a>
+<iframe width="1019" height="573" src="https://www.youtube.com/embed/kpEISfKpShM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2>Repartido<h2>
+<a style="color:#2980B9;" href="assets/others/basic.pdf">Entrar</a>
+<h2>Iniciar Prueba?<h2>
+<a style="color:#2980B9;" href="/pb.php">Click aquí para entrar</a>
+<style>
+</style>
 </html>

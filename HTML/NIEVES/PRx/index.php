@@ -126,16 +126,13 @@ session_start();
             </div>
             <!-- About Section Content-->
             <div class="row">
-                <div class="col-lg-4 ms-auto">
-                    <p class="lead">En Bit By Bit ofrecemos software asequible a empresas e individuos para </p>
-                </div>
-                <div class="col-lg-4 me-auto">
-                    <p class="lead">Queremos ser la empresa número uno en latino américa especializada en la producción de software, paginas web e informatica en general.</p>
-                </div>
-            </div>
+                <center><div>
+                    <p class="lead">Somos una iniciativa que pretende apoyar a maestos y alumnos la </p>
+                </div></center>
+                
             <center><a href="mas.php"><button id="boton" class="btn btn-primary"  data-bs-dismiss="modal">
                 <i class="fas fa-info"></i>
-                Ver más
+                Ver más (Membresias)
                 </button></a></center>
     </section>
     <!-- Contact Section-->
@@ -259,12 +256,12 @@ session_start();
                                     <div class="divider-custom-line"></div>
                                 </div>
                                 <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="assets/img/courses/basic.png" alt="..." />
+                                <img class="img-fluid rounded mb-5" src="assets/img/img2.jpg" alt="..." />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">Este curso tiene las palabras más esenciales para del conocimiento del Inglés. Aprenderás los verbos básicos, preposiciones, sustantivos. Serás capaz de entender textos simples.Este curso tiene consistirá en el aprendizaje
                                     de las 100 palabras más comunes del idioma Inglés.</p>
                                 <button class="btn btn-primary" href="login.php" data-bs-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
+                                        <i class="fas fa-sign-in-alt"></i>
                                         Login
                                     </button>
                             </div>
@@ -292,11 +289,11 @@ session_start();
                                     <div class="divider-custom-line"></div>
                                 </div>
                                 <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="assets/img/courses/medium.png" alt="..." />
+                                <img class="img-fluid rounded mb-5" src="assets/img/img1.jpg" alt="..." />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">Este curso medio tiene un montón de palabras nuevas, aprenderás más sobre verbos, sustantivos y gramatica. Serás capaz de entender textos B1 y B2, e incluso podrás escribir textos simples.</p>
                                 <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
+                                        <i class="fas fa-sign-in-alt"></i>
                                         Login
                                     </button>
                             </div>
@@ -324,11 +321,11 @@ session_start();
                                     <div class="divider-custom-line"></div>
                                 </div>
                                 <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="assets/img/courses/advanced.png" alt="..." />
+                                <img class="img-fluid rounded mb-5" src="assets/img/img3.jpg" alt="..." />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">Tendrás un conocimiento incluso más amplio sobre el idioma Inglés, serás capaz de escribir y entender textos más complejos, podrás seguir piezas de contenido nativo como películas, series, etc. </p>
                                 <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
+                                    <i class="fas fa-sign-in-alt"></i>
                                         Login
                                     </button>
                             </div>
