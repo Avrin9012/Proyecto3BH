@@ -11365,7 +11365,6 @@ td {
     background-color: transparent;
     width: 300px;
     height: 200px;
-    border: 1px solid #f1f1f1;
     perspective: 1000px;
 }
 
@@ -11490,6 +11489,15 @@ input {
     width: 79%;
 }
 
+.conatiner {
+    padding: 0;
+    margin: 150px;
+}
+
+input {
+    width: 79%;
+}
+
 #a {
     margin: 30px 30px;
     text-align: center;
@@ -11552,6 +11560,7 @@ label {
     display: inline-block;
     margin-top: -24px;
     margin-right: 49px;
+    float: right;
     padding-bottom: 53px;
 }
 

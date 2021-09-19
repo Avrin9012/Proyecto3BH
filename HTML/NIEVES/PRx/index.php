@@ -49,7 +49,6 @@ session_start();
         <div class="container d-flex align-items-center flex-column">
             <!-- Masthead Avatar Image-->
             <!-- Masthead Heading-->
-            <img src="assets/img/header.png">
             <!-- Icon Divider-->
             <div class="divider-custom divider-light">
                 <div class="divider-custom-line"></div>
@@ -127,9 +126,13 @@ session_start();
             <!-- About Section Content-->
             <div class="row">
                 <center><div>
-                    <p class="lead">Somos una iniciativa que pretende apoyar a maestos y alumnos la </p>
+                    <p class="lead">
+                    Somos una página de apoyo académico en cursos de inglés para instituciones educativas. <br>
+                    Nuestro servicio ofrece un repaso y entendimiento de los conceptos ya dados a nivel básico de inglés. <br>
+                    La página dispone de diferentes niveles de inglés, nivel 1, nivel 2 y el nivel  3. Cada nivel dispone de un/a video/lectura de repaso,  un práctico y la prueba final con una calificación al momento. <br> Aprendiendoingles.com es muy dinámica, moviéndote dentro de la misma con simples clicks o taps si utilizas un celular o tablet.
+                    Lo único que vas a necesitar para poder contar con el servicio es conexión a internet y un dispositivo en cual conectarse (laptop, celular, tablet, ...) con estos requisitos YA mismo puedes empezar a disfrutar de aprendiendoingles.com ¡gratuitamente! 
+                    </p>
                 </div></center>
-                
             <center><a href="mas.php"><button id="boton" class="btn btn-primary"  data-bs-dismiss="modal">
                 <i class="fas fa-info"></i>
                 Ver más (Membresias)
@@ -248,7 +251,7 @@ session_start();
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Nivel I</h2>
                                 <!-- Icon Divider-->
                                 <div class="divider-custom">
                                     <div class="divider-custom-line"></div>
@@ -260,7 +263,7 @@ session_start();
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">Este curso tiene las palabras más esenciales para del conocimiento del Inglés. Aprenderás los verbos básicos, preposiciones, sustantivos. Serás capaz de entender textos simples.Este curso tiene consistirá en el aprendizaje
                                     de las 100 palabras más comunes del idioma Inglés.</p>
-                                <button class="btn btn-primary" href="login.php" data-bs-dismiss="modal">
+                                <button class="btn btn-primary" role="link" onclick="window.location='course/cb1.php'" data-bs-dismiss="modal">
                                         <i class="fas fa-sign-in-alt"></i>
                                         Login
                                     </button>
@@ -281,7 +284,7 @@ session_start();
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty Cake</h2>
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Nivel II</h2>
                                 <!-- Icon Divider-->
                                 <div class="divider-custom">
                                     <div class="divider-custom-line"></div>
@@ -292,7 +295,7 @@ session_start();
                                 <img class="img-fluid rounded mb-5" src="assets/img/img1.jpg" alt="..." />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">Este curso medio tiene un montón de palabras nuevas, aprenderás más sobre verbos, sustantivos y gramatica. Serás capaz de entender textos B1 y B2, e incluso podrás escribir textos simples.</p>
-                                <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                <button class="btn btn-primary" role="link" onclick="window.location='course/cb2.php'" data-bs-dismiss="modal">
                                         <i class="fas fa-sign-in-alt"></i>
                                         Login
                                     </button>
@@ -313,7 +316,7 @@ session_start();
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus Tent</h2>
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Nivel III</h2>
                                 <!-- Icon Divider-->
                                 <div class="divider-custom">
                                     <div class="divider-custom-line"></div>
@@ -324,7 +327,7 @@ session_start();
                                 <img class="img-fluid rounded mb-5" src="assets/img/img3.jpg" alt="..." />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">Tendrás un conocimiento incluso más amplio sobre el idioma Inglés, serás capaz de escribir y entender textos más complejos, podrás seguir piezas de contenido nativo como películas, series, etc. </p>
-                                <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                <button class="btn btn-primary" role="link" onclick="window.location='course/cb3.php'" data-bs-dismiss="modal">
                                     <i class="fas fa-sign-in-alt"></i>
                                         Login
                                     </button>

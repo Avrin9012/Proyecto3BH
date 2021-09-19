@@ -29,27 +29,24 @@ if (isset($_SESSION['email'])) {
     }else{
     echo 'si esta conectado';
     }
-    $form = "<form class='form-inline my-2 my-lg-0' method='POST' action='query.php'>
-    <input class='form-control mr-sm-2' type='text' placeholder='Search' aria-label='Search' name='fucks'>
-    <button class='btn btn-secondary my-2 my-sm-0' type='submit' name='submit'>Search</button>
-    </form>";
 	echo '<ul class="navbar-nav mr-auto"> <li class="nav-item active">
 	<a class="nav-link bold" href="create.php"><span>Create</span></a>
 	</li>
-	</ul>';
-	echo $form;      
+	</ul>';     
 	echo "<li class='nav-item dropdown'><div>
 	<a class='nav-link dropdown-toggle' href='#' id='dropdown01' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>".	          
-	$_SESSION['my_img'] . $_SESSION['email']."</a>
+	$_SESSION['email']."</a>;
 	<div class='dropdown-menu' aria-labelledby='dropdown01'>
-	<a class='dropdown-item' href='user.php?user_ref=$_SESSION[id]'>My Sets</a>
-	<a class='dropdown-item' href='settings.php?my_settings=$_SESSION[id]		 
-	'>Settings</a>
-	<a class='dropdown-item' href='logout.php'>Logout</a>
+	<a class='dropdown-item' href='user.php?user_ref=$_SESSION[id]'>Mis flashcards</a>
+	<a class='dropdown-item' href='opciones.php?my_settings=$_SESSION[id]		 
+	'>opciones</a>
+	<a class='dropdown-item' href='close.php'>Cerrar sesion</a>
 	</div>
 	</li>
-    ";       
-}else if (!isset($_SESSION['user'])) {
+    ";
+    $dir = 'users_img/'.$_SESSION['my_img'];
+    echo '<img src="'.$dir.'">';       
+}else if (!isset($_SESSION['email'])) {
 	echo ' <div class="collapse navbar-collapse" id="navbarsExampleDefault">
 	<ul class="navbar-nav mr-auto">
 	<li class="nav-item active">
@@ -63,7 +60,6 @@ if (isset($_SESSION['email'])) {
 	</li>
 	</div>
 	';
-    echo $form;
 		        }
         ?>
     </nav>

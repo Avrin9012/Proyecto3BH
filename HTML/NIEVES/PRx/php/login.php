@@ -9,8 +9,13 @@ session_start();
  	$consulta="SELECT * FROM usuario WHERE email = '$emailogin' AND contraseña = '$contraseñalogin'";
  	$resultado = mysqli_query($conexion, $consulta);
  	$busqueda = mysqli_num_rows($resultado);
+ 	$row = mysqli_fetch_array($resultado);
  	if($busqueda > 0) {
- 		$_SESSION['email'] = '$emailogin';
+ 		$_SESSION['email'] = $emailogin;
+ 		$_SESSION['my_img'] = $row[5];
+		$_SESSION['id'] = $row[0];
+		$_SESSION['user'] = $row[1];
+		$_SESSION['id'] = $row[0];
  		header('location:../index.php');
 
  	}

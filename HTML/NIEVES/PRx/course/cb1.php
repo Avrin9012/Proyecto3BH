@@ -10,6 +10,7 @@ session_start()
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
+    <link href="../css/styles.css" rel="stylesheet" />
     <title>Curso Basico 1</title>
     <!-- Favicon-->
     <link rel="shortcut icon" href="assets/img/favicon.ico">
@@ -20,23 +21,24 @@ session_start()
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="../css/styles.css" rel="stylesheet" />
+
 </head>
 
 <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-    <a class="navbar-brand" href="../index.php"><img id="header1" src="../assets/img/logoingles.png" ></a>
+    <a class="navbar-brand" href="../index.php"><img id="header1" src="../assets/img/logoingles.png"></a>
         <div class="container">
             <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
-                </button>
+            </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Inicio</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Login</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="register.php">Registrarse</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../index.php">Inicio</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="cb2.php">Nivel II</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="cb3.php">Nivel III</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../index.php#contact">Soporte</a></li>
                 </ul>
             </div>
         </div>
@@ -45,17 +47,21 @@ session_start()
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
             <!-- Masthead Avatar Image-->
-            <img class="masthead-avatar mb-5" src="assets/img/logo.png" alt="..." />
             <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-</body>
-<h1>Videos<h1>
-<iframe width="731" height="411" src="https://www.youtube.com/embed/-FVgwyVqhCA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="1019" height="573" src="https://www.youtube.com/embed/ygXaRht8Euo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="1019" height="573" src="https://www.youtube.com/embed/bANo-ONfcJo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<h2>Repartido<h2>
-<a style="color:#2980B9;" href="assets/others/basic.pdf">Entrar</a>
-<h2>Iniciar Prueba?<h2>
-<a style="color:#2980B9;" href="/pb.php">Click aquí para entrar</a>
+            <div class="pruebavideos">
+            <h1>Bienvenidos al Nivel I de aprendiendo inglés.</h1>
+            <p>Basic level useful for learn concepts or develop a consistent base.</p>
+            <br>
+            <p>The student has recommended videos and a test per level to demonstrate their learned skills.</p>
+            <hr>
+            <h1>Videos<h1>
+            <iframe width="720" height="480" src="https://www.youtube.com/embed/sTz28jZqxx0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <hr>
+            <br><br>
+            <a class="botonprueba" href="https://forms.gle/jAFnPU5a9JUD946X9">Iniciar Prueba</a>
+            </div>
+    </body>
+
 <style>
 </style>
 </html>

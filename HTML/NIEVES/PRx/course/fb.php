@@ -62,12 +62,12 @@ $resultado = $mysqli->query("SELECT palabra, traduccion FROM palabra where idpal
 $row = mysqli_fetch_array($resultado);
 ?>
 
-<div class="maincontainer">
-<div class="thecard">
-    <div class="thefront">
+<div class="flip-card">
+<div class="flip-card-inner">
+    <div class="flip-card-front">
         <h1><?php echo $row["0"]?></h1>
     </div>
-    <div class="theback">
+    <div class="flip-card-back">
         <h1><?php echo $row["1"]?></h1>
         <script src="../js/app.js"></script>
         <button class="again">Again</button>

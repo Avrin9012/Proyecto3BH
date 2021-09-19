@@ -11,7 +11,7 @@ session_start()
     <meta name="description" content="" />
     <meta name="author" content="" />
     <link href="../css/styles.css" rel="stylesheet" />
-    <title>Curso Basico 2</title>
+    <title>Curso Basico 3</title>
     <!-- Favicon-->
     <link rel="shortcut icon" href="assets/img/favicon.ico">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -37,7 +37,7 @@ session_start()
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../index.php">Inicio</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="cb1.php">Nivel I</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="cb3.php">Nivel III</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="cb2.php">Nivel II</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../index.php#contact">Soporte</a></li>
                 </ul>
             </div>
@@ -49,14 +49,14 @@ session_start()
             <!-- Masthead Avatar Image-->
             <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
             <div class="pruebavideos">
-            <h1>Bienvenidos al Nivel II de aprendiendo inglés.</h1>
-            <p>intermediate level to review grammatical aspects such as the conjugation of the verb be.</p>
+            <h1>Bienvenidos al Nivel III de aprendiendo inglés.</h1>
+            <p>advanced level upon completion you will be able to create basic sentences as a minimum.</p>
             <hr>
             <h1>Videos<h1>
-            <iframe width="720" height="480" src="https://www.youtube.com/embed/kpEISfKpShM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="720" height="480" src="https://www.youtube.com/embed/jEmGXm_jhyI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <hr>
             <br><br>
-            <a class="botonprueba" href="https://forms.gle/5YzdvZcZ6LpcCnq89">Iniciar Prueba</a>
+            <a class="botonprueba" href="https://forms.gle/sUc8RHX8ZAyC4nuw6">Iniciar Prueba</a>
             </div>
     </body>
 
