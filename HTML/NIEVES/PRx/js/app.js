@@ -1,24 +1,23 @@
-  
-const term = document.querySelector('.term');
-const definition = document.querySelector('.definition')
-const againButton = document.querySelector('.again');
-const goodButton = document.querySelector('.good');
-const easyButton = document.querySelector('.easy');
+  const againButton = document.querySelector('.again');
+  const goodButton = document.querySelector('.good');
+  const easyButton = document.querySelector('.easy');
+  const easyButton = document.querySelector('.points');
 
-data = Object.entries(words)
+  againButton.addEventListener('click', function() {
+      var points = againButton
+      points = points + 20
+      againButton.textContent = $(points)
+  });
 
-function getRandomWord() {
+  goodButton.addEventListener('click', function() {
+      var points = againButton
+      points = points - 20
+      goodButton.textContent = $(points)
 
-}
+  });
 
-againButton.addEventListener('click', function() {
-    getRandomWord();
-});
-
-goodButton.addEventListener('click', function() {
-    getRandomWord();
-});
-
-easyButton.addEventListener('click', function() {
-    getRandomWord();
-});
+  easyButton.addEventListener('click', function() {
+      var points = againButton
+      points = points - 50
+      easyButton.textContent = $(points)
+  });

@@ -61,7 +61,9 @@ $resultado = $mysqli->query("SELECT palabra, traduccion FROM palabra where idpal
 
 $row = mysqli_fetch_array($resultado);
 ?>
-
+<div class="counter">
+    <p class="points">0</p>
+</div>
 <div class="flip-card">
 <div class="flip-card-inner">
     <div class="flip-card-front">
@@ -76,10 +78,21 @@ $row = mysqli_fetch_array($resultado);
     </div>
 </div>
 
+<br>
+<br>
+<br>
+
 <?php else: ?>
     <h1>Prohibido<h2>
     <p>Deberias estar logeado</p>
+    <a href='https://www.freepik.com'><img id="imgfree" src="../assets/img/forbidden.png" width="15%"></a>
 <?php endif; ?>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </html>
             

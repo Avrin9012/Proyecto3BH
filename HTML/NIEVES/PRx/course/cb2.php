@@ -50,13 +50,14 @@ session_start()
             <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
             <div class="pruebavideos">
             <h1>Bienvenidos al Nivel II de aprendiendo inglés.</h1>
-            <p>intermediate level to review grammatical aspects such as the conjugation of the verb be.</p>
+            <p>Intermediate level to review grammatical aspects such as the conjugation of the verb "to be".</p>
             <hr>
             <h1>Videos<h1>
-            <iframe width="720" height="480" src="https://www.youtube.com/embed/kpEISfKpShM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="720" height="480" src="https://www.youtube.com/embed/AP5UD8c3T_s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <a style="color:#2980B9;">From 00:00 to 08:45</a>
             <hr>
             <br><br>
-            <a class="botonprueba" href="https://forms.gle/5YzdvZcZ6LpcCnq89">Iniciar Prueba</a>
+            <a style="color:#2980B9;" class="botonprueba" href="https://forms.gle/5YzdvZcZ6LpcCnq89">Iniciar Prueba</a>
             </div>
     </body>
 

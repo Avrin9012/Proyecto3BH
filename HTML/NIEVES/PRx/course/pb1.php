@@ -48,14 +48,5 @@ session_start()
             <img class="masthead-avatar mb-5" src="assets/img/logo.png" alt="..." />
             <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
-<h1>Videos<h1>
-<iframe width="731" height="411" src="https://www.youtube.com/embed/-FVgwyVqhCA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="1019" height="573" src="https://www.youtube.com/embed/ygXaRht8Euo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="1019" height="573" src="https://www.youtube.com/embed/bANo-ONfcJo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<h2>Repartido<h2>
-<a style="color:#2980B9;" href="assets/others/basic.pdf">Entrar</a>
-<h2>Iniciar Prueba?<h2>
-<a style="color:#2980B9;" href="/pb.php">Click aquí para entrar</a>
-<style>
-</style>
+
 </html>

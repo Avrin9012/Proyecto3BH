@@ -46,22 +46,6 @@ session_start();
         <div class="container d-flex align-items-center flex-column">
             <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
-<?php if (isset($_SESSION['email'])): ?>
-    <div class="maincontainer">
-    <div class="thecard">
-    <div class="thefront"><h1>Term</h1><p>Definition</p></div>
-    <div class="theback"><h1>Term</h1><p>Definition</p>
-    <div class="button">
-    <button class="again">Again</button>
-    <button class="good">Good</button>
-    <button class="easy">Easy</button>
-    </div>
-    <script src="js/app.js"></script>
-    </div>
-<?php else: ?>
-    <h1>Prohibido<h2>
-    <p>Deberias estar logeado</p>
-<?php endif; ?>
 
 </html>
             
