@@ -1,0 +1,29 @@
+#!/bin/ash
+cont=0
+while [ $cont -eq 0 ] do
+echo "/////////////////////////////////////////////"
+echo "/elige una opcion para gestionar el sistema /"
+echo "/1)Ver procesos                             /"
+echo "/2)Ver uso de la memoria                    /"
+echo "/3)Matar procesos                           /"
+echo "/4)Ver espacio en disco                     /"
+echo "/////////////////////////////////////////////"
+read respuesta
+case $respuesta in
+1)
+
+;;
+2)
+
+;;
+3)
+
+;;
+4)
+
+;;
+*)
+echo "el numero indicado no es correcto"
+;;
+esac
+done

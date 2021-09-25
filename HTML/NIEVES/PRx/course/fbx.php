@@ -53,88 +53,36 @@ session_start();
     else{
     }
 
-function php_flashcards(){
-$num = rand(1,100);
+    $num = rand(1,100);
 $resultado = $mysqli->query("SELECT palabra, traduccion FROM palabra where idpalabra = '$num' " );
- if (!$resultado) {
-    echo "Falló la creación de la tabla: (" . $mysqli->errno . ") " . $mysqli->error;
+    if (!$resultado) {
+        echo "Falló la creación de la tabla: (" . $mysqli->errno . ") " . $mysqli->error;
 }
 
 $row = mysqli_fetch_array($resultado);
-
-echo '<div class="counter">
-      <p class="points">0</p>
-      </div>
-      <div class="flip-card">
-      <div class="flip-card-inner">
-      <div class="flip-card-front">
+?>
+<div class="counter">
+    <p class="points">0</p>
+</div>
+<div class="flip-card">
+<div class="flip-card-inner">
+    <div class="flip-card-front">
         <h1><?php echo $row["0"]?></h1>
-      </div>
-      <div class="flip-card-back">
+    </div>
+    <div class="flip-card-back">
         <h1><?php echo $row["1"]?></h1>
         <script src="../js/app.js"></script>
-        <button class="again">Again</button>
-        <button class="good">Good</button>
-        <button class="easy">Easy</button>
     </div>
-</div>';
-}
-?>
-<script type="text/javascript">
-function FSJS(){
-  const againButton = document.querySelector('.again');
-  const goodButton = document.querySelector('.good');
-  const easyButton = document.querySelector('.easy');
-  const easyButton = document.querySelector('.points');
-
-  function againButton(){
-    var points = againButton
-    points = points + 20
-    againButton.textContent = $(points)
-  }
-
-  function goodButton(){
-    var points = againButton
-    points = points - 20
-    goodButton.textContent = $(points)
-
-  }
-
-  function easyButton(){
-    var points = againButton
-    points = points - 50
-    easyButton.textContent = $(points)
-
-  }
-
-  againButton.addEventListener('click', function() {
-    function againButton()
-    <?php php_flashcards; ?>
-
-
-  });
-
-  goodButton.addEventListener('click', function() {
-    function goodButton()
-    <?php php_flashcards; ?>
-
-
-  });
-
-  easyButton.addEventListener('click', function() {
-    function easyButton()
-    <?php php_flashcards; ?>
-    
-
-  });
-}
-
-</script>
-<div>
-<p class="points">0</p>
-<button type="button" class="EmpezarFlashcards" onclick="FSJS()">Empezar Flashcards</button>
-<i class="fas fa-play-circle"></i>
 </div>
+<div class="buttonsFS">
+<button class="again">Again</button>
+<button class="good">Good</button>
+<button class="easy">Easy</button>
+</div>
+<br>
+<br>
+<br>
+
 <?php else: ?>
     <h1>Prohibido<h2>
     <p>Deberias estar logeado</p>

@@ -57,15 +57,6 @@ session_start();
             </div>
             <!-- Masthead Subheading-->
             <a href='https://www.freepik.es/vectores/fondo'><img id="imgfree" src="assets\img\english.jpg" width="15%"></a><br>
-            <style type="text/css">
-                p {
-                    font-size: 2em;
-                }
-                
-                #imgfree {
-                    border-radius: 50%;
-                }
-            </style>
             <p>Todo el inglés en un solo lugar</p>
         </div>
     </header>

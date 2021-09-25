@@ -21,56 +21,14 @@ session_start();
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-    <?php
-if (isset($_SESSION['email'])) {
-    $mysqli = new mysqli("localhost", "root", "", "proyecto");
-    if ($mysqli->connect_errno) {
-    echo 'no';
-    }else{
-    echo 'si esta conectado';
-    }
-	echo '<ul class="navbar-nav mr-auto"> <li class="nav-item active">
-	<a class="nav-link bold" href="create.php"><span>Create</span></a>
-	</li>
-	</ul>';     
-	echo "<li class='nav-item dropdown'><div>
-	<a class='nav-link dropdown-toggle' href='#' id='dropdown01' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>".	          
-	$_SESSION['email']."</a>;
-	<div class='dropdown-menu' aria-labelledby='dropdown01'>
-	<a class='dropdown-item' href='user.php?user_ref=$_SESSION[id]'>Mis flashcards</a>
-	<a class='dropdown-item' href='opciones.php?my_settings=$_SESSION[id]		 
-	'>opciones</a>
-	<a class='dropdown-item' href='close.php'>Cerrar sesion</a>
-	</div>
-	</li>
-    ";
-    $dir = 'users_img/'.$_SESSION['my_img'];
-    echo '<img src="'.$dir.'">';       
-}else if (!isset($_SESSION['email'])) {
-	echo ' <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-	<ul class="navbar-nav mr-auto">
-	<li class="nav-item active">
-	<a class="nav-link bold" href="login.php">Signin <span class="sr-only">(current)</span></a>
-	</li>
-	<li class="nav-item active">
-	<a class="nav-link bold" href="register.php"><span class="text-">Register</span></a>
-	</li>
-	<li class="nav-item active">
-	<a class="nav-link bold" href="create.php"><span>Create</span></a>
-	</li>
-	</div>
-	';
-		        }
-        ?>
-    </nav>
-</div>
+
 </head>
 
 <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.php"><img id="header1" src="assets/img/logoingles.png" ></a>
         <div class="container">
+            <a class="navbar-brand" href="#page-top"><img id="header1" src="assets/img/logoingles.png" ></a>
             <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -83,6 +41,45 @@ if (isset($_SESSION['email'])) {
                 </ul>
             </div>
         </div>
+    <?php
+if (isset($_SESSION['email'])) {
+    $mysqli = new mysqli("localhost", "root", "", "proyecto");
+    if ($mysqli->connect_errno) {
+    echo 'no';
+    }else{
+    }
+    $dir = 'users_img/'.$_SESSION['my_img'];
+    echo '<ul class="navbar-nav mr-auto"> <li class="nav-item active">
+    <a class="nav-link bold" href="create.php"><span>Create</span></a>
+    </li>
+    </ul>';     
+    echo "<div id='userlogin'><li class='nav-item dropdown'><div>
+    <a class='nav-link dropdown-toggle' href='#' id='dropdown01' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>".             
+    '<img id="imgfree" src="'.$dir.'">' . $_SESSION['email']."</a>
+    <div class='dropdown-menu' aria-labelledby='dropdown01'>
+    <a class='dropdown-item' href='user.php?user_ref=$_SESSION[id]'>Mis flashcards</a>
+    <a class='dropdown-item' href='opciones.php?my_settings=$_SESSION[id]        
+    '>opciones</a>
+    <a class='dropdown-item' href='close.php'>Cerrar sesion</a>
+    </div>
+    </li>
+    </div>";
+}else if (!isset($_SESSION['email'])) {
+    echo ' <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+    <a class="nav-link bold" href="login.php">Signin <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item active">
+    <a class="nav-link bold" href="register.php"><span class="text-">Register</span></a>
+    </li>
+    <li class="nav-item active">
+    <a class="nav-link bold" href="create.php"><span>Create</span></a>
+    </li>
+    </div>
+    ';
+        }
+    ?>
     </nav>
     <!-- Masthead-->
     <header class="masthead bg-primary text-white text-center">
