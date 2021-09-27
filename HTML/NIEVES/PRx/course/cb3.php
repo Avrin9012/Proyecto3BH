@@ -13,7 +13,7 @@ session_start()
     <link href="../css/styles.css" rel="stylesheet" />
     <title>Curso Basico 3</title>
     <!-- Favicon-->
-    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
@@ -46,7 +46,7 @@ session_start()
     <!-- Masthead-->
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
-            <!-- Masthead Avatar Image-->
+            <!-- Video Div-->
             <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
             <div class="pruebavideos">
             <h1>Bienvenidos al Nivel III de aprendiendo inglés.</h1>
@@ -59,7 +59,4 @@ session_start()
             <a style="color:#2980B9;" class="botonprueba" href="https://forms.gle/sUc8RHX8ZAyC4nuw6">Iniciar Prueba</a>
             </div>
     </body>
-
-<style>
-</style>
 </html>

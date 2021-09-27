@@ -46,6 +46,7 @@ session_start();
                 <img class="masthead-avatar mb-5" src="assets/img/logo.png" alt="..." />
                 <h1>POLÍTICA DE PRIVACIDAD</h1><br><br>
 
+<!-- Privacy politics-->
 <p>El presente Política de Privacidad establece los términos en que Bit By Bit usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de acuerdo con dichos cambios.</p><br>
 
 <h2>Información que es recogida</h2><br><br>
@@ -75,6 +76,5 @@ session_start();
 <p>Esta compañía no venderá, cederá ni distribuirá la información personal que es recopilada sin su consentimiento, salvo que sea requerido por un juez con un orden judicial.</p><br>
 
 <p>Bit By Bit Se reserva el derecho de cambiar los términos de la presente Política de Privacidad en cualquier momento.</p>
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>

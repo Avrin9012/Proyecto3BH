@@ -13,7 +13,7 @@ session_start()
     <title>Prueba 1</title>
     <!-- Favicon-->
     <link rel="shortcut icon" href="assets/img/favicon.ico">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -45,8 +45,7 @@ session_start()
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
             <!-- Masthead Avatar Image-->
-            <img class="masthead-avatar mb-5" src="assets/img/logo.png" alt="..." />
-            <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfbxsQVXnBvD9dcO1S5jnjecGZ1yfZpcVDIYIjnZwbT3ro4ZA/viewform?embedded=true" width="640" height="4903" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
 </body>
 
 </html>

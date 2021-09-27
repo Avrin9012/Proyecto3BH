@@ -48,7 +48,7 @@ session_start();
             <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 
-
+<!-- Form-->
 <div class="conatiner">
 	 	<form enctype="multipart/form-data" action="" method="POST">
 		  <span class="form-group" style="white-space:nowrap" >

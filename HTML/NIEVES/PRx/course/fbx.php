@@ -13,7 +13,7 @@ session_start();
     <title>Flashcards Basico</title>
     <!-- Favicon-->
     <link rel="shortcut icon" href="assets/img/favicon.ico">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -40,11 +40,13 @@ session_start();
         </div>
     </nav>
     <!-- Masthead-->
+    <!-- ·Arreglar clases de МИЭРДА para fit la pagina-->
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
             <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-</body>
+
 <?php if (isset($_SESSION['email'])): ?>
+    <!-- If logged-->
     <?php
     $mysqli = new mysqli("localhost", "root", "", "proyecto");
     if ($mysqli->connect_errno) {
@@ -53,7 +55,7 @@ session_start();
     else{
     }
 
-    $num = rand(1,100);
+$num = rand(1,100);
 $resultado = $mysqli->query("SELECT palabra, traduccion FROM palabra where idpalabra = '$num' " );
     if (!$resultado) {
         echo "Falló la creación de la tabla: (" . $mysqli->errno . ") " . $mysqli->error;
@@ -61,6 +63,7 @@ $resultado = $mysqli->query("SELECT palabra, traduccion FROM palabra where idpal
 
 $row = mysqli_fetch_array($resultado);
 ?>
+<!-- Flashcard html-->
 <div class="counter">
     <p class="points">0</p>
 </div>
@@ -79,21 +82,13 @@ $row = mysqli_fetch_array($resultado);
 <button class="good">Good</button>
 <button class="easy">Easy</button>
 </div>
-<br>
-<br>
-<br>
 
 <?php else: ?>
+    <!-- If not logged-->
     <h1>Prohibido<h2>
     <p>Deberias estar logeado</p>
     <a href='https://www.freepik.com'><img id="imgfree" src="../assets/img/forbidden.png" width="15%"></a>
 <?php endif; ?>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+</body>
 </html>
             

@@ -13,7 +13,7 @@ session_start()
     <link href="../css/styles.css" rel="stylesheet" />
     <title>Curso Basico 2</title>
     <!-- Favicon-->
-    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
@@ -46,7 +46,7 @@ session_start()
     <!-- Masthead-->
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
-            <!-- Masthead Avatar Image-->
+            <!-- Videos Div-->
             <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
             <div class="pruebavideos">
             <h1>Bienvenidos al Nivel II de aprendiendo inglés.</h1>
@@ -54,13 +54,11 @@ session_start()
             <hr>
             <h1>Videos<h1>
             <iframe width="720" height="480" src="https://www.youtube.com/embed/AP5UD8c3T_s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <a style="color:#2980B9;">From 00:00 to 08:45</a>
+            <br>
+            <a style="color:#2980B9;">From 00:00 to 16:30</a>
             <hr>
             <br><br>
             <a style="color:#2980B9;" class="botonprueba" href="https://forms.gle/5YzdvZcZ6LpcCnq89">Iniciar Prueba</a>
             </div>
     </body>
-
-<style>
-</style>
 </html>

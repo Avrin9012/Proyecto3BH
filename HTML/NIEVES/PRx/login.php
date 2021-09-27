@@ -103,7 +103,5 @@ if (isset($_SESSION['email'])) {
                     <p class="IS">When you register, you agree with our terms and conditions.</p>
                 </div>
             </form>
-            <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
-
 </html>
