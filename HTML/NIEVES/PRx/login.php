@@ -20,7 +20,7 @@ session_start();
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/stylesfitbg.css" rel="stylesheet" />
 
 </head>
 
@@ -28,16 +28,14 @@ session_start();
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="#page-top"><img id="header1" src="assets/img/logoingles.png" ></a>
+            <a class="navbar-brand" href="index.php"><img id="header1" src="assets/img/logoingles.png" ></a>
             <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Inicio</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Login</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="register.php">Registrarse</a></li>
+                    
                 </ul>
             </div>
         </div>
@@ -48,35 +46,29 @@ if (isset($_SESSION['email'])) {
     echo 'no';
     }else{
     }
-    $dir = 'users_img/'.$_SESSION['my_img'];
-    echo '<ul class="navbar-nav mr-auto"> <li class="nav-item active">
-    <a class="nav-link bold" href="create.php"><span>Create</span></a>
-    </li>
-    </ul>';     
-    echo "<div id='userlogin'><li class='nav-item dropdown'><div>
+    $dir = 'users_img/'.$_SESSION['my_img'];    
+    echo "<div><li class='nav-item dropdown'><div>
     <a class='nav-link dropdown-toggle' href='#' id='dropdown01' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>".             
-    '<img id="imgfree" src="'.$dir.'">' . $_SESSION['email']."</a>
+    '<img id="imgfree" src="'.$dir.'">' . $_SESSION['user']."</a>
     <div class='dropdown-menu' aria-labelledby='dropdown01'>
-    <a class='dropdown-item' href='user.php?user_ref=$_SESSION[id]'>Mis flashcards</a>
-    <a class='dropdown-item' href='opciones.php?my_settings=$_SESSION[id]        
-    '>opciones</a>
-    <a class='dropdown-item' href='close.php'>Cerrar sesion</a>
-    </div>
-    </li>
-    </div>";
+    </div> </li> </div>
+    <nav> <ul class='navbar-nav ms-auto'>
+    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='create.php'>Crear flashcards</a></li>
+    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='close.php'>Cerrar sesion</a></li>
+    <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='index.php'>Inicio</a></li>
+    </ul>
+    </nav>
+    ";
+    ?>
+
+    <?php
 }else if (!isset($_SESSION['email'])) {
-    echo ' <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto">
-    <li class="nav-item active">
-    <a class="nav-link bold" href="login.php">Signin <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="nav-item active">
-    <a class="nav-link bold" href="register.php"><span class="text-">Register</span></a>
-    </li>
-    <li class="nav-item active">
-    <a class="nav-link bold" href="create.php"><span>Create</span></a>
-    </li>
-    </div>
+    echo '<nav> <ul class="navbar-nav ms-auto">
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Login</a></li>
+    <li class="RegisterButton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="register.php">Registrarse</a></li>
+    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Inicio</a></li>
+    </ul>
+    </nav>
     ';
         }
     ?>
@@ -100,7 +92,6 @@ if (isset($_SESSION['email'])) {
                 </div>
                 <div>
                     <input type="submit" value="Login" class="btn btn-primary">
-                    <p class="IS">When you register, you agree with our terms and conditions.</p>
                 </div>
             </form>
 </body>

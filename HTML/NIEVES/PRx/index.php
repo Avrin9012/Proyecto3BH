@@ -34,15 +34,43 @@ session_start();
                 </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#courses">Cursos</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Sobre Nosotros</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Soporte</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Login</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="register.php">Registrarse</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="close.php">Cerrar sesion</a></li>
+                    
                 </ul>
             </div>
         </div>
+    <?php
+if (isset($_SESSION['email'])) {
+    $mysqli = new mysqli("localhost", "root", "", "proyecto");
+    if ($mysqli->connect_errno) {
+    echo 'no';
+    }else{
+    }
+    $dir = 'users_img/'.$_SESSION['my_img'];    
+    echo "<div><li class='nav-item dropdown'><div>
+    <a class='nav-link dropdown-toggle' href='#' id='dropdown01' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>".             
+    '<img id="imgfree" src="'.$dir.'">' . $_SESSION['user']."</a>
+    <div class='dropdown-menu' aria-labelledby='dropdown01'>
+    </div> </li> </div>
+    <nav> <ul class='navbar-nav ms-auto'>
+    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='create.php'>Crear flashcards</a></li>
+    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='close.php'>Cerrar sesion</a></li>
+    <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='index.php'>Inicio</a></li>
+    </ul>
+    </nav>
+    ";
+    ?>
+
+    <?php
+}else if (!isset($_SESSION['email'])) {
+    echo '<nav> <ul class="navbar-nav ms-auto">
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Login</a></li>
+    <li class="RegisterButton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="register.php">Registrarse</a></li>
+    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Inicio</a></li>
+    </ul>
+    </nav>
+    ';
+        }
+    ?>
     </nav>
     <!-- Masthead-->
     <header class="masthead bg-primary text-white text-center">

@@ -19,7 +19,7 @@ session_start();
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/stylesfitbg.css" rel="stylesheet" />
 </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -51,14 +51,14 @@ session_start();
                         <h1 class="login">Registro</h1>
                             <div>
                                 <i class="fal fa-dove" style="color: #28c997;"></i>
-                                <p><input name="usuario" type="text" required placeholder="usuario"> </p>
-                                <p><input name="nombre" type="text" required placeholder="nombre"> </p>
-                                <p><input name='contraseña' type="password" required placeholder="contraseña" /> </p>
-                                <p><input name="email" type="email" required placeholder="mail"> </p>
-                                <a href="login.html"> <input class="button" type="submit" name="enviar" value="Enviar" /></a>
-                                <input class="button" type="reset" name="restablecer" value="restablecer" /></p>
+                                <p><input class="form-control" name="usuario" type="text" required placeholder="usuario"> </p>
+                                <p><input class="form-control" name="nombre" type="text" required placeholder="nombre"> </p>
+                                <p><input class="form-control" name='contraseña' type="password" required placeholder="contraseña" /> </p>
+                                <p><input class="form-control" name="email" type="email" required placeholder="mail"> </p>
+                                <a href="login.html"> <input class="btn btn-primary" type="submit" name="enviar" value="Enviar" /></a>
+                                <input class="btn btn-primary" type="reset" name="restablecer" value="restablecer" /></p>
                             </div>
-            <p class="IS">Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+            <p class="IS">Al registrarte, aceptas nuestras <a href="politicas.php"> Condiciones de uso y Política de privacidad.</a></p>
         </div>
     </form>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>

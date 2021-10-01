@@ -58,6 +58,10 @@ session_start()
             <a style="color:#2980B9;">From 00:00 to 16:30</a>
             <hr>
             <br><br>
+            <a style="color:#2980B9;" class="botonprueba" href="https://forms.gle/5YzdvZcZ6LpcCnq89">Consultar repartido</a>
+            <br>
+            <p>From page 8 to page 15</p>
+            <br>
             <a style="color:#2980B9;" class="botonprueba" href="https://forms.gle/5YzdvZcZ6LpcCnq89">Iniciar Prueba</a>
             </div>
     </body>

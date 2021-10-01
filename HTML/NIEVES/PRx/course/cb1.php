@@ -59,7 +59,7 @@ session_start()
             <br><br>
             <a style="color:#2980B9;" class="botonprueba" href="../assets/others/EB1.pdf">Recurso escrito</a>
             <br>
-            <a style="color:#2980B9;" class="botonprueba" href="pb1.php">Iniciar Prueba</a>
+            <a style="color:#2980B9;" class="botonprueba" href="https://forms.gle/jAFnPU5a9JUD946X9">Iniciar Prueba</a>
             </div>
     </body>
 </html>
