@@ -75,23 +75,5 @@ if (isset($_SESSION['email'])) {
     <!-- Masthead-->
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
-            <!-- Masthead Avatar Image-->
-            <img class="masthead-avatar mb-5" src="assets/img/header.png" alt="..." />
-            <form action="/PRx/php/login.php" method="post" class="carga">
-                <h1 class="login">Login</h1>
-                <div class="contenedor">
-                    <div class="input-contenedor">
-                        <i class="fas fa-envelope icon"></i>
-                        <input name="emailogin" type="email" placeholder="Email" required="" class="form-control">
-                    </div>
-                </div>
-                <div class="input-contenedor">
-                    <i class="fas fa-key icon"></i>
-                    <input name="clavelogin" type="password" placeholder="Password" required="" class="form-control">
-                </div>
-                <div>
-                    <input type="submit" value="Login" class="btn btn-primary">
-                </div>
-            </form>
 </body>
 </html>

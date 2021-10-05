@@ -1,34 +1,31 @@
 <?php
-session_start()
+session_start();
 ?>
 
 <!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <link href="../css/stylesfitbg.css" rel="stylesheet" />
-    <title>Curso Basico 1</title>
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="../assets/img/favicon.ico">
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-
-</head>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Cursos de ingles</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
 
 <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="#page-top"><img id="header1" src="../assets/img/logoingles.png" ></a>
+            <a class="navbar-brand" href="#page-top"><img id="header1" src="assets/img/logoingles.png" ></a>
             <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -43,7 +40,7 @@ if (isset($_SESSION['email'])) {
     echo 'no';
     }else{
     }
-    $dir = '../users_img/'.$_SESSION['my_img'];
+    $dir = 'users_img/'.$_SESSION['my_img'];
     echo '<ul class="navbar-nav mr-auto"> <li class="nav-item active">
     </li>
     </ul>';     
@@ -72,35 +69,82 @@ if (isset($_SESSION['email'])) {
         }
     ?>
     </nav>
-
-    <!-- If the user has membership-->
-    <?php if (isset($_SESSION['membresia'])) { ?>
-
+        <!-- Masthead-->
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
-                <!-- Videos Div-->
-                <div class="pruebavideos">
-                <h1>Bienvenidos al Nivel I de aprendiendo inglés.</h1>
-                <p>Basic level useful for learn concepts or develop a consistent base.</p>
-                <br>
-                <p>The student has recommended videos and a test per level to demonstrate their learned skills.</p>
-                <hr>
-                <h1>Videos<h1>
-                <iframe width="720" height="480" src="https://www.youtube.com/embed/sTz28jZqxx0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <hr>
-                <br><br>
-                <a style="color:#2980B9;" class="botonprueba" href="../assets/others/EB1.pdf">Recurso escrito</a>
-                <br>
-                <a style="color:#2980B9;" class="botonprueba" href="https://forms.gle/jAFnPU5a9JUD946X9">Iniciar Prueba</a>
-                </div>
-<?php }else { ?>
-        <!-- If not-->
-        <header class="masthead bg-primary text-white text-center">
-        <div class="container d-flex align-items-center flex-column">
-        <h1>Prohibido<h2>
-        <p>Deberias tener la membresia activada</p>
-        <a href='https://www.freepik.com'><img id="imgfree" src="../assets/img/forbidden.png" width="15%"></a>
-        </div>
-    <?php } ?>
-    </body>
+                <!-- Masthead Avatar Image-->
+<center>
+<table border=1 align="center">
+    <tr>
+        <td>Membresia Basica</td>
+        <td>Precios</td>
+    </tr>
+    <tr>
+        <td>Prueba gratis (1 Mes)</td>
+        <td>Gratis</td>
+    </tr>
+    <tr>
+        <td>3 Meses</td>
+        <td>3.99$xM</td>
+    </tr>
+    <tr>
+        <td>6 Meses</td>
+        <td>4.99$xM</td>
+    </tr>
+     <tr>
+        <td>1 Año</td>
+        <td>7.99$xM</td>
+    </tr>
+</table>
+</center>
+<br>
+<hr>
+<table border=1 align="center">
+    <tr>
+        <td>Membresia Media</td>
+        <td>Precios</td>
+    </tr>
+    <tr>
+        <td>Prueba gratis (1 Mes)</td>
+        <td>Free</td>
+    </tr>
+    <tr>
+        <td>3 Meses</td>
+        <td>5.99$xM</td>
+    </tr>
+    <tr>
+        <td>6 Meses</td>
+        <td>6.99$xM</td>
+    </tr>
+    <tr>
+        <td>1 Año</td>
+        <td>9.99$xM</td>
+    </tr>
+</table>
+<br>
+<hr>
+<table border=1 align="center">
+    <tr>
+        <td>Membresia Avanzada</td>
+        <td>Precios</td>
+    </tr>
+    <tr>
+        <td>Prueba gratuita (1 Mes)</td>
+        <td>Free</td>
+    </tr>
+    <tr>
+        <td>3 Meses</td>
+        <td>6.99$xM</td>
+    </tr>
+    <tr>
+        <td>6 Meses</td>
+        <td>7.99$xM</td>
+    </tr>
+    <tr>
+        <td>1 Año</td>
+        <td>10.99$xM</td>
+    </tr>
+</table>
+<hr><br>
+</body>
 </html>

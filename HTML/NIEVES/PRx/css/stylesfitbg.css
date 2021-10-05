@@ -266,7 +266,7 @@ sup {
 }
 
 a {
-    color:#ffffff;
+    color: #ffffff;
     text-decoration: underline;
 }
 
@@ -3789,7 +3789,6 @@ fieldset:disabled .btn {
 .dropdown,
 .dropstart {
     position: relative;
-    padding-left: 40%;
 }
 
 .dropdown-toggle {
@@ -11256,7 +11255,12 @@ html {
 
 .masthead {
     padding-top: calc(6rem + 74px);
-    padding-bottom: 45%;
+    padding-bottom: 6rem;
+}
+
+.masthead2 {
+    padding-top: calc(6rem + 74px);
+    padding-bottom: 100%;
 }
 
 .masthead .masthead-heading {
@@ -11275,7 +11279,7 @@ html {
 @media (min-width: 992px) {
     .masthead {
         padding-top: calc(6rem + 104px);
-        padding-bottom: 24.79%;
+        padding-bottom: 50%;
     }
     .masthead .masthead-heading {
         font-size: 4rem;
@@ -11569,10 +11573,24 @@ label {
 
 #imgfree {
     border-radius: 20%;
-    width: 30%;
+    width: 15%;
+}
 
+#imgfreelogin {
+    float: left;
+    border-radius: 20%;
+    width: 15%;
+}
+
+.txtlogin {
+    color: #fff;
 }
 
 #userlogin {
     position: relative;
+}
+
+.RefreshButton {
+    margin-top: 65.5%;
+
 }

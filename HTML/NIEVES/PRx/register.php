@@ -55,6 +55,10 @@ session_start();
                                 <p><input class="form-control" name="nombre" type="text" required placeholder="nombre"> </p>
                                 <p><input class="form-control" name='contraseña' type="password" required placeholder="contraseña" /> </p>
                                 <p><input class="form-control" name="email" type="email" required placeholder="mail"> </p>
+                                <div class="form-group">
+                                <input type="hidden" name = "hidden" class="form-control" id="exampleInputPassword1" size=100000>
+                                <input type="file" class="form-control" id="exampleInputPassword1" name="img">
+                                </div>
                                 <a href="login.html"> <input class="btn btn-primary" type="submit" name="enviar" value="Enviar" /></a>
                                 <input class="btn btn-primary" type="reset" name="restablecer" value="restablecer" /></p>
                             </div>

@@ -25,21 +25,52 @@ session_start();
 
 <body id="page-top">
     <!-- Navigation-->
+
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-    <a class="navbar-brand" href="#page-top"><img id="header1" src="assets/img/logoingles.png" ></a>
         <div class="container">
+            <a class="navbar-brand" href="#page-top"><img id="header1" src="assets/img/logoingles.png" ></a>
             <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Inicio</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Login</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="register.php">Registrarse</a></li>
-                </ul>
             </div>
         </div>
+    <?php
+if (isset($_SESSION['email'])) {
+    $mysqli = new mysqli("localhost", "root", "", "proyecto");
+    if ($mysqli->connect_errno) {
+    echo 'no';
+    }else{
+    }
+    $dir = 'users_img/'.$_SESSION['my_img'];
+    echo '<ul class="navbar-nav mr-auto"> <li class="nav-item active">
+    </li>
+    </ul>';     
+    echo "<ul class='navbar-nav ms-auto'>
+    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='create.php'>Crear flashcards</a></li>
+    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='close.php'>Cerrar sesion</a></li>
+    <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='index.php'>Inicio</a></li>
+    </ul>
+    <div id='userlogin'><li class='nav-item dropdown'><div>
+    <a class='nav-link txtlogin' href='user.php' aria-haspopup='true' aria-expanded='false'>".             
+    '<img id="imgfreelogin" src="'.$dir.'">' . $_SESSION['email']."</a>
+    <div class='dropdown-menu' aria-labelledby='dropdown01'>
+    <a class='dropdown-item' href='user.php?user_ref=$_SESSION[id]'>Mis flashcards</a>
+    <a class='dropdown-item' href='opciones.php?my_settings=$_SESSION[id]        
+    '>opciones</a>
+    <a class='dropdown-item' href='close.php'>Cerrar sesion</a>
+    </div> </li> </div>";
+}else if (!isset($_SESSION['email'])) {
+    echo '
+    <ul class="navbar-nav ms-auto">
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Login</a></li>
+    <li class="RegisterButton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="register.php">Registrarse</a></li>
+    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Inicio</a></li>
+    </ul>
+    ';
+        }
+    ?>
     </nav>
     <!-- Masthead-->
     <header class="masthead bg-primary text-white text-center">
@@ -72,56 +103,37 @@ session_start();
 		    <input type="hidden" name = "hidden" class="form-control" id="exampleInputPassword1" size=100000>
 		    <input type="file" class="form-control" id="exampleInputPassword1" name="img">
 		  </div>
-
 		  <input type="submit" class="btn btn-primary" name="submit">
 		  <br>
 		  
 		</form>
 	 </div>
-
 </html>
 
 <?php 
-  if(isset($_SESSION['email'])) {
-  	
-  	if (isset($_POST['submit'])) {
-
-  		
-  		$mysqli = new mysqli("localhost", "root", "", "proyecto");
+if (isset($_POST['submit'])) {
+  	$mysqli = new mysqli("localhost", "root", "", "proyecto");
  	    if ($mysqli->connect_errno) {
- 		    echo 'no';
+ 	        echo 'no';
  	    }
  	    else{
- 		    echo 'si esta conectado';
+ 	        echo 'si esta conectado';
  	    }
 
- 	    $title = $_POST['title'];
-	    $term = $_POST['term'];
-	    $defination = $_POST['defination'];
-	    $img = $_FILES['img']['name'];
+        $title = $_POST['title'];
+        $term = $_POST['term'];
+        $defination= $_POST['defination'];
+        $img = $_FILES['img']['name'];
 
-	   	$dir = 'sets_img/' . basename($img);
+        $dir = 'user_img/' . basename($img);
 	    
-	   
     if (!$mysqli->query("INSERT INTO sets(title,term,defination,img) VALUES ('$title','$term','$defination','$img')")) {
         echo "Falló la creación de la tabla: (" . $mysqli->errno . ") " . $mysqli->error;
     }else {
         if(move_uploaded_file($_FILES['img']['tmp_name'], $dir)) {
-		    echo "done";
-		} else {
-		    echo "No se pudo mover el archivo ";
-		}}
-       
-} else {
-    echo "Prohibido tienes que estar logeado";
- }
+            echo "done";
+        } else {
+            echo "No se pudo mover el archivo ";
+        }}
 }
 ?>
-
-
-
-
-
-
-		
-

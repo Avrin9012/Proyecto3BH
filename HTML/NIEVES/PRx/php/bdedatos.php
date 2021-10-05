@@ -11,9 +11,12 @@
 	$nombre = $_POST['nombre'];
 	$contraseña = $_POST['contraseña'];
 	$email = $_POST['email'];
+	$img = $_FILES['img']['name'];
+
+	$dir = 'users_img/' . basename($img);
 	
 //consulta para insertar
-	$insertar = "INSERT INTO usuario (usuario, nombre, contraseña, email) VALUES ('$usuario','$nombre','$contraseña','$email')";
+	$insertar = "INSERT INTO usuario (usuario, nombre, contraseña, email, user_img) VALUES ('$usuario','$nombre','$contraseña','$email', '$img')";
 
 	$verificar_usuario = mysqli_query($conexion, "SELECT * FROM usuario WHERE usuario = '$usuario'");
 		if (mysqli_num_rows($verificar_usuario) > 0){
@@ -33,8 +36,15 @@
 					alert("El usuario ya está registrado");
 					window.history.go(-1);
 					</script>';
-		header('location:../index.html');
+		header('location:../index.php');
+		if(move_uploaded_file($_FILES['img']['tmp_name'], $dir)) {
+		    echo "done";
+		} else {
+		    echo "No se pudo mover el archivo ";
+		}
 	}
+}
+
 //Cerrar conexion
 	mysqli_close($conexion);
 ?>

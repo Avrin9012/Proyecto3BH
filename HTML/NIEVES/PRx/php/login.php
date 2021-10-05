@@ -13,9 +13,18 @@ session_start();
  	if($busqueda > 0) {
  		$_SESSION['email'] = $emailogin;
  		$_SESSION['my_img'] = $row[5];
-		$_SESSION['id'] = $row[0];
 		$_SESSION['user'] = $row[1];
 		$_SESSION['id'] = $row[0];
+		if($row[6] == 1) {
+		$_SESSION['membresia'] = $row[6];
+		}
+	    else {
+	    }
+		if($row[7] == 1) {
+		$_SESSION['admin'] = $row[7];
+		}
+	    else {
+	    }
  		header('location:../index.php');
 
  	}

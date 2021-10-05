@@ -11574,7 +11574,16 @@ label {
 #imgfree {
     border-radius: 20%;
     width: 15%;
+}
 
+#imgfreelogin {
+    float: left;
+    border-radius: 20%;
+    width: 15%;
+}
+
+.txtlogin {
+    color: #fff;
 }
 
 #userlogin {

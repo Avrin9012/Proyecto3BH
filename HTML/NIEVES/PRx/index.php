@@ -33,9 +33,6 @@ session_start();
                     <i class="fas fa-bars"></i>
                 </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    
-                </ul>
             </div>
         </div>
     <?php
@@ -45,29 +42,31 @@ if (isset($_SESSION['email'])) {
     echo 'no';
     }else{
     }
-    $dir = 'users_img/'.$_SESSION['my_img'];    
-    echo "<div><li class='nav-item dropdown'><div>
-    <a class='nav-link dropdown-toggle' href='#' id='dropdown01' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>".             
-    '<img id="imgfree" src="'.$dir.'">' . $_SESSION['user']."</a>
-    <div class='dropdown-menu' aria-labelledby='dropdown01'>
-    </div> </li> </div>
-    <nav> <ul class='navbar-nav ms-auto'>
+    $dir = 'users_img/'.$_SESSION['my_img'];
+    echo '<ul class="navbar-nav mr-auto"> <li class="nav-item active">
+    </li>
+    </ul>';     
+    echo "<ul class='navbar-nav ms-auto'>
     <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='create.php'>Crear flashcards</a></li>
     <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='close.php'>Cerrar sesion</a></li>
     <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='index.php'>Inicio</a></li>
     </ul>
-    </nav>
-    ";
-    ?>
-
-    <?php
+    <div id='userlogin'><li class='nav-item dropdown'><div>
+    <a class='nav-link txtlogin' href='user.php' aria-haspopup='true' aria-expanded='false'>".             
+    '<img id="imgfreelogin" src="'.$dir.'">' . $_SESSION['email']."</a>
+    <div class='dropdown-menu' aria-labelledby='dropdown01'>
+    <a class='dropdown-item' href='user.php?user_ref=$_SESSION[id]'>Mis flashcards</a>
+    <a class='dropdown-item' href='opciones.php?my_settings=$_SESSION[id]        
+    '>opciones</a>
+    <a class='dropdown-item' href='close.php'>Cerrar sesion</a>
+    </div> </li> </div>";
 }else if (!isset($_SESSION['email'])) {
-    echo '<nav> <ul class="navbar-nav ms-auto">
+    echo '
+    <ul class="navbar-nav ms-auto">
     <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Login</a></li>
     <li class="RegisterButton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="register.php">Registrarse</a></li>
     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Inicio</a></li>
     </ul>
-    </nav>
     ';
         }
     ?>
@@ -171,49 +170,55 @@ if (isset($_SESSION['email'])) {
             <!-- Contact Section Form-->
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-xl-7">
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- * * SB Forms Contact Form * *-->
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- This form is pre-integrated with SB Forms.-->
-                    <!-- To make this form functional, sign up at-->
-                    <!-- https://startbootstrap.com/solution/contact-forms-->
-                    <!-- to get an API token!-->
-                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <form id="contactForm" action="/php/submit.php" method="post" data-sb-form-api-token="API_TOKEN">
                         <!-- Name input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                            <input name="nameM" class="form-control" id="name" type="text" placeholder="Ingrese su nombre..." data-sb-validations="required" />
                             <label for="name">Nombre completo</label>
                             <div class="invalid-feedback" data-sb-feedback="name:required">Un nombre es requerido.</div>
                         </div>
                         <!-- Email address input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                            <input name="emailM" class="form-control" id="email" type="email" placeholder="nombre@ejemplo.com" data-sb-validations="required,email" />
                             <label for="email">Correo electronico</label>
                             <div class="invalid-feedback" data-sb-feedback="email:required">Un Email es requerido.</div>
                             <div class="invalid-feedback" data-sb-feedback="email:email">El Email no es valido.</div>
                         </div>
                         <!-- Phone number input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                            <input name="phoneM" class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
                             <label for="phone">Numero de telefono</label>
                             <div class="invalid-feedback" data-sb-feedback="phone:required">Un numero de telefono es requerido.</div>
                         </div>
                         <!-- Message input-->
                         <div class="form-floating mb-3">
-                            <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                            <textarea name="messageM" class="form-control" id="message" type="text" placeholder="Ingrese su mensaje..." style="height: 10rem" data-sb-validations="required"></textarea>
                             <label for="message">Mensaje</label>
                             <div class="invalid-feedback" data-sb-feedback="message:required">Un mensaje es requerido.</div>
                         </div>
+
+                        <form class="row justify-content-center" action="php/submit.php" method="post">
+                        <div class="col-lg-8 col-xl-7">
+                        <div>
+                            <i class="fal fa-dove" style="color: #28c997;"></i>
+                            <p><input class="form-floating mb-3" name="nameM" type="text" required placeholder="Ingrese su usario"> </p>
+                            <p><input class="form-floating mb-3" name="emailM" type="text" required placeholder="Usuario@example.com"> </p>
+                            <p><input class="form-floating mb-3" name='phoneM' type="phone" required placeholder="7234871" /> </p>
+                            <p><input class="form-floating mb-3" name="messageM" type="message" required placeholder="Ingrese su mensaje..."> </p>
+                            <div class="form-group">
+                            </div>
+                            <a href="login.html"> <input class="btn btn-primary" type="submit" name="enviar" value="Enviar" /></a>
+                            <input class="btn btn-primary btn-xl disabled" type="reset" name="restablecer" value="restablecer" /></p>
+                        </div>
+                        </div>
+                        </form>
                         <!-- Submit success message-->
                         <!---->
                         <!-- This is what your users will see when the form-->
                         <!-- has successfully submitted-->
                         <div class="d-none" id="submitSuccessMessage">
                             <div class="text-center mb-3">
-                                <div class="fw-bolder">Form submission successful!</div>
-                                To activate this form, sign up at
-                                <br />
-                                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                <div class="fw-bolder">Mensaje enviado!</div>
                             </div>
                         </div>
                         <!-- Submit error message-->
@@ -245,8 +250,8 @@ if (isset($_SESSION['email'])) {
                 <!-- Footer Social Icons-->
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <h4 class="text-uppercase mb-4">Nuestras redes</h4>
-                    <a class="btn btn-outline-light btn-social mx-1" href="!"><i class="fab fa-fw fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/Aprende-Ingles-bitbybit-103111362135653"><i class="fab fa-fw fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/aprendeingles.bitbybit/"><i class="fab fa-fw fa-instagram"></i></a>
                 </div>
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <h4 class="text-uppercase mb-4">Politicas de privacidad</h4>
@@ -281,11 +286,18 @@ if (isset($_SESSION['email'])) {
                                 <img class="img-fluid rounded mb-5" src="assets/img/img2.jpg" alt="..." />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">Este curso tiene las palabras más esenciales para del conocimiento del Inglés. Aprenderás los verbos básicos, preposiciones, sustantivos. Serás capaz de entender textos simples.Este curso tiene consistirá en el aprendizaje
-                                    de las 100 palabras más comunes del idioma Inglés.</p>
-                                <button class="btn btn-primary" role="link" onclick="window.location='course/cb1.php'" data-bs-dismiss="modal">
+                                    de las 100 palabras más comunes del idioma Inglés.</p>                    
+                                <?php if (isset($_SESSION['email'])) { ?>
+                                    <button class="btn btn-primary" role="link" onclick="window.location='pcb1.php'" data-bs-dismiss="modal">
+                                        <i class="fas fa-sign-in-alt"></i>
+                                        Ingresar a curso
+                                    </button>
+                                <?php }else if (!isset($_SESSION['email'])) { ?>
+                                    <button class="btn btn-primary" role="link" onclick="window.location='login.php'" data-bs-dismiss="modal">
                                         <i class="fas fa-sign-in-alt"></i>
                                         Login
                                     </button>
+                               <?php } ?>
                             </div>
                         </div>
                     </div>
@@ -314,10 +326,17 @@ if (isset($_SESSION['email'])) {
                                 <img class="img-fluid rounded mb-5" src="assets/img/img1.jpg" alt="..." />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">Este curso medio tiene un montón de palabras nuevas, aprenderás más sobre verbos, sustantivos y gramatica. Serás capaz de entender textos B1 y B2, e incluso podrás escribir textos simples.</p>
-                                <button class="btn btn-primary" role="link" onclick="window.location='course/cb2.php'" data-bs-dismiss="modal">
+                                <?php if (isset($_SESSION['email'])) { ?>
+                                    <button class="btn btn-primary" role="link" onclick="window.location='pcb2.php'" data-bs-dismiss="modal">
+                                        <i class="fas fa-sign-in-alt"></i>
+                                        Ingresar a curso
+                                    </button>
+                                <?php }else if (!isset($_SESSION['email'])) { ?>
+                                    <button class="btn btn-primary" role="link" onclick="window.location='login.php'" data-bs-dismiss="modal">
                                         <i class="fas fa-sign-in-alt"></i>
                                         Login
                                     </button>
+                               <?php } ?>
                             </div>
                         </div>
                     </div>
@@ -346,10 +365,17 @@ if (isset($_SESSION['email'])) {
                                 <img class="img-fluid rounded mb-5" src="assets/img/img3.jpg" alt="..." />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">Tendrás un conocimiento incluso más amplio sobre el idioma Inglés, serás capaz de escribir y entender textos más complejos, podrás seguir piezas de contenido nativo como películas, series, etc. </p>
-                                <button class="btn btn-primary" role="link" onclick="window.location='course/cb3.php'" data-bs-dismiss="modal">
-                                    <i class="fas fa-sign-in-alt"></i>
+                                <?php if (isset($_SESSION['email'])) { ?>
+                                    <button class="btn btn-primary" role="link" onclick="window.location='course/cb3.php'" data-bs-dismiss="modal">
+                                        <i class="fas fa-sign-in-alt"></i>
+                                        Ingresar a curso
+                                    </button>
+                                <?php }else if (!isset($_SESSION['email'])) { ?>
+                                    <button class="btn btn-primary" role="link" onclick="window.location='login.php'" data-bs-dismiss="modal">
+                                        <i class="fas fa-sign-in-alt"></i>
                                         Login
                                     </button>
+                               <?php } ?>
                             </div>
                         </div>
                     </div>
