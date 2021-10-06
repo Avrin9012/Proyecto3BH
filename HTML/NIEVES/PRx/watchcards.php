@@ -20,7 +20,7 @@ session_start();
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/stylesfitbg.css" rel="stylesheet" />
 </head>
 
 <body id="page-top">
@@ -45,12 +45,11 @@ session_start();
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
             <!-- Masthead Avatar Image-->
-            <img class="masthead-avatar mb-5" src="assets/img/logo.png" alt="..." />
 </body>
 
 <?php
-if($_GET['user_ref']){
-	$set = $_GET['user_ref'];
+if($_SESSION['id']){
+	$set = $_SESSION['id'];
 
 	$sel = "SELECT users.username, users.id, sets.title, sets.defination, sets.term, sets.sets_id, sets.img, sets.id 
      FROM users INNER JOIN sets ON users.id = sets.sets_id and users.id = '$set' 

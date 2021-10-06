@@ -71,6 +71,15 @@ if (isset($_SESSION['email'])) {
     ';
         }
     ?>
+
+<?php if (isset($_SESSION['admin'])) {
+    echo '
+    <ul class="navbar-nav ms-auto">
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../soporte.php">Mensajes Soporte</a></li>
+    </ul>
+    ';
+}
+    ?>
     </nav>
 
     <!-- If the user has membership-->

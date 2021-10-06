@@ -11490,9 +11490,8 @@ td {
     margin: 150px;
 }
 
-.conatiner 
-{
-    padding:0;
+.conatiner {
+    padding: 0;
     margin: 150px;
 }
 
@@ -11501,32 +11500,31 @@ input {
 }
 
 #a {
-    margin:30px 30px;
-    text-align:center; 
+    margin: 30px 30px;
+    text-align: center;
 }
 
 .bg-dark {
     background-color: #007bff!important;
 }
 
- .navbar {
-        padding-left: 150px;
-
+.navbar {
+    padding-left: 150px;
 }
 
 .bold {
-    font-size:15px;
+    font-size: 15px;
     padding-top: 18px;
 }
 
 label {
-    display:inline;
+    display: inline;
 }
 
 .img {
-    width:40px;
-    height:40px;
-    border-radius:60%;
+    width: 40px;
+    height: 40px;
+    border-radius: 60%;
 }
 
 .mode-x {
@@ -11537,15 +11535,16 @@ label {
 }
 
 .nav-link {
-    padding-right:10px:
-    padding-bottom:10px; 
+    padding-right: 10px;
+    padding-bottom: 10px;
 }
+
 .text-x {
     padding-bottom: 30px;
 }
 
 .nav-item {
-        list-style-type: none;
+    list-style-type: none;
 }
 
 .dropdown-toggle {
@@ -11564,11 +11563,10 @@ label {
     margin-right: 49px;
     float: right;
     padding-bottom: 53px;
-    
 }
 
 .outline {
-    margin:auto 30px;
+    margin: auto 30px;
 }
 
 #imgfree {

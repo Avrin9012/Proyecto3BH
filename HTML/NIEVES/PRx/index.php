@@ -70,6 +70,14 @@ if (isset($_SESSION['email'])) {
     ';
         }
     ?>
+<?php if (isset($_SESSION['admin'])) {
+    echo '
+    <ul class="navbar-nav ms-auto">
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="soporte.php">Mensajes Soporte</a></li>
+    </ul>
+    ';
+}
+    ?>
     </nav>
     <!-- Masthead-->
     <header class="masthead bg-primary text-white text-center">
@@ -170,7 +178,7 @@ if (isset($_SESSION['email'])) {
             <!-- Contact Section Form-->
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-xl-7">
-                    <form id="contactForm" action="/php/submit.php" method="post" data-sb-form-api-token="API_TOKEN">
+                    <form action="php/submit.php" id="contactForm" method="post" data-sb-form-api-token="API_TOKEN">
                         <!-- Name input-->
                         <div class="form-floating mb-3">
                             <input name="nameM" class="form-control" id="name" type="text" placeholder="Ingrese su nombre..." data-sb-validations="required" />
@@ -196,40 +204,8 @@ if (isset($_SESSION['email'])) {
                             <label for="message">Mensaje</label>
                             <div class="invalid-feedback" data-sb-feedback="message:required">Un mensaje es requerido.</div>
                         </div>
-
-                        <form class="row justify-content-center" action="php/submit.php" method="post">
-                        <div class="col-lg-8 col-xl-7">
-                        <div>
-                            <i class="fal fa-dove" style="color: #28c997;"></i>
-                            <p><input class="form-floating mb-3" name="nameM" type="text" required placeholder="Ingrese su usario"> </p>
-                            <p><input class="form-floating mb-3" name="emailM" type="text" required placeholder="Usuario@example.com"> </p>
-                            <p><input class="form-floating mb-3" name='phoneM' type="phone" required placeholder="7234871" /> </p>
-                            <p><input class="form-floating mb-3" name="messageM" type="message" required placeholder="Ingrese su mensaje..."> </p>
-                            <div class="form-group">
-                            </div>
-                            <a href="login.html"> <input class="btn btn-primary" type="submit" name="enviar" value="Enviar" /></a>
-                            <input class="btn btn-primary btn-xl disabled" type="reset" name="restablecer" value="restablecer" /></p>
-                        </div>
-                        </div>
-                        </form>
-                        <!-- Submit success message-->
-                        <!---->
-                        <!-- This is what your users will see when the form-->
-                        <!-- has successfully submitted-->
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center mb-3">
-                                <div class="fw-bolder">Mensaje enviado!</div>
-                            </div>
-                        </div>
-                        <!-- Submit error message-->
-                        <!---->
-                        <!-- This is what your users will see when there is-->
-                        <!-- an error submitting the form-->
-                        <div class="d-none" id="submitErrorMessage">
-                            <div class="text-center text-danger mb-3">Error al enviar el mensaje!</div>
-                        </div>
                         <!-- Submit Button-->
-                        <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Enviar</button>
+                        <button class="btn btn-primary btn-xl" type="submit" name="submit" value="Enter">Enviar</button>
                     </form>
                 </div>
             </div>

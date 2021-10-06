@@ -32,19 +32,13 @@
 		echo 'Error al registrarse';
 	}
 	else{
-		echo '<script>
-					alert("El usuario ya está registrado");
-					window.history.go(-1);
-					</script>';
-		header('location:../index.php');
 		if(move_uploaded_file($_FILES['img']['tmp_name'], $dir)) {
 		    echo "done";
 		} else {
 		    echo "No se pudo mover el archivo ";
 		}
+		header('location:../index.php');
 	}
-}
-
 //Cerrar conexion
 	mysqli_close($conexion);
 ?>

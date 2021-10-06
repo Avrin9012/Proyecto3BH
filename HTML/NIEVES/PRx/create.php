@@ -71,14 +71,26 @@ if (isset($_SESSION['email'])) {
     ';
         }
     ?>
+
+<?php if (isset($_SESSION['admin'])) {
+    echo '
+    <ul class="navbar-nav ms-auto">
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="soporte.php">Mensajes Soporte</a></li>
+    </ul>
+    ';
+}
+    ?>
     </nav>
     <!-- Masthead-->
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
             <!-- Masthead Avatar Image-->
             <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-</body>
-
+<!-- Button to flashcards-->
+<center>
+<form action="watchcards.php">
+    <input class="btn btn-primary btn-xl" type="submit" value="Ir a flashcards"/>
+</form><center>
 <!-- Form-->
 <div class="conatiner">
 	 	<form enctype="multipart/form-data" action="" method="POST">
@@ -107,9 +119,8 @@ if (isset($_SESSION['email'])) {
 		  <br>
 		  
 		</form>
-	 </div>
-</html>
-
+	</div>
+</body>
 <?php 
 if (isset($_POST['submit'])) {
   	$mysqli = new mysqli("localhost", "root", "", "proyecto");
@@ -117,23 +128,24 @@ if (isset($_POST['submit'])) {
  	        echo 'no';
  	    }
  	    else{
- 	        echo 'si esta conectado';
+
  	    }
 
         $title = $_POST['title'];
         $term = $_POST['term'];
-        $defination= $_POST['defination'];
         $img = $_FILES['img']['name'];
+        $user = $_SESSION['user'];
 
-        $dir = 'user_img/' . basename($img);
+        $dir = 'sets_img/' . basename($img);
 	    
-    if (!$mysqli->query("INSERT INTO sets(title,term,defination,img) VALUES ('$title','$term','$defination','$img')")) {
+    if (!$mysqli->query("INSERT INTO sets(title,term,defination,img,user) VALUES ('$title','$term','$defination','$img','$user')")) {
         echo "Falló la creación de la tabla: (" . $mysqli->errno . ") " . $mysqli->error;
     }else {
         if(move_uploaded_file($_FILES['img']['tmp_name'], $dir)) {
-            echo "done";
+
         } else {
             echo "No se pudo mover el archivo ";
         }}
 }
 ?>
+</html>
