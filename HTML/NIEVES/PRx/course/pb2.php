@@ -84,6 +84,7 @@ if (isset($_SESSION['email'])) {
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
             <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfM4LNwwBWajtKscEXgot4yEH9xakSjq7JQAaYzesRGuHA43A/viewform?embedded=true" width="640" height="2752" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
 </body>
 
 </html>

@@ -98,9 +98,9 @@ if (isset($_SESSION['email'])) {
                 <iframe width="720" height="480" src="https://www.youtube.com/embed/sTz28jZqxx0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <hr>
                 <br><br>
-                <a style="color:#2980B9;" class="botonprueba" href="../assets/others/EB1.pdf">Recurso escrito</a>
+                <a style="color:#2980B9;" class="botonprueba" href="../assets/others/EB2.pdf">Recurso escrito</a>
                 <br>
-                <a style="color:#2980B9;" class="botonprueba" href="https://forms.gle/jAFnPU5a9JUD946X9">Iniciar Prueba</a>
+                <a style="color:#2980B9;" class="botonprueba" href="pb2.php">Iniciar Prueba</a>
                 </div>
 <?php }else { ?>
         <!-- If not-->

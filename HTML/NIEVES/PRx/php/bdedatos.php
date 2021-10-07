@@ -32,6 +32,7 @@
 		echo 'Error al registrarse';
 	}
 	else{
+		
 		if(move_uploaded_file($_FILES['img']['tmp_name'], $dir)) {
 		    echo "done";
 		} else {

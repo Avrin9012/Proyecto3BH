@@ -98,12 +98,13 @@ if (isset($_SESSION['email'])) {
                 <p>The student has recommended videos and a test per level to demonstrate their learned skills.</p>
                 <hr>
                 <h1>Videos<h1>
-                <iframe width="720" height="480" src="https://www.youtube.com/embed/sTz28jZqxx0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="720" height="480" src="https://www.youtube.com/embed/ZuG9kUiRC_I?list=PLfrczU8VG2wzwPo_QYfuAE5l80CqgL5fS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <hr>
-                <br><br>
-                <a style="color:#2980B9;" class="botonprueba" href="../assets/others/EB1.pdf">Recurso escrito</a>
                 <br>
-                <a style="color:#2980B9;" class="botonprueba" href="https://forms.gle/jAFnPU5a9JUD946X9">Iniciar Prueba</a>
+                <br>
+                <a style="color:#2980B9;" class="botonprueba" href="https://linguapress.com/advanced/smugglers.htm">Texto</a>
+                <br>
+                <a style="color:#2980B9;" class="botonprueba" href="pb3.php">Iniciar Prueba</a>
                 </div>
 <?php }else { ?>
         <!-- If not-->

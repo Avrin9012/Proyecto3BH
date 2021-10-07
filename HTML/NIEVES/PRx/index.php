@@ -235,6 +235,7 @@ if (isset($_SESSION['email'])) {
                 </div>
             </div>
         </div>
+    <a style="color:#2c3e50;" class="rick" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Entra aqui para una sorpresa</p>
     </footer>
     <!-- Copyright Section-->
     <div class="copyright py-4 text-center text-white">
