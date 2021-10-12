@@ -47,7 +47,7 @@ if (isset($_SESSION['email'])) {
     </li>
     </ul>';     
     echo "<ul class='navbar-nav ms-auto'>
-    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='create.php'>Crear flashcards</a></li>
+    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='create.php'>Flashcards</a></li>
     <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='close.php'>Cerrar sesion</a></li>
     <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='index.php'>Inicio</a></li>
     </ul>
@@ -99,7 +99,7 @@ if (isset($_SESSION['email'])) {
     <section class="page-section portfolio" id="courses">
         <div class="container">
             <!-- Portfolio Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Cursos</h2>
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Pruebas</h2>
             <!-- Icon Divider-->
             <div class="divider-custom">
                 <div class="divider-custom-line"></div>
@@ -235,7 +235,7 @@ if (isset($_SESSION['email'])) {
                 </div>
             </div>
         </div>
-    <a style="color:#2c3e50;" class="rick" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Entra aqui para una sorpresa</p>
+    <!-- <a style="color:#2c3e50;" class="rick" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Entra aqui para una sorpresa</p> -->
     </footer>
     <!-- Copyright Section-->
     <div class="copyright py-4 text-center text-white">
@@ -265,7 +265,7 @@ if (isset($_SESSION['email'])) {
                                 <p class="mb-4">Este curso tiene las palabras más esenciales para del conocimiento del Inglés. Aprenderás los verbos básicos, preposiciones, sustantivos. Serás capaz de entender textos simples.Este curso tiene consistirá en el aprendizaje
                                     de las 100 palabras más comunes del idioma Inglés.</p>                    
                                 <?php if (isset($_SESSION['email'])) { ?>
-                                    <button class="btn btn-primary" role="link" onclick="window.location='pcb1.php'" data-bs-dismiss="modal">
+                                    <button class="btn btn-primary" role="link" onclick="window.location='course/cb1.php'" data-bs-dismiss="modal">
                                         <i class="fas fa-sign-in-alt"></i>
                                         Ingresar a curso
                                     </button>
@@ -304,7 +304,7 @@ if (isset($_SESSION['email'])) {
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">Este curso medio tiene un montón de palabras nuevas, aprenderás más sobre verbos, sustantivos y gramatica. Serás capaz de entender textos B1 y B2, e incluso podrás escribir textos simples.</p>
                                 <?php if (isset($_SESSION['email'])) { ?>
-                                    <button class="btn btn-primary" role="link" onclick="window.location='pcb2.php'" data-bs-dismiss="modal">
+                                    <button class="btn btn-primary" role="link" onclick="window.location='course/cb2.php'" data-bs-dismiss="modal">
                                         <i class="fas fa-sign-in-alt"></i>
                                         Ingresar a curso
                                     </button>

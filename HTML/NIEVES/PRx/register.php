@@ -45,7 +45,7 @@ session_start();
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
                 <img class="masthead-avatar mb-5" src="assets/img/header.png" alt="..." />
-                <form class="registrarse" , action="/PRx/php/bdedatos.php" method="post">
+                <form enctype="multipart/form-data" class="registrarse" action="/PRx/php/bdedatos.php" method="post">
                     <!-- Form-->
                     <div class="contenedor">
                         <h1 class="login">Registro</h1>

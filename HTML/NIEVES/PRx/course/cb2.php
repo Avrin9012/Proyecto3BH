@@ -28,7 +28,7 @@ session_start()
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="#page-top"><img id="header1" src="../assets/img/logoingles.png" ></a>
+            <a class="navbar-brand" href="../index.php"><img id="header1" src="../assets/img/logoingles.png" ></a>
             <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -48,7 +48,7 @@ if (isset($_SESSION['email'])) {
     </li>
     </ul>';     
     echo "<ul class='navbar-nav ms-auto'>
-    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='../create.php'>Crear flashcards</a></li>
+    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='../create.php'>Flashcards</a></li>
     <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='../close.php'>Cerrar sesion</a></li>
     <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='../index.php'>Inicio</a></li>
     </ul>
@@ -95,7 +95,8 @@ if (isset($_SESSION['email'])) {
                 <p>The student has recommended videos and a test per level to demonstrate their learned skills.</p>
                 <hr>
                 <h1>Videos<h1>
-                <iframe width="720" height="480" src="https://www.youtube.com/embed/sTz28jZqxx0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="720" height="480" src="https://www.youtube.com/embed/AP5UD8c3T_s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p> De 00:00 hasta 16:30</p>
                 <hr>
                 <br><br>
                 <a style="color:#2980B9;" class="botonprueba" href="../assets/others/EB2.pdf">Recurso escrito</a>

@@ -6,14 +6,16 @@
  	else{
  		echo 'si esta conectado';
  	}
+
 //recibir los datos y almacenar variables
  	$usuario = $_POST['usuario'];
 	$nombre = $_POST['nombre'];
-	$contraseña = $_POST['contraseña'];
+
+	$contraseña = password_hash($_POST['contraseña'], PASSWORD_DEFAULT);
 	$email = $_POST['email'];
 	$img = $_FILES['img']['name'];
 
-	$dir = 'users_img/' . basename($img);
+	$dir = '../users_img/' . basename($img);
 	
 //consulta para insertar
 	$insertar = "INSERT INTO usuario (usuario, nombre, contraseña, email, user_img) VALUES ('$usuario','$nombre','$contraseña','$email', '$img')";
@@ -26,13 +28,13 @@
 					</script>';
 				exit;
 		}
+
 //ejecuta consulta
 	$resultado = mysqli_query($conexion, $insertar);
 	if (!$resultado){
 		echo 'Error al registrarse';
 	}
 	else{
-		
 		if(move_uploaded_file($_FILES['img']['tmp_name'], $dir)) {
 		    echo "done";
 		} else {
