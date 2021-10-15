@@ -123,29 +123,30 @@ if (isset($_SESSION['email'])) {
 </body>
 <?php 
 if (isset($_POST['submit'])) {
-  	$mysqli = new mysqli("localhost", "root", "", "proyecto");
- 	    if ($mysqli->connect_errno) {
- 	        echo 'no';
- 	    }
- 	    else{
+    $mysqli = new mysqli("localhost", "root", "", "proyecto");
+       if ($mysqli->connect_errno) {
+           echo 'no';
+       }
+       else{
 
- 	    }
+       }
 
-        $title = $_POST['title'];
-        $term = $_POST['term'];
-        $img = $_FILES['img']['name'];
-        $user = $_SESSION['user'];
+      $title = $_POST['title'];
+      $term = $_POST['term'];
+      $definationC = $_POST['defination'];
+      $img = $_FILES['img']['name'];
+      $owner = $_SESSION['user'];
 
-        $dir = 'sets_img/' . basename($img);
-	    
-    if (!$mysqli->query("INSERT INTO sets(title,term,defination,img,user) VALUES ('$title','$term','$defination','$img','$user')")) {
-        echo "Falló la creación de la tabla: (" . $mysqli->errno . ") " . $mysqli->error;
-    }else {
-        if(move_uploaded_file($_FILES['img']['tmp_name'], $dir)) {
+      $dir = 'sets_img/' . basename($img);
+      
+  if (!$mysqli->query("INSERT INTO sets(title,term,defination,img,user) VALUES ('$title','$term','$definationC','$img','$owner')")) {
+      echo "Falló la creación de la tabla: (" . $mysqli->errno . ") " . $mysqli->error;
+  }else {
+      if(move_uploaded_file($_FILES['img']['tmp_name'], $dir)) {
 
-        } else {
-            echo "No se pudo mover el archivo ";
-        }}
+      } else {
+          echo "No se pudo mover el archivo o simplemente no seleccionaste un archivo ";
+      }}
 }
 ?>
 </html>

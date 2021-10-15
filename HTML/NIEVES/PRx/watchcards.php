@@ -46,40 +46,104 @@ session_start();
         <div class="container d-flex align-items-center flex-column">
             <!-- Masthead Avatar Image-->
 </body>
-
 <?php
-if($_SESSION['id']){
-	$set = $_SESSION['id'];
+if (isset($_SESSION['email'])) {
 
-	$sel = "SELECT users.username, users.id, sets.title, sets.defination, sets.term, sets.sets_id, sets.img, sets.id 
-     FROM users INNER JOIN sets ON users.id = sets.sets_id and users.id = '$set' 
-     ";
-    $sel_run = $conn->prepare($sel);
-    $sel_run->execute();
-    while ($sel_fetch = $sel_run->fetch(PDO::FETCH_ASSOC)) {
-    	echo "
-	  	  <div class='conatiner'>
-	  	       <a href='singel.php?x=$sel_fetch[id]'><h5>$sel_fetch[title]</h5></a>
-		  	   <div class='flip-card'>
-				  <div class='flip-card-inner'>
-
-				    <div class='flip-card-front'>
-				      
-				      <p>$sel_fetch[term]</p>
-
-				    </div>
-				    <div class='flip-card-back'>
-				      <h1>$sel_fetch[defination]</h1> 
-				      <img class='img_sets' src='sets_img/".$sel_fetch['img']."' /> 
-
-				    </div>
-				  </div>
-				</div>
-		  </div>";
-		
+    $mysqli = new mysqli("localhost", "root", "", "proyecto");
+    if ($mysqli->connect_errno) {
+        echo 'no';
+    }
+    else{
 
     }
-   } 
+
+    $CardOwner = $_SESSION['user'];
+    $resultado = $mysqli->query("SELECT title, term, defination, img FROM sets WHERE user = '$CardOwner'");
+    if (!$resultado) {
+        echo "Fallo el fetch: : (" . $mysqli->errno . ") " . $mysqli->error;
+    }}else{
+        
+        $row = mysqli_fetch_array($mysqli);
+
+        echo"<div class='container'>
+                    <a><h5>" . $row["0"] ."</h5></a>
+                    <div class='flip-card'>
+                        <div class='flip-card-inner'>
+
+                        <div class='flip-card-front'>
+                      
+                        <p>". $row["1"] ."</p>
+
+                    </div>
+                <div class='flip-card-back'>
+                <h1>". $row["2"] ." </h1> 
+                <img class='img_sets' src='sets_img/". $row["3"] ."' /> 
+                       </div>
+                       </div>
+                   </div>
+";
+}
 ?>
 
+</div>
+<button onClick='window.location.reload()' class="'btn btn-primary RefreshButton'">Refresh</button>
+</div>
+
+
+<?php
+
+/*
+        $row = mysqli_fetch_array($resultado);
+        
+        $Lenght = var_dump(count($row));
+        for ($i = 0; $i < 10; $i++) {
+            echo "
+               <div class='container'>
+                    <a><h5>" . $row[$i] ."</h5></a>
+                    <div class='flip-card'>
+                        <div class='flip-card-inner'>
+
+                        <div class='flip-card-front'>
+                      
+                        <p>". $row["1"] ."</p>
+
+                    </div>
+                <div class='flip-card-back'>
+                <h1>". $row["2"] ." </h1> 
+                <img class='img_sets' src='sets_img/". $row["3"] ."' /> 
+                       </div>
+                       </div>
+                   </div>
+                </div>";
+        
+    }
+  } 
+
+
+        echo"<div class='container'>
+                    <a><h5>" . $row[$i] ."</h5></a>
+                    <div class='flip-card'>
+                        <div class='flip-card-inner'>
+
+                        <div class='flip-card-front'>
+                      
+                        <p>". $row["1"] ."</p>
+
+                    </div>
+                <div class='flip-card-back'>
+                <h1>". $row["2"] ." </h1> 
+                <img class='img_sets' src='sets_img/". $row["3"] ."' /> 
+                       </div>
+                       </div>
+                   </div>
+                </div>
+<button onClick=". echo "window.location.reload()". echo " class="'btn btn-primary RefreshButton'">Refresh</button>
+</div>";
+
+
+
+*/
+?>
+
+</body>
 </html>
