@@ -36,17 +36,20 @@ session_start();
             <div class="collapse navbar-collapse" id="navbarResponsive">
             </div>
         </div>
-    <?php
+<?php
 if (isset($_SESSION['email'])) {
+    /* Connection */
     $mysqli = new mysqli("localhost", "root", "", "proyecto");
     if ($mysqli->connect_errno) {
     echo 'no';
     }else{
     }
+    /* Dir for user img */
     $dir = 'users_img/'.$_SESSION['my_img'];
     echo '<ul class="navbar-nav mr-auto"> <li class="nav-item active">
     </li>
-    </ul>';     
+    </ul>';
+    /* NAV HTML if user is logged */     
     echo "<ul class='navbar-nav ms-auto'>
     <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='create.php'>Flashcards</a></li>
     <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='close.php'>Cerrar sesion</a></li>
@@ -62,6 +65,7 @@ if (isset($_SESSION['email'])) {
     <a class='dropdown-item' href='close.php'>Cerrar sesion</a>
     </div> </li> </div>";
 }else if (!isset($_SESSION['email'])) {
+    /* NAV HTML if user is not logged */
     echo '
     <ul class="navbar-nav ms-auto">
     <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Login</a></li>
@@ -71,11 +75,12 @@ if (isset($_SESSION['email'])) {
     ';
         }
     ?>
-
 <?php if (isset($_SESSION['admin'])) {
+    /* NAV HTML if user is admin */
     echo '
     <ul class="navbar-nav ms-auto">
     <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="soporte.php">Mensajes Soporte</a></li>
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="admin/addmem.php">Añadir membresia</a></li>
     </ul>
     ';
 }
@@ -125,28 +130,42 @@ if (isset($_SESSION['email'])) {
 if (isset($_POST['submit'])) {
     $mysqli = new mysqli("localhost", "root", "", "proyecto");
        if ($mysqli->connect_errno) {
-           echo 'no';
+           echo 'FALLO LA CONEXION';
        }
        else{
-
        }
 
-      $title = $_POST['title'];
-      $term = $_POST['term'];
-      $definationC = $_POST['defination'];
-      $img = $_FILES['img']['name'];
-      $owner = $_SESSION['user'];
+    $CardOwner = $_SESSION['user'];
 
-      $dir = 'sets_img/' . basename($img);
+    $card = $mysqli->query("SELECT COUNT(*) as num FROM sets WHERE user = '$CardOwner'");
+    
+    if (!$card) {
+        echo "Fallo el fetch: : (" . $mysqli->errno . ") " . $mysqli->error;
+    }else{
+
+    $intCard = mysqli_fetch_array($card);
+
+    $idcard = $intCard['num'];
+
+    $title = $_POST['title'];
+    $term = $_POST['term'];
+    $definationC = $_POST['defination'];
+    $img = $_FILES['img']['name'];
+    $owner = $_SESSION['user'];
+    $IdUserCard = $idcard + 1;
+
+    $dir = 'sets_img/' . basename($img);
       
-  if (!$mysqli->query("INSERT INTO sets(title,term,defination,img,user) VALUES ('$title','$term','$definationC','$img','$owner')")) {
+    if (!$mysqli->query("INSERT INTO sets(title,term,defination,img,user,IdUserCard) VALUES ('$title','$term','$definationC','$img','$owner','$IdUserCard')")) {
       echo "Falló la creación de la tabla: (" . $mysqli->errno . ") " . $mysqli->error;
-  }else {
+    }else {
       if(move_uploaded_file($_FILES['img']['tmp_name'], $dir)) {
 
       } else {
           echo "No se pudo mover el archivo o simplemente no seleccionaste un archivo ";
       }}
+    }
 }
 ?>
+
 </html>

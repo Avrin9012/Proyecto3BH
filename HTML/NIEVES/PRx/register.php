@@ -39,6 +39,55 @@ session_start();
                     </ul>
                 </div>
             </div>
+<?php
+if (isset($_SESSION['email'])) {
+    /* Connection */
+    $mysqli = new mysqli("localhost", "root", "", "proyecto");
+    if ($mysqli->connect_errno) {
+    echo 'no';
+    }else{
+    }
+    /* Dir for user img */
+    $dir = 'users_img/'.$_SESSION['my_img'];
+    echo '<ul class="navbar-nav mr-auto"> <li class="nav-item active">
+    </li>
+    </ul>';
+    /* NAV HTML if user is logged */     
+    echo "<ul class='navbar-nav ms-auto'>
+    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='create.php'>Flashcards</a></li>
+    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='close.php'>Cerrar sesion</a></li>
+    <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='index.php'>Inicio</a></li>
+    </ul>
+    <div id='userlogin'><li class='nav-item dropdown'><div>
+    <a class='nav-link txtlogin' href='user.php' aria-haspopup='true' aria-expanded='false'>".             
+    '<img id="imgfreelogin" src="'.$dir.'">' . $_SESSION['email']."</a>
+    <div class='dropdown-menu' aria-labelledby='dropdown01'>
+    <a class='dropdown-item' href='user.php?user_ref=$_SESSION[id]'>Mis flashcards</a>
+    <a class='dropdown-item' href='opciones.php?my_settings=$_SESSION[id]        
+    '>opciones</a>
+    <a class='dropdown-item' href='close.php'>Cerrar sesion</a>
+    </div> </li> </div>";
+}else if (!isset($_SESSION['email'])) {
+    /* NAV HTML if user is not logged */
+    echo '
+    <ul class="navbar-nav ms-auto">
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Login</a></li>
+    <li class="RegisterButton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="register.php">Registrarse</a></li>
+    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Inicio</a></li>
+    </ul>
+    ';
+        }
+    ?>
+<?php if (isset($_SESSION['admin'])) {
+    /* NAV HTML if user is admin */
+    echo '
+    <ul class="navbar-nav ms-auto">
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="soporte.php">Mensajes Soporte</a></li>
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="admin/addmem.php">Añadir membresia</a></li>
+    </ul>
+    ';
+}
+    ?>
         </nav>
         <!-- Masthead-->
         <header class="masthead bg-primary text-white text-center">
