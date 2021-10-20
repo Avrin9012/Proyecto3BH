@@ -10,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Crear flashcards</title>
+    <title>Usuario flashcards</title>
     <!-- Favicon-->
     <link rel="shortcut icon" href="assets/img/favicon.ico">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -20,15 +20,14 @@ session_start();
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/stylesfitbg.css" rel="stylesheet" />
 </head>
 
-<body id="page-top">
+<body id="index.php">
     <!-- Navigation-->
-
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="index.php"><img id="header1" src="assets/img/logoingles.png" ></a>
+            <a class="navbar-brand" href="#page-top"><img id="header1" src="assets/img/logoingles.png" ></a>
             <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -90,88 +89,74 @@ if (isset($_SESSION['email'])) {
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
             <!-- Masthead Avatar Image-->
-            <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-<!-- Button to flashcards-->
-<center>
-<form action="watchcards.php">
-    <input class="btn btn-primary btn-xl" type="submit" value="Ir a flashcards"/>
-</form><center>
-<!-- Create card form-->
-<div class="conatiner">
-	 	<form enctype="multipart/form-data" action="" method="POST">
-		  <span class="form-group" style="white-space:nowrap" >
-		    <label for="exampleInputEmail1" >Title</label>
-		    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Title" name="title">
-		    <small id="emailHelp" class="form-text text-muted"></small>
-		  </span>
-
-		  <div class="form-group">
-		    <label for="exampleInputEmail1" >Term</label>
-		    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Term" name="term">
-		    <small id="emailHelp" class="form-text text-muted"></small>
-		  </div>
-		  
-		  <div class="form-group">
-		    <label for="exampleInputPassword1">Defination</label>
-		    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Defination" name="defination">
-		  </div>
-		  <div class="form-group">
-		    <label for="exampleInputPassword1">IMG</label>
-		    <input type="hidden" name = "hidden" class="form-control" id="exampleInputPassword1" size=100000>
-		    <input type="file" class="form-control" id="exampleInputPassword1" name="img">
-		  </div>
-		  <input type="submit" class="btn btn-primary" name="submit">
-		  <br>
-		  
-		</form>
-	</div>
 </body>
-<?php 
-if (isset($_POST['submit'])) {
+<?php
+if (isset($_SESSION['email'])) {
     /* Connection */
     $mysqli = new mysqli("localhost", "root", "", "proyecto");
-       if ($mysqli->connect_errno) {
-           echo 'FALLO LA CONEXION';
-       }
-       else{
-       }
-    $CardOwner = $_SESSION['user'];
-
-    /* Query for fetch how many cards have the user */
-    $card = $mysqli->query("SELECT COUNT(*) as num FROM sets WHERE user = '$CardOwner'");
-    
-    if (!$card) {
-        echo "Fallo el fetch: : (" . $mysqli->errno . ") " . $mysqli->error;
-    }else{
-
-    /* Row fetch */
-    $intCard = mysqli_fetch_array($card);
-
-    /* Save the array to int */
-    $idcard = $intCard['num'];
-
-    /* Vars */
-    $title = $_POST['title'];
-    $term = $_POST['term'];
-    $definationC = $_POST['defination'];
-    $img = $_FILES['img']['name'];
-    $owner = $_SESSION['user'];
-    $IdUserCard = $idcard + 1;
-
-    /* Sets dir */
-    $dir = 'sets_img/' . basename($img);
-
-    /* Query for insert to database */
-    if (!$mysqli->query("INSERT INTO sets(title,term,defination,img,user,IdUserCard) VALUES ('$title','$term','$definationC','$img','$owner','$IdUserCard')")) {
-      echo "Falló la creación de la tabla: (" . $mysqli->errno . ") " . $mysqli->error;
-    }else {
-      /* Move file */
-      if(move_uploaded_file($_FILES['img']['tmp_name'], $dir)) {
-      } else {
-          echo "No se pudo mover el archivo o simplemente no seleccionaste un archivo ";
-      }}
+    if ($mysqli->connect_errno) {
+        echo 'FALLO LA CONEXION';
     }
+    else{
+
+    }
+
+    /* Owner for query */
+    $CardOwner = $_SESSION['user'];
+    /* Query id card */
+    $idcard = $mysqli->query("SELECT MAX(IdUserCard) as num FROM sets WHERE user = '$CardOwner'");
+    /* Save the query in a row */
+    $RowCard = mysqli_fetch_array($idcard);
+    /* Convert the row to int */
+    $Intcard = (int)$RowCard['num'];
+
+    /* Idcard error */
+    if (!$idcard) {
+        echo "Fallo el fetch de las cards: : (" . $mysqli->errno . ") " . $mysqli->error;
+
+    }else if ($Intcard == 0){
+    /* If don't have any card, display a message  */
+    echo "<center>
+    <h1>No hay ninguna carta<h2>
+    <p>Crea una carta en la pagina anterior</p>
+    </center>";
+    }
+    else{
+        /* Random number  */
+        $num = rand(1,$Intcard);
+        /* Query for card */
+        $resultado = $mysqli->query("SELECT title, term, defination, img FROM sets WHERE user = '$CardOwner' and IdUserCard = '$num' ");
+        if (!$resultado) {
+            echo "Fallo el fetch: : (" . $mysqli->errno . ") " . $mysqli->error;
+        }else{
+            /* Vars for the card */
+            $row = mysqli_fetch_array($resultado);
+            /* Display the card */
+            echo"<center><div class='container'>
+                    <a><h5>" . $row["0"] ."</h5></a>
+                    <div class='flip-card'>
+                        <div class='flip-card-inner'>
+
+                        <div class='flip-card-front'>
+                      
+                        <p>". $row["1"] ."</p>
+
+                    </div>
+                <div class='flip-card-back'>
+                <h1>". $row["2"] ." </h1> 
+                <img class='img_sets' src='sets_img/". $row["3"] ."' /> 
+                       </div>
+                       </div>
+                   </div></center>";
+    }
+  }
 }
 ?>
+<!-- Refresh button -->
+<div>
+<button onClick="window.location.reload()" class="btn btn-primary RefreshButton">Refresh</button>
+</div>
 
+<!-- End -->
+</body>
 </html>

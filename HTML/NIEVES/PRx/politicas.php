@@ -35,7 +35,7 @@ session_start();
                     </ul>
                 </div>
             </div>
-            <?php
+<?php
 if (isset($_SESSION['email'])) {
     /* Connection */
     $mysqli = new mysqli("localhost", "root", "", "proyecto");

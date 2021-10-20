@@ -37,15 +37,18 @@ session_start();
         </div>
     <?php
 if (isset($_SESSION['email'])) {
+    /* Connection */
     $mysqli = new mysqli("localhost", "root", "", "proyecto");
     if ($mysqli->connect_errno) {
     echo 'no';
     }else{
     }
+    /* Dir for user img */
     $dir = '../users_img/'.$_SESSION['my_img'];
     echo '<ul class="navbar-nav mr-auto"> <li class="nav-item active">
     </li>
-    </ul>';     
+    </ul>';  
+    /* NAV HTML if user is logged */   
     echo "<ul class='navbar-nav ms-auto'>
     <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='../create.php'>Flashcards</a></li>
     <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='../close.php'>Cerrar sesion</a></li>
@@ -61,6 +64,7 @@ if (isset($_SESSION['email'])) {
     <a class='dropdown-item' href='close.php'>Cerrar sesion</a>
     </div> </li> </div>";
 }else if (!isset($_SESSION['email'])) {
+    /* NAV HTML if user is not logged */
     echo '
     <ul class="navbar-nav ms-auto">
     <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../login.php">Login</a></li>
@@ -72,9 +76,11 @@ if (isset($_SESSION['email'])) {
     ?>
 
 <?php if (isset($_SESSION['admin'])) {
+    /* NAV HTML if user is admin */
     echo '
     <ul class="navbar-nav ms-auto">
     <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../soporte.php">Mensajes Soporte</a></li>
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../admin/addmem.php">Añadir Membresia</a></li>
     </ul>
     ';
 }
@@ -83,8 +89,9 @@ if (isset($_SESSION['email'])) {
     <!-- Masthead-->
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
-            <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfM4LNwwBWajtKscEXgot4yEH9xakSjq7JQAaYzesRGuHA43A/viewform?embedded=true" width="640" height="2752" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+
+<!-- Iframe with the google form-->
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfM4LNwwBWajtKscEXgot4yEH9xakSjq7JQAaYzesRGuHA43A/viewform?embedded=true" width="640" height="2752" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
 </body>
 
 </html>

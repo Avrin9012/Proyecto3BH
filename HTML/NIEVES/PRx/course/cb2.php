@@ -48,8 +48,8 @@ if (isset($_SESSION['email'])) {
     $dir = '../users_img/'.$_SESSION['my_img'];
     echo '<ul class="navbar-nav mr-auto"> <li class="nav-item active">
     </li>
-    </ul>';
-    /* NAV HTML if user is logged */
+    </ul>';  
+    /* NAV HTML if user is logged */   
     echo "<ul class='navbar-nav ms-auto'>
     <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='../create.php'>Flashcards</a></li>
     <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='../close.php'>Cerrar sesion</a></li>
@@ -81,6 +81,7 @@ if (isset($_SESSION['email'])) {
     echo '
     <ul class="navbar-nav ms-auto">
     <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../soporte.php">Mensajes Soporte</a></li>
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../admin/addmem.php">Añadir Membresia</a></li>
     </ul>
     ';
 }
@@ -92,7 +93,7 @@ if (isset($_SESSION['email'])) {
 
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
-                <!-- Videos Div-->
+                <!-- Video Div-->
                 <div class="pruebavideos">
                 <h1>Bienvenidos al Nivel I de aprendiendo inglés.</h1>
                 <p>Basic level useful for learn concepts or develop a consistent base.</p>

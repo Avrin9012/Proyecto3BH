@@ -37,15 +37,18 @@ session_start();
         </div>
     <?php
 if (isset($_SESSION['email'])) {
+    /* Connection */
     $mysqli = new mysqli("localhost", "root", "", "proyecto");
     if ($mysqli->connect_errno) {
     echo 'no';
     }else{
     }
+    /* Dir for user img */
     $dir = '../users_img/'.$_SESSION['my_img'];
     echo '<ul class="navbar-nav mr-auto"> <li class="nav-item active">
     </li>
-    </ul>';     
+    </ul>';  
+    /* NAV HTML if user is logged */   
     echo "<ul class='navbar-nav ms-auto'>
     <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='../create.php'>Flashcards</a></li>
     <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='../close.php'>Cerrar sesion</a></li>
@@ -61,6 +64,7 @@ if (isset($_SESSION['email'])) {
     <a class='dropdown-item' href='close.php'>Cerrar sesion</a>
     </div> </li> </div>";
 }else if (!isset($_SESSION['email'])) {
+    /* NAV HTML if user is not logged */
     echo '
     <ul class="navbar-nav ms-auto">
     <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../login.php">Login</a></li>
@@ -72,9 +76,11 @@ if (isset($_SESSION['email'])) {
     ?>
 
 <?php if (isset($_SESSION['admin'])) {
+    /* NAV HTML if user is admin */
     echo '
     <ul class="navbar-nav ms-auto">
     <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../soporte.php">Mensajes Soporte</a></li>
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../admin/addmem.php">Añadir Membresia</a></li>
     </ul>
     ';
 }
@@ -88,32 +94,37 @@ if (isset($_SESSION['email'])) {
 <?php if (isset($_SESSION['email'])): ?>
     <!-- If logged-->
     <?php
+    /* Connection */
     $mysqli = new mysqli("localhost", "root", "", "proyecto");
     if ($mysqli->connect_errno) {
         echo 'no';
     }
     else{
     }
-
+/* Random number for select the card */
 $num = rand(155,188);
+/* Query */
 $resultado = $mysqli->query("SELECT palabra, traduccion FROM palabra where idpalabra = '$num' " );
     if (!$resultado) {
         echo "Falló la creación de la tabla: (" . $mysqli->errno . ") " . $mysqli->error;
 }
-
+/* Fetch query to row */
 $row = mysqli_fetch_array($resultado);
 ?>
 <!-- Flashcard html-->
 <div class="flip-card">
 <div class="flip-card-inner">
     <div class="flip-card-front">
+        <!-- Display array row 0 (word)-->
         <h1><?php echo $row["0"]?></h1>
     </div>
     <div class="flip-card-back">
+        <!-- Display array row 1 (translation)-->
         <h1><?php echo $row["1"]?></h1>
         <script src="../js/app.js"></script>
     </div>
 </div>
+<!-- Refresh button-->
 <div>
 <button onClick="window.location.reload()" class="btn btn-primary RefreshButton">Refresh</button>
 </div>

@@ -124,8 +124,7 @@ if (isset($_SESSION['email'])) {
     else{
         /* Random number  */
         $num = rand(1,$Intcard);
-        echo $Intcard;
-        echo $num;
+
         /* Query for card */
         $resultado = $mysqli->query("SELECT title, term, defination, img FROM sets WHERE user = '$CardOwner' and IdUserCard = '$num' ");
         if (!$resultado) {
@@ -133,6 +132,11 @@ if (isset($_SESSION['email'])) {
         }else{
             /* Vars for the card */
             $row = mysqli_fetch_array($resultado);
+
+            /* Dir for displey img or not */
+            $dir = 'sets_img/' . basename($row["3"]);
+            echo $dir;
+
             /* Display the card */
             echo"<center><div class='container'>
                     <a><h5>" . $row["0"] ."</h5></a>
@@ -145,18 +149,31 @@ if (isset($_SESSION['email'])) {
 
                     </div>
                 <div class='flip-card-back'>
-                <h1>". $row["2"] ." </h1> 
-                <img class='img_sets' src='sets_img/". $row["3"] ."' /> 
+                <h1>". $row["2"] ." </h1> ";
+
+                /* If card don't have img, close the div */
+                if ($dir = 'sets_img/') {
+                echo " 
                        </div>
-                       </div>
-                   </div></center>";
+                       </div>";
+                }
+
+                /* If card have img, show the img */
+                else if (!$dir = 'sets_img/') {
+                    echo "
+                    <img class='img_sets' src='sets_img/". $row["3"] ."' /> 
+                           </div>
+                           </div>
+                       </div></center>";
+                    }
+
     }
   }
 }
 ?>
 <!-- Refresh button -->
-</div>
-<button onClick='window.location.reload()' class="'btn btn-primary RefreshButton'">Refresh</button>
+<div>
+<button onClick="window.location.reload()" class="btn btn-primary RefreshButton">Refresh</button>
 </div>
 
 <!-- End -->

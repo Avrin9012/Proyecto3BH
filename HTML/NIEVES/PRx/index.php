@@ -35,7 +35,7 @@ session_start();
             <div class="collapse navbar-collapse" id="navbarResponsive">
             </div>
         </div>
-<?php
+    <?php
 if (isset($_SESSION['email'])) {
     /* Connection */
     $mysqli = new mysqli("localhost", "root", "", "proyecto");
@@ -241,7 +241,6 @@ if (isset($_SESSION['email'])) {
                 </div>
             </div>
         </div>
-    <!-- <a style="color:#2c3e50;" class="rick" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Entra aqui para una sorpresa</p> -->
     </footer>
     <!-- Copyright Section-->
     <div class="copyright py-4 text-center text-white">
@@ -375,5 +374,9 @@ if (isset($_SESSION['email'])) {
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <div style="background: #1a252f;">
+    <a style="color:#1a252f;" class="rick" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Entra aqui para una sorpresa</p>
+    <a style="color:#1a252f;" class="rick" href="https://signup.las.leagueoflegends.com/es/signup/redownload">No quieres entrar aqui</p>
+    <div>
 </body>
 </html>

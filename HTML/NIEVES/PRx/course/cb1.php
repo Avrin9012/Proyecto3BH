@@ -93,7 +93,7 @@ if (isset($_SESSION['email'])) {
 
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
-                <!-- Videos Div-->
+                <!-- Video Div-->
                 <div class="pruebavideos">
                 <h1>Bienvenidos al Nivel I de aprendiendo inglés.</h1>
                 <p>Basic level useful for learn concepts or develop a consistent base.</p>

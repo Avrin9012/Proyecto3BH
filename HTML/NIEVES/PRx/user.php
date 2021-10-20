@@ -96,7 +96,7 @@ if (isset($_SESSION['email'])) {
                 <i class="fal fa-dove" style="color: #28c997;"></i>
                 <p><input class="form-control" name="usuario" type="text" required placeholder=<?php echo $_SESSION['user'] ?> > </p>
                 <p><input class="form-control" name="nombre" type="text" required placeholder=<?php echo $_SESSION['nombre'] ?> >  </p>
-                <p><input class="form-control" name='contraseña' type="password" required placeholder="123456">  </p>
+                <p><input class="form-control" name='contraseña' type="password" required placeholder="No puedes ver la contraseña">  </p>
                 <p><input class="form-control" name="email" type="email" required placeholder=<?php echo $_SESSION['email'] ?> >  </p>
                 <div class="form-group">
                 <input type="hidden" name = "hidden" class="form-control" id="exampleInputPassword1" size=100000>
@@ -113,6 +113,25 @@ if (isset($_SESSION['email'])) {
                 <input class="btn btn-primary" type="reset" name="restablecer" value="restablecer" /></p>
             </div> </center>
         </div>
+<?php
+
+if (isset($_POST['submit'])) {
+    $mysqli = new mysqli("localhost", "root", "", "proyecto");
+       if ($mysqli->connect_errno) {
+           echo 'FALLO LA CONEXION';
+       }
+       else{
+       }
+
+       $asd = $mysqli->query("SELECT COUNT(*) as num FROM sets WHERE user = '$CardOwner'");
+
+
+
+
+
+
+}
+?>
 
 </body>
 </html>
