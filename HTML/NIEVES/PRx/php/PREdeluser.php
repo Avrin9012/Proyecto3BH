@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start()
 ?>
 
 <!DOCTYPE html>
@@ -10,17 +10,17 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Soporte</title>
+    <link href="../css/stylesfitbg.css" rel="stylesheet" />
+    <title>Eliminar usuario</title>
     <!-- Favicon-->
-    <link rel="shortcut icon" href="assets/img/favicon.ico">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/stylesfitbg.css" rel="stylesheet" />
 
 </head>
 
@@ -28,7 +28,7 @@ session_start();
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="#page-top"><img id="header1" src="assets/img/logoingles.png" ></a>
+            <a class="navbar-brand" href="../index.php"><img id="header1" src="../assets/img/logoingles.png" ></a>
             <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -45,15 +45,15 @@ if (isset($_SESSION['email'])) {
     }else{
     }
     /* Dir for user img */
-    $dir = 'users_img/'.$_SESSION['my_img'];
+    $dir = '../users_img/'.$_SESSION['my_img'];
     echo '<ul class="navbar-nav mr-auto"> <li class="nav-item active">
     </li>
-    </ul>';
-    /* NAV HTML if user is logged */     
+    </ul>';  
+    /* NAV HTML if user is logged */   
     echo "<ul class='navbar-nav ms-auto'>
-    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='create.php'>Flashcards</a></li>
-    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='close.php'>Cerrar sesion</a></li>
-    <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='index.php'>Inicio</a></li>
+    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='../create.php'>Flashcards</a></li>
+    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='../close.php'>Cerrar sesion</a></li>
+    <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='../index.php'>Inicio</a></li>
     </ul>
     <div id='userlogin'><li class='nav-item dropdown'><div>
     <a class='nav-link txtlogin' href='user.php' aria-haspopup='true' aria-expanded='false'>".             
@@ -68,57 +68,40 @@ if (isset($_SESSION['email'])) {
     /* NAV HTML if user is not logged */
     echo '
     <ul class="navbar-nav ms-auto">
-    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Login</a></li>
-    <li class="RegisterButton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="register.php">Registrarse</a></li>
-    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Inicio</a></li>
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../login.php">Login</a></li>
+    <li class="RegisterButton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../register.php">Registrarse</a></li>
+    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../index.php">Inicio</a></li>
     </ul>
     ';
         }
     ?>
+
 <?php if (isset($_SESSION['admin'])) {
     /* NAV HTML if user is admin */
     echo '
     <ul class="navbar-nav ms-auto">
-    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="soporte.php">Mensajes Soporte</a></li>
-    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="admin/addmem.php">Añadir membresia</a></li>
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../soporte.php">Mensajes Soporte</a></li>
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../admin/addmem.php">Añadir Membresia</a></li>
     </ul>
     ';
 }
     ?>
-    </nav>
-    <!-- Masthead-->
+</nav>
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
-        <!-- Create table-->
-        <table>
-<tr>
-    <td>ID</td>
-    <td>Nombre</td>
-    <td>Email</td>
-    <td>Télefono</td>
-    <td>Mensaje</td>
-</tr>
 
-<?php
-    /* Connection */
-	$conexion = mysqli_connect("localhost", "root", "", "proyecto");
-    $soporte="SELECT * FROM soporte";
-    $resulta=mysqli_query($conexion,$soporte);
+<center><div>
+    <h1>¿Estas seguro de borrar la cuenta?<h1>
+        <!-- Button to deluser -->
+        <form action="deluser.php">
+            <input class="btn btn-primary btn-xl" type="submit" value="Si"/>
+        </form>  
+        <!-- Button to moduser -->
+        <form action="../user.php">
+            <input class="btn btn-primary btn-xl" type="submit" value="No"/>
+        </form>
+    </div>
+</center>
 
-    /* Query */
-    while($mostrar=mysqli_fetch_array($resulta)){
-    ?>
-        <tr>
-            <td><?php echo $mostrar['id_mensaje'] ?></td>
-            <td><?php echo $mostrar['name'] ?></td>
-            <td><?php echo $mostrar['email'] ?></td>
-            <td><?php echo $mostrar['phone'] ?></td>
-            <td><?php echo $mostrar['message'] ?></td>
-            <td><a href="php/eliminar.php? id_mensaje=<?php echo $mostrar['id_mensaje'] ?>">Eliminar</a></td>
-        </tr>
-
-<?php } ?>
-
-</table>
 </body>
 </html>

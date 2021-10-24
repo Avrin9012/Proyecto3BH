@@ -25,7 +25,6 @@ session_start();
 
 <body id="page-top">
     <!-- Navigation-->
-
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="index.php"><img id="header1" src="assets/img/logoingles.png" ></a>
@@ -91,11 +90,17 @@ if (isset($_SESSION['email'])) {
         <div class="container d-flex align-items-center flex-column">
             <!-- Masthead Avatar Image-->
             <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+            
 <!-- Button to flashcards-->
-<center>
-<form action="watchcards.php">
+<center><form action="watchcards.php">
     <input class="btn btn-primary btn-xl" type="submit" value="Ir a flashcards"/>
 </form><center>
+<!-- Button to flashcards-->
+<center>
+<form action="delcards.php">
+    <input class="btn btn-primary btn-xl" type="submit" value="Eliminar flashcards"/>
+</form><center>
+
 <!-- Create card form-->
 <div class="conatiner">
 	 	<form enctype="multipart/form-data" action="" method="POST">
@@ -122,10 +127,10 @@ if (isset($_SESSION['email'])) {
 		  </div>
 		  <input type="submit" class="btn btn-primary" name="submit">
 		  <br>
-		  
 		</form>
 	</div>
 </body>
+
 <?php 
 if (isset($_POST['submit'])) {
     /* Connection */
@@ -174,4 +179,21 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
+<!-- If you have the memebership, you can go to flashcards-->
+<?php if (isset($_SESSION['membresia'])) { ?>
+<form action="course/fb.php">
+    <input class="btn btn-primary btn-xl" type="submit" value="Ir a flashcards basicas"/>
+</form><center>
+
+<center><form action="course/fm.php">
+    <input class="btn btn-primary btn-xl" type="submit" value="Ir a flashcards medias"/>
+</form><center>
+
+<form action="course/fa.php">
+    <input class="btn btn-primary btn-xl" type="submit" value="Ir a flashcards avanzadas"/>
+</form><center>
+
+<?php } ?>
+
+</body>
 </html>

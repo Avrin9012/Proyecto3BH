@@ -135,7 +135,6 @@ if (isset($_SESSION['email'])) {
 
             /* Dir for displey img or not */
             $dir = 'sets_img/' . basename($row["3"]);
-            echo $dir;
 
             /* Display the card */
             echo"<center><div class='container'>
@@ -152,19 +151,19 @@ if (isset($_SESSION['email'])) {
                 <h1>". $row["2"] ." </h1> ";
 
                 /* If card don't have img, close the div */
-                if ($dir = 'sets_img/') {
+                if ($dir == 'sets_img/') {
                 echo " 
                        </div>
                        </div>";
                 }
 
                 /* If card have img, show the img */
-                else if (!$dir = 'sets_img/') {
+                else if ($dir != 'sets_img/') {
                     echo "
                     <img class='img_sets' src='sets_img/". $row["3"] ."' /> 
                            </div>
                            </div>
-                       </div></center>";
+                           ";
                     }
 
     }

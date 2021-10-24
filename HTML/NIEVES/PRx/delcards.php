@@ -10,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Usuario flashcards</title>
+    <title>Borrar cartas</title>
     <!-- Favicon-->
     <link rel="shortcut icon" href="assets/img/favicon.ico">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -21,9 +21,10 @@ session_start();
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/stylesfitbg.css" rel="stylesheet" />
+
 </head>
 
-<body id="index.php">
+<body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
         <div class="container">
@@ -35,7 +36,7 @@ session_start();
             <div class="collapse navbar-collapse" id="navbarResponsive">
             </div>
         </div>
-<?php
+    <?php
 if (isset($_SESSION['email'])) {
     /* Connection */
     $mysqli = new mysqli("localhost", "root", "", "proyecto");
@@ -88,75 +89,42 @@ if (isset($_SESSION['email'])) {
     <!-- Masthead-->
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
-            <!-- Masthead Avatar Image-->
-</body>
+        <!-- Create table-->
+        <table>
+<tr>
+    <td>Title</td>
+    <td>Termn</td>
+    <td>Defination</td>
+    <td>User</td>
+    <td>IdUserCard</td>
+</tr>
+
 <?php
-if (isset($_SESSION['email'])) {
+
     /* Connection */
-    $mysqli = new mysqli("localhost", "root", "", "proyecto");
-    if ($mysqli->connect_errno) {
-        echo 'FALLO LA CONEXION';
-    }
-    else{
+    $myslqi = mysqli_connect("localhost", "root", "", "proyecto");
 
-    }
-
-    /* Owner for query */
+    /* User name */
     $CardOwner = $_SESSION['user'];
-    /* Query id card */
-    $idcard = $mysqli->query("SELECT MAX(IdUserCard) as num FROM sets WHERE user = '$CardOwner'");
-    /* Save the query in a row */
-    $RowCard = mysqli_fetch_array($idcard);
-    /* Convert the row to int */
-    $Intcard = (int)$RowCard['num'];
 
-    /* Idcard error */
-    if (!$idcard) {
-        echo "Fallo el fetch de las cards: : (" . $mysqli->errno . ") " . $mysqli->error;
+    /* Query for select on database */
+    $delcard="SELECT * from sets where user = '$CardOwner'";
+    $resulta=mysqli_query($mysqli,$delcard);
 
-    }else if ($Intcard == 0){
-    /* If don't have any card, display a message  */
-    echo "<center>
-    <h1>No hay ninguna carta<h2>
-    <p>Crea una carta en la pagina anterior</p>
-    </center>";
-    }
-    else{
-        /* Random number  */
-        $num = rand(1,$Intcard);
-        /* Query for card */
-        $resultado = $mysqli->query("SELECT title, term, defination, img FROM sets WHERE user = '$CardOwner' and IdUserCard = '$num' ");
-        if (!$resultado) {
-            echo "Fallo el fetch: : (" . $mysqli->errno . ") " . $mysqli->error;
-        }else{
-            /* Vars for the card */
-            $row = mysqli_fetch_array($resultado);
-            /* Display the card */
-            echo"<center><div class='container'>
-                    <a><h5>" . $row["0"] ."</h5></a>
-                    <div class='flip-card'>
-                        <div class='flip-card-inner'>
+    /* Query */
+    while($mostrar=mysqli_fetch_array($resulta)){
+    ?>
+        <tr>
+            <td><?php echo $mostrar['title'] ?></td>
+            <td><?php echo $mostrar['term'] ?></td>
+            <td><?php echo $mostrar['defination'] ?></td>
+            <td><?php echo $mostrar['user'] ?></td>
+            <td><?php echo $mostrar['IdUserCard'] ?></td>
+            <td><a href="php/eliminarCard.php? IdUserCard=<?php echo $mostrar['IdUserCard'] ?>">Eliminar</a></td>
+        </tr>
 
-                        <div class='flip-card-front'>
-                      
-                        <p>". $row["1"] ."</p>
+<?php } ?>
 
-                    </div>
-                <div class='flip-card-back'>
-                <h1>". $row["2"] ." </h1> 
-                <img class='img_sets' src='sets_img/". $row["3"] ."' /> 
-                       </div>
-                       </div>
-                   </div></center>";
-    }
-  }
-}
-?>
-<!-- Refresh button -->
-<div>
-<button onClick="window.location.reload()" class="btn btn-primary RefreshButton">Refresh</button>
-</div>
-
-<!-- End -->
+</table>
 </body>
 </html>

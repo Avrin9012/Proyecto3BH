@@ -11,7 +11,6 @@
 /* Vars */
  	$usuario = $_POST['usuario'];
 	$nombre = $_POST['nombre'];
-
 	$contraseña = password_hash($_POST['contraseña'], PASSWORD_DEFAULT);
 	$email = $_POST['email'];
 	$img = $_FILES['img']['name'];

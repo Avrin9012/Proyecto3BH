@@ -4,8 +4,9 @@ session_start();
 	$conexion = mysqli_connect("localhost", "root", "", "proyecto");
 
 	/* Vars */
-	$emailogin= $_POST['emailogin'];
-	$contraseñalogin= password_hash($_POST['clavelogin'], PASSWORD_DEFAULT);
+	$emailogin = $_POST['emailogin'];
+	$contraseñalogin = password_hash($_POST['clavelogin'], PASSWORD_DEFAULT);
+	echo $contraseñalogin;
 
 	/* Query */
  	$consulta="SELECT * FROM usuario WHERE email = '$emailogin'";
@@ -16,13 +17,8 @@ session_start();
 
 	/* Save fetch to row */
  	$row = mysqli_fetch_array($resultado);
- 	if ($row && password_verify($contraseñalogin, $row['usuario'])) {
-        echo 'Bienvenido, ' . htmlspecialchars($nombre) . '!';
-    } else {
-        echo 'La autenticación ha fallado para ' . htmlspecialchars($nombre) . '.';
-    }
-	/* Session vars and auth */
- 	if($busqueda > 0) {
+ 	echo $_POST['clavelogin'];
+ 	if (password_verify($_POST['clavelogin'], $row['3'])) {
  		$_SESSION['email'] = $emailogin;
  		$_SESSION['my_img'] = $row[5];
  		$_SESSION['nombre'] = $row[2];
@@ -43,15 +39,12 @@ session_start();
 	    }
 		/* Go to index */
  		header('location:../index.php');
+        echo 'Bienvenido, ' . htmlspecialchars($emailogin) . '!';
+    } else {
+        echo'<script> alert("Error de autenticación");
+			 window.history.go(-1); </script>';
+    }
 
- 	}
- 	else{
-		/* Error message */
- 		echo' 	<script>
-					alert("Error de autenticación");
-					window.history.go(-1);
-			  	</script>';
- 	}
  	mysqli_free_result($resultado);
  	mysql_close($conexion);
 ?>

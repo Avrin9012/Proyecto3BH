@@ -269,15 +269,20 @@ if (isset($_SESSION['email'])) {
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">Este curso tiene las palabras más esenciales para del conocimiento del Inglés. Aprenderás los verbos básicos, preposiciones, sustantivos. Serás capaz de entender textos simples.Este curso tiene consistirá en el aprendizaje
                                     de las 100 palabras más comunes del idioma Inglés.</p>                    
-                                <?php if (isset($_SESSION['email'])) { ?>
-                                    <button class="btn btn-primary" role="link" onclick="window.location='course/cb1.php'" data-bs-dismiss="modal">
+                                <?php if ((isset($_SESSION['email'])) and (!isset($_SESSION['membresia']))) { ?>
+                                    <button class="btn btn-primary" role="link" onclick="window.location='mas.php'" data-bs-dismiss="modal">
                                         <i class="fas fa-sign-in-alt"></i>
-                                        Ingresar a curso
+                                        Ver precios de la membresia
                                     </button>
                                 <?php }else if (!isset($_SESSION['email'])) { ?>
                                     <button class="btn btn-primary" role="link" onclick="window.location='login.php'" data-bs-dismiss="modal">
                                         <i class="fas fa-sign-in-alt"></i>
                                         Login
+                                    </button>
+                                <?php }else if ((isset($_SESSION['email'])) and (isset($_SESSION['membresia']))) { ?>
+                                    <button class="btn btn-primary" role="link" onclick="window.location='course/cb1.php'" data-bs-dismiss="modal">
+                                        <i class="fas fa-sign-in-alt"></i>
+                                        Ingresar al curso
                                     </button>
                                <?php } ?>
                             </div>

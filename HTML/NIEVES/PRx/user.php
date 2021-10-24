@@ -10,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Ver usuario</title>
+    <title>Editar perfil</title>
     <!-- Favicon-->
     <link rel="shortcut icon" href="assets/img/favicon.ico">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -90,48 +90,61 @@ if (isset($_SESSION['email'])) {
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
 
+        <!-- moduser form-->
         <div class="contenedor">
         <h1 class="login">Editar perfil</h1>
+        <form enctype="multipart/form-data" class="registrarse" action="php/moduser.php" method="post">
         <center> <div>
                 <i class="fal fa-dove" style="color: #28c997;"></i>
-                <p><input class="form-control" name="usuario" type="text" required placeholder=<?php echo $_SESSION['user'] ?> > </p>
-                <p><input class="form-control" name="nombre" type="text" required placeholder=<?php echo $_SESSION['nombre'] ?> >  </p>
-                <p><input class="form-control" name='contraseña' type="password" required placeholder="No puedes ver la contraseña">  </p>
-                <p><input class="form-control" name="email" type="email" required placeholder=<?php echo $_SESSION['email'] ?> >  </p>
+                <!-- User-->
+                <p><input class="form-control" name="moduser" type="text" required value=<?php echo $_SESSION['user'] ?> > </p>
+                <!-- Nombre-->
+                <p><input class="form-control" name="modname" type="text" required value=<?php echo $_SESSION['nombre'] ?> >  </p>
+                <!-- Email-->
+                <p><input class="form-control" name="modmail" type="email" required value=<?php echo $_SESSION['email'] ?> >  </p>
+                <!-- Form control password-->
                 <div class="form-group">
                 <input type="hidden" name = "hidden" class="form-control" id="exampleInputPassword1" size=100000>
+                <!-- Image-->
                 <?php $dir = 'users_img/'.$_SESSION['my_img']; ?>
                 <a class='nav-link txtlogin' href='user.php' aria-haspopup='true' aria-expanded='false'>             
                 <?php echo '<img id="imgmod" src="'.$dir.'"></a>'?>
+                <!-- Form control file-->
                 <input type="hidden" name = "hidden" class="form-control" id="exampleInputPassword1" size=100000>
-                <input type="file" class="form-control" id="exampleInputPassword1" name="img">
+                <input type="file" class="form-control" id="exampleInputPassword1" name="modIMG">
                 <br>
                 </div>
-                <textarea name="messageM" class="form-control" id="message" type="text" placeholder=<?php echo $_SESSION['bio'] ?> style="height: 10rem" data-sb-validations="required"></textarea>
-                <div class="invalid-feedback" data-sb-feedback="message:required"></div>
-                <a href="login.html"> <input class="btn btn-primary" type="submit" name="enviar" value="Enviar" /></a>
+                <!-- Submit and reset-->
+                <a href="php/moduser.php"> <input class="btn btn-primary" type="submit" name="enviar" value="Enviar" /></a>
                 <input class="btn btn-primary" type="reset" name="restablecer" value="restablecer" /></p>
             </div> </center>
+        </form>
+
+        <!-- Form password -->
+        <br>
         </div>
-<?php
+        <h1 class="login">Cambiar contraseña</h1>
+        <form class="registrarse" action="php/ModPassUser.php" method="post">
+        <center> <div>
+                <i class="fal fa-dove" style="color: #28c997;"></i>
+                <p>Ingrese su contraseña vieja</p>
+                <!-- Password old -->
+                <p><input class="form-control" name="Passold" type="password" required placeholder=""></p>
+                <p>Ingrese su contraseña nueva</p>
+                <!-- Passworld new -->
+                <p><input class="form-control" name="Passnew" type="password" required placeholder=""></p>    
+                <!-- Submit -->            
+                <a href="php/ModPassUser.php"> <input class="btn btn-primary" type="submit" name="enviar" value="Enviar" /></a>
+            </div> </center>
+        </div>
+    </form>
 
-if (isset($_POST['submit'])) {
-    $mysqli = new mysqli("localhost", "root", "", "proyecto");
-       if ($mysqli->connect_errno) {
-           echo 'FALLO LA CONEXION';
-       }
-       else{
-       }
+<br>
 
-       $asd = $mysqli->query("SELECT COUNT(*) as num FROM sets WHERE user = '$CardOwner'");
-
-
-
-
-
-
-}
-?>
+<!-- Button to PREdeluser -->
+<form action="php/PREdeluser.php">
+    <input class="btn btn-primary btn-xl" type="submit" value="Eliminar usuario"/>
+</form><center>
 
 </body>
 </html>
