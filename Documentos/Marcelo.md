@@ -16,12 +16,28 @@
 ### Servicios
   + Servicios y costos que brinda el Sistema
   
-## Gestion
-  + Calendario
-  + Recursos
+## Gestion de Proyexto
+  + Gestion de Alcance
+    + Alcance del Producto
+    + Alcance del Proyecto
+    
+  + Gestion de Calendario
+    + EDT
+    + Gantt
+    
+  + Gesion de Recursos RRHH:
+    + RACI
+    
+  + Gestion de Interesados
+    + Matriz de Interesados
+    
+  + Gestion de Calidad
+    + Testing
+    
+  
 
-## Aportes desde las Disciplinas
-  + Formación empresarial: Misión y Visón, Logo. Marco Teórico de la empresa. Objetivos generales y específicos de la empresa.
+## Materias Partcipantes
+  + Formación Empresarial: Misión y Visón, Logo. Marco Teórico de la empresa. Objetivos generales y específicos de la empresa.
   + ADA: Ciclo de Vida y Etapas del Desarrollo del Software
   + Gestion de Proyecto de Web: Ciclo de Vida del Proyecto
   + Sistemas Operativos: Seleccion del S.O. Variables de Entorno y Manejo de terminal. Scripts de automatización. Roles y usuarios del Sistema.
@@ -30,12 +46,14 @@
   + Diseño Web: Html5, CSS 
   + Filosofía : Responsabilidad Social Emrpesarial es sobre ética
   + Matemática: Estadisiticas. Derivadas.
+  + Ciencias Sociales:
+  + Inglés:
 
 
 
 # Ciclo de Vida y Etapas del Desarrollo del Software
 ## Ciclo de vida
-  + Incremental
+  + Incremental: Justificar
 
 ### Etapa de Análisis
 **Adquisición de Requerimientos**
@@ -46,6 +64,11 @@
 
 
 ### Etapa de Diseño
+## Arquitectura del Software en 3 Capas
+  + Presentación
+  + Aplicación
+  + Datos
+
 **Diagramas**
   + MER
   + Diagrama de Casos de uso
@@ -55,7 +78,7 @@
 
 ### Etapa de Implementación
 **Implementación**
-  + DML (USE DATAbase, Create table)
+  + DML (USE, Create table)
   + DDL (Insert, delete, update, select)
   + Modulos principales: php
 
