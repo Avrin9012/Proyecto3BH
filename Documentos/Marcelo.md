@@ -5,16 +5,16 @@
 **1. Introduccion y Descripción del Contexto**
   + Aqui hacen una descripción general del trabajo que realizaron para hacer el proyecto
 
-2. Carta de presentacion o Propósito del proyecto
+**2. Carta de presentacion o Propósito del proyecto**
   + Letra o propuesta inicial del proyecto
 
-3) Misión Visón
+**3. Misión Visón**
   + Objetivos y carta de presentacion de la empresa
 
-4) Servicios
+**4. Servicios**
   + Servicios y costos que brinda el Sistema
   
-5) Gestion de Proyecto
+**5. Gestion de Proyecto""
   + Gestion de Alcance
     * Alcance del Producto
     * Alcance del Proyecto
@@ -33,7 +33,7 @@
     * Testing
     
   
-6) Materias Partcipantes
+**6. Materias Partcipantes**
   + Formación Empresarial
     * Misión y Visón, Logo. Marco Teórico de la empresa. Objetivos generales y específicos de la empresa.
   + ADA
@@ -61,7 +61,7 @@
   + Inglés
     * 
 
-7) Ciclo de Vida y Etapas del Desarrollo del Software
+**7. Ciclo de Vida y Etapas del Desarrollo del Software**
   + Ciclo de vida
     * Cascada
     * Incremental
@@ -72,7 +72,6 @@
   + Requerimientos No Funcionales
   + EDT o WBS (Esquema de Desglose de trabajo)
   + Documento de Especificación de Requeriminetos de Software
-
 
 ### Etapa de Diseño
 ## Arquitectura del Software en 3 Capas
