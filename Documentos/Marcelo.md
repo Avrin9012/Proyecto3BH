@@ -1,4 +1,4 @@
-# _Documento de referencia para armar la Carpeta
+# _Documento de referencia para armar la Carpeta_
 
 ## Indice temático del documento
 
