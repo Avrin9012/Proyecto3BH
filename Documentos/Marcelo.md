@@ -1,10 +1,10 @@
 ## Documento para ayudar a armar la documentacion
 
 
-## Indice temàtico del documento
+## Indice temático del documento
 
 ### Introduccion y Descripción del Contexto
-# Aqui hacen una desctipcion general del trabajo que realizaron para hacer el proyecto
+** Aqui hacen una desctipcion general del trabajo que realizaron para hacer el proyecto **
 
 
 ### Carta de presentacion o Propósito del proyecto
