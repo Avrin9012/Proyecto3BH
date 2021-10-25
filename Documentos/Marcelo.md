@@ -1,11 +1,9 @@
-# Documento para ayudar a armar la documentacion
-
+# Documento de referecnia para armar la Carpeta
 
 ## Indice temático del documento
 
 ### Introduccion y Descripción del Contexto
-  + Aqui hacen una desctipcion general del trabajo que realizaron para hacer el proyecto**
-
+  + Aqui hacen una descripción general del trabajo que realizaron para hacer el proyecto
 
 ### Carta de presentacion o Propósito del proyecto
   + Letra o propuesta inicial del proyecto
@@ -16,7 +14,7 @@
 ### Servicios
   + Servicios y costos que brinda el Sistema
   
-## Gestion de Proyexto
+## Gestion de Proyecto
   + Gestion de Alcance
     * Alcance del Producto
     * Alcance del Proyecto
