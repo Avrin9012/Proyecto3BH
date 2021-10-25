@@ -1,4 +1,4 @@
-### Documento para ayudar a armar la documentacion
+# Documento para ayudar a armar la documentacion
 
 
 ### Indice temático del documento
