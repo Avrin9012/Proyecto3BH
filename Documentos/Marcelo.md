@@ -35,7 +35,6 @@
     * Testing
     
   
-
 ## Materias Partcipantes
   + Formación Empresarial
     * Misión y Visón, Logo. Marco Teórico de la empresa. Objetivos generales y específicos de la empresa.
@@ -64,11 +63,11 @@
   + Inglés
     * 
 
-
-
 # Ciclo de Vida y Etapas del Desarrollo del Software
 ## Ciclo de vida
-  + Incremental: Justificar
+  + Incremental
+  + Cascada
+  + AGIL
 
 ### Etapa de Análisis
 **Adquisición de Requerimientos**
@@ -80,9 +79,9 @@
 
 ### Etapa de Diseño
 ## Arquitectura del Software en 3 Capas
-  + Presentación
-  + Aplicación
-  + Datos
+  + Capa de Presentación
+  + Capa de Aplicación
+  + Capa de Datos
 
 **Diagramas**
   + MER
