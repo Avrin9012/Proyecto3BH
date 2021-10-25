@@ -14,7 +14,7 @@
 **4. Servicios**
   + Servicios y costos que brinda el Sistema
   
-**5. Gestion de Proyecto**
+**5. Gestion del Proyecto y del Producto**
   + Gestion de Alcance
     * Alcance del Producto
       - Descripcion de las caracteristicas del software a desarrollar
