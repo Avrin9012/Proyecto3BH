@@ -17,7 +17,12 @@
   
 
 
+# Etapas del Desarrollo del Software
 ### Etapa de Análisis
+**Adquisición de Requerimientos
++ Requeriminetos Funcionales
++ Requeriminetos No Funcionales
++ Documento de Especificación de Requeriminetos de Software
 
 
 ### Etapa de Diseño
