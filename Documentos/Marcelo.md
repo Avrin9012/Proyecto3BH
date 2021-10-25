@@ -18,21 +18,21 @@
   
 ## Gestion de Proyexto
   + Gestion de Alcance
-    + Alcance del Producto
-    + Alcance del Proyecto
+    * Alcance del Producto
+    * Alcance del Proyecto
     
   + Gestion de Calendario
-    + EDT
-    + Gantt
+    * EDT
+    * Gantt
     
   + Gesion de Recursos RRHH:
-    + RACI
+    * RACI
     
   + Gestion de Interesados
-    + Matriz de Interesados
+    * Matriz de Interesados
     
   + Gestion de Calidad
-    + Testing
+    * Testing
     
   
 
@@ -89,5 +89,6 @@
 
 
 ## Documentacón
+**Documentación**
   + Carpeta final para Defensa del Proyexto
   + Anexos
