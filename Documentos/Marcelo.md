@@ -48,7 +48,7 @@
   + Programación Web: PHP
     * Módulos de implementación
   + Bases de Datos
-    * MER, DDL y DML
+    * MER, DML y DDL
   + Diseño Web
     * Html5, CSS 
   + Filosofía
@@ -57,9 +57,9 @@
     * Estadisiticas
     * Derivadas
   + Ciencias Sociales
-    * 
+     
   + Inglés
-    * 
+     
 
 **7. Ciclo de Vida y Etapas del Desarrollo del Software**
   + Ciclo de vida
@@ -79,7 +79,7 @@
   + Capa de Aplicación
   + Capa de Datos
 
-**Diagramas**
+* Diagramas
   + MER
   + Diagrama de Casos de uso
   + Diagrama de Despliegue
@@ -87,18 +87,18 @@
   + Prototipos de Páginas o Maquetado
 
 ### Etapa de Implementación
-**Implementación**
+* Implementación
   + DML (USE, Create table)
   + DDL (Insert, delete, update, select)
   + Modulos principales: php
 
 ### Testing
-**Testing**
+* Testing
   + Test de caja negra
   + Test de caja blanca
 
 
 ## Documentacón
-**Documentación**
+* Documentación
   + Carpeta final para Defensa del Proyexto
   + Anexos
