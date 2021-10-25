@@ -36,3 +36,12 @@
   + DML
   + DDL
   + Modulos prcinpales
+
+### Testing
+**Testing**
+  + Test de caja negra
+  + Test de caja blanca
+
+
+## Documentacón
+  + Carpeta final para Defensa del Proyexto
