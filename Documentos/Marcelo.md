@@ -14,7 +14,7 @@
 **4. Servicios**
   + Servicios y costos que brinda el Sistema
   
-**5. Gestion de Proyecto""
+**5. Gestion de Proyecto**
   + Gestion de Alcance
     * Alcance del Producto
     * Alcance del Proyecto
@@ -33,7 +33,7 @@
     * Testing
     
   
-**6. Materias Partcipantes**
+**6. Materias Participantes**
   + Formación Empresarial
     * Misión y Visón, Logo. Marco Teórico de la empresa. Objetivos generales y específicos de la empresa.
   + ADA
