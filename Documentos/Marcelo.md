@@ -17,6 +17,7 @@
 **5. Gestion de Proyecto**
   + Gestion de Alcance
     * Alcance del Producto
+      -- Descripcion de las caracteristicas del software a desarrollar
     * Alcance del Proyecto
     
   + Gestion de Calendario
