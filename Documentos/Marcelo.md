@@ -22,15 +22,16 @@
 **Adquisición de Requerimientos**
   + Requerimientos Funcionales
   + Requerimientos No Funcionales
+  + EDT o WBS (Esquema de DEsglose de trabajo)
   + Documento de Especificación de Requeriminetos de Software
 
 
 ### Etapa de Diseño
 **Diagramas**
-  + Casos de uso
-  + Despliegue
-  + Actividad
-  + Prototipos 
+  + Diagrama de Casos de uso
+  + Diagrama de Despliegue
+  + Diagrama de Actividad
+  + Prototipos de Páginas
 
 ### Etapa de Implementación
 **Implementación**
