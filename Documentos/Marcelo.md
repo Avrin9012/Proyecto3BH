@@ -11,18 +11,18 @@
 + Letra o propuesta inicial del proyecto
 
 ### Misión Visón
-+ Objetivos y carta de presentacion de la empresa
+  + Objetivos y carta de presentacion de la empresa
 
-### Servicios y costos
+### Servicios
   
 
 
 # Etapas del Desarrollo del Software
 ### Etapa de Análisis
 **Adquisición de Requerimientos**
-+ Requerimientos Funcionales
-+ Requerimientos No Funcionales
-+ Documento de Especificación de Requeriminetos de Software
+  + Requerimientos Funcionales
+  + Requerimientos No Funcionales
+  + Documento de Especificación de Requeriminetos de Software
 
 
 ### Etapa de Diseño
