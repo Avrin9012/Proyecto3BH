@@ -101,5 +101,6 @@
 
 ## Documentacón
 * Documentación
-  + Carpeta final para Defensa del Proyexto
+  + Carpeta final para Defensa del Proyecto
+  + Comentarios en el código
   + Anexos
