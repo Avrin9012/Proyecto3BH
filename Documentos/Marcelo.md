@@ -19,9 +19,9 @@
 
 # Etapas del Desarrollo del Software
 ### Etapa de Análisis
-**Adquisición de Requerimientos
-+ Requeriminetos Funcionales
-+ Requeriminetos No Funcionales
+**Adquisición de Requerimientos**
++ Requerimientos Funcionales
++ Requerimientos No Funcionales
 + Documento de Especificación de Requeriminetos de Software
 
 
@@ -32,6 +32,7 @@
   + Actividad
 
 ### Etapa de Implementación
+**Implementación**
   + DML
   + DDL
   + Modulos prcinpales
