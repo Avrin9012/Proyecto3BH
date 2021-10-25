@@ -2,8 +2,8 @@
 
 ## Indice temático del documento
 
-1. Introduccion y Descripción del Contexto
-  * Aqui hacen una descripción general del trabajo que realizaron para hacer el proyecto
+**1. Introduccion y Descripción del Contexto**
+  + Aqui hacen una descripción general del trabajo que realizaron para hacer el proyecto
 
 2. Carta de presentacion o Propósito del proyecto
   + Letra o propuesta inicial del proyecto
