@@ -8,7 +8,7 @@
 
 
 ### Carta de presentacion o Propósito del proyecto
-+ Letra o propuesta inicial que dió inicio al proyecto
++ Letra o propuesta inicial del proyecto
 
 ### Misión Visón
 + Objetivos y carta de presentacion de la empresa
