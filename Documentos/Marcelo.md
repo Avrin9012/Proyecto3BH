@@ -2,19 +2,19 @@
 
 ## Indice temático del documento
 
-### Introduccion y Descripción del Contexto
+1) Introduccion y Descripción del Contexto
   + Aqui hacen una descripción general del trabajo que realizaron para hacer el proyecto
 
-### Carta de presentacion o Propósito del proyecto
+2) Carta de presentacion o Propósito del proyecto
   + Letra o propuesta inicial del proyecto
 
-### Misión Visón
+3) Misión Visón
   + Objetivos y carta de presentacion de la empresa
 
-### Servicios
+4) Servicios
   + Servicios y costos que brinda el Sistema
   
-## Gestion de Proyecto
+5) Gestion de Proyecto
   + Gestion de Alcance
     * Alcance del Producto
     * Alcance del Proyecto
@@ -33,7 +33,7 @@
     * Testing
     
   
-## Materias Partcipantes
+6) Materias Partcipantes
   + Formación Empresarial
     * Misión y Visón, Logo. Marco Teórico de la empresa. Objetivos generales y específicos de la empresa.
   + ADA
@@ -44,7 +44,7 @@
     * Seleccion del S.O.
     * Variables de Entorno y Manejo de terminal.
     * Scripts de automatización.
-    *  Roles y usuarios del Sistema.
+    * Roles y usuarios del Sistema.
   + Programación Web: PHP
     * Módulos de implementación
   + Bases de Datos
@@ -61,11 +61,10 @@
   + Inglés
     * 
 
-# Ciclo de Vida y Etapas del Desarrollo del Software
-## Ciclo de vida
-  + Incremental
-  + Cascada
-  + AGIL
+7) Ciclo de Vida y Etapas del Desarrollo del Software
+  + Ciclo de vida
+    * Cascada
+    * Incremental
 
 ### Etapa de Análisis
 **Adquisición de Requerimientos**
