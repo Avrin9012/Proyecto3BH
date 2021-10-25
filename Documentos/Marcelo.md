@@ -3,7 +3,7 @@ Documento para ayudar a armar la documentacion
 
 Indice temàtico del documento
 
-### Introduccion y Descripción del Contexto**
+### Introduccion y Descripción del Contexto
 # Aqui hacen una desctipcion general del trabajo que realizaron para hacer el proyecto
 
 
