@@ -1,7 +1,7 @@
-## Documento para ayudar a armar la documentacion
+### Documento para ayudar a armar la documentacion
 
 
-## Indice temático del documento
+### Indice temático del documento
 
 ### Introduccion y Descripción del Contexto
 ** Aqui hacen una desctipcion general del trabajo que realizaron para hacer el proyecto **
@@ -11,7 +11,7 @@
 + Letra o propuesta inicial que dió inicio al proyecto
 
 ### Misión Visón
-+ Objetivos y caracteristicas de la empresa 
++ Objetivos y carta de presentacion de la empresa
 
 ### Servicios y costos
   
