@@ -19,7 +19,7 @@
     * Alcance del Producto
       - Descripcion de las caracteristicas del software a desarrollar
     * Alcance del Proyecto
-    
+      - Descripcion de las caracteristicas del proyecto en el que se hizo el Software
   + Gestion de Calendario
     * EDT
     * Gantt
