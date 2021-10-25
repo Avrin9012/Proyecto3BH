@@ -11,7 +11,7 @@ Indice temàtico del documento
 # Letra o propuesta inicial que dió inicio al proyecto
 
 ### Misión Visón
-+Objetivos y caracteristicas de la empresa 
++ Objetivos y caracteristicas de la empresa 
 
 ### Servicios y costos
   
@@ -21,7 +21,7 @@ Indice temàtico del documento
 
 
 ### Etapa de Diseño
-** Diagramas **
+**Diagramas**
   + Casos de uso
   + Despliegue
   + Actividad
@@ -29,4 +29,4 @@ Indice temàtico del documento
 ### Etapa de Implementación
   + DML
   + DDL
-  + Moduclos prcinpales
+  + Modulos prcinpales
