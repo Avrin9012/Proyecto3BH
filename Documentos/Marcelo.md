@@ -82,7 +82,7 @@
 
 * Diagramas
   + MER
-  + Diagrama de Casos de uso
+  + Diagrama y desarrollo de Casos de uso
   + Diagrama de Despliegue
   + Diagrama de Actividad
   + Prototipos de Páginas o Maquetado
