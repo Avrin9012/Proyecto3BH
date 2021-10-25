@@ -30,12 +30,13 @@
   + Casos de uso
   + Despliegue
   + Actividad
+  + Prototipos 
 
 ### Etapa de Implementación
 **Implementación**
   + DML
   + DDL
-  + Modulos prcinpales
+  + Modulos principales
 
 ### Testing
 **Testing**
