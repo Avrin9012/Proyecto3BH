@@ -1,14 +1,25 @@
-<?php
-    $UserCardId = $_GET['IdUserCard'];
-    $conexion = mysqli_connect("localhost", "root", "", "proyecto");
-    $del = "DELETE FROM sets WHERE IdUserCard = '$UserCardId'";
-    $col= mysqli_query($conexion, $del);
-    if(!$col){
-        echo "No se eliminó";
+<?php   
+session_start();
 
-    }else{
-        header("location: ../create.php");
-    }
+/* Connection */
+$conexion = mysqli_connect("localhost", "root", "", "proyecto");
 
+/* Vars */
+$emailAuth = $_SESSION['email'];
+$userAuth = $_SESSION['user'];
+$nameAuth = $_SESSION['nombre'];
 
-    ?>
+/* Query */
+$del = "DELETE FROM usuario WHERE email = '$emailAuth' AND usuario = '$userAuth' AND nombre = '$nameAuth'";
+$col= mysqli_query($conexion, $del);
+
+/* If it's correct */
+if(!$col){
+    echo "No se eliminó";
+}else{
+    /* If it's not */
+    unlink('../users_img/' . $_SESSION['my_img']);
+    session_unset();
+    session_destroy();
+    header("location: ../index.php");
+}

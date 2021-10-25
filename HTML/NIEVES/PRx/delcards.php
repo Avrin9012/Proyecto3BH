@@ -93,10 +93,9 @@ if (isset($_SESSION['email'])) {
         <table>
 <tr>
     <td>Title</td>
-    <td>Termn</td>
+    <td>Term</td>
     <td>Defination</td>
     <td>User</td>
-    <td>IdUserCard</td>
 </tr>
 
 <?php
@@ -119,7 +118,6 @@ if (isset($_SESSION['email'])) {
             <td><?php echo $mostrar['term'] ?></td>
             <td><?php echo $mostrar['defination'] ?></td>
             <td><?php echo $mostrar['user'] ?></td>
-            <td><?php echo $mostrar['IdUserCard'] ?></td>
             <td><a href="php/eliminarCard.php? IdUserCard=<?php echo $mostrar['IdUserCard'] ?>">Eliminar</a></td>
         </tr>
 
