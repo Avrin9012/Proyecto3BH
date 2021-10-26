@@ -99,15 +99,15 @@ if (isset($_SESSION['email'])) {
     </tr>
     <tr>
         <td>3 Meses</td>
-        <td>3.99$xM</td>
+        <td>3.99$</td>
     </tr>
     <tr>
         <td>6 Meses</td>
-        <td>4.99$xM</td>
+        <td>4.99$</td>
     </tr>
      <tr>
         <td>1 Año</td>
-        <td>7.99$xM</td>
+        <td>7.99$</td>
     </tr>
 </table>
 </center>
@@ -124,15 +124,15 @@ if (isset($_SESSION['email'])) {
     </tr>
     <tr>
         <td>3 Meses</td>
-        <td>5.99$xM</td>
+        <td>5.99$</td>
     </tr>
     <tr>
         <td>6 Meses</td>
-        <td>6.99$xM</td>
+        <td>6.99$</td>
     </tr>
     <tr>
         <td>1 Año</td>
-        <td>9.99$xM</td>
+        <td>9.99$</td>
     </tr>
 </table>
 <br>
@@ -148,15 +148,15 @@ if (isset($_SESSION['email'])) {
     </tr>
     <tr>
         <td>3 Meses</td>
-        <td>6.99$xM</td>
+        <td>6.99$</td>
     </tr>
     <tr>
         <td>6 Meses</td>
-        <td>7.99$xM</td>
+        <td>7.99$</td>
     </tr>
     <tr>
         <td>1 Año</td>
-        <td>10.99$xM</td>
+        <td>10.99$</td>
     </tr>
 </table>
 <hr><br>
