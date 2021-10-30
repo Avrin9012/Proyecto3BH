@@ -97,7 +97,7 @@ if (isset($_SESSION['email'])) {
 
 <h2>Información que es recogida</h2><br><br>
 
-<p>Nuestro sitio web podrá recoger información personal por ejemplo: Nombre,  información de contacto como  su dirección de correo electrónica e información demográfica. Así mismo cuando sea necesario podrá ser requerida información específica para procesar algún pedido o realizar una entrega o facturación.<p><br>
+<p>Nuestro sitio web podrá recoger información personal por ejemplo: Nombre, información de contacto como su dirección de correo electrónica e información demográfica. Así mismo cuando sea necesario podrá ser requerida información específica para procesar algún pedido o realizar una entrega o facturación.<p><br>
 
 <h2>Uso de la información recogida</h2><br><br>
 
@@ -105,11 +105,13 @@ if (isset($_SESSION['email'])) {
 
 <p>Bit By Bit está altamente comprometido para cumplir con el compromiso de mantener su información segura. Usamos los sistemas más avanzados y los actualizamos constantemente para asegurarnos que no exista ningún acceso no autorizado.</p><br>
 
-<h2>Cookies</h2><br><br>
+<h2>Subida de imagenes con derecho de autor</h2><br><br>
 
-<p>Una cookie se refiere a un fichero que es enviado con la finalidad de solicitar permiso para almacenarse en su ordenador, al aceptar dicho fichero se crea y la cookie sirve entonces para tener información respecto al tráfico web, y también facilita las futuras visitas a una web recurrente. Otra función que tienen las cookies es que con ellas las web pueden reconocerte individualmente y por tanto brindarte el mejor servicio personalizado de su web.</p><br>
+<p>Bit by Bit se desligua de cualquier imagen almacenada por medio de la foto de perfil. Esto sera única responsabilidad del usuario que la suba. Si usted es una empresa, persona o entidad afectada por esto, contactanos a aprendeinglesproyect@gmail.com para su inmediata eliminación</p><br>
 
-<p>Nuestro sitio web emplea las cookies para poder identificar las páginas que son visitadas y su frecuencia. Esta información es empleada únicamente para análisis estadístico y después la información se elimina de forma permanente. Usted puede eliminar las cookies en cualquier momento desde su ordenador. Sin embargo las cookies ayudan a proporcionar un mejor servicio de los sitios web, estás no dan acceso a información de su ordenador ni de usted, a menos de que usted así lo quiera y la proporcione directamente noticias. Usted puede aceptar o negar el uso de cookies, sin embargo la mayoría de navegadores aceptan cookies automáticamente pues sirve para tener un mejor servicio web. También usted puede cambiar la configuración de su ordenador para declinar las cookies. Si se declinan es posible que no pueda utilizar algunos de nuestros servicios.</p><br>
+<h2>Eliminación de cuentas</h2><br><br>
+
+<p>Todas las cuentas asociadas a una institución o usuario pueden ser eliminada sin previo aviso despues de 1 mes y 5 dias de atraso al pago de la membresías. Sin embargo estas no se removeran completamente sino que sera posible acceder a ellas si en los proximos 5 dias habiles la institución o persona pagan la membresia. </p><br>
 
 <h2>Enlaces a Terceros</h2><br><br>
 
