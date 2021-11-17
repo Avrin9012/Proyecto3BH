@@ -11,10 +11,10 @@ session_start()
     <meta name="description" content="" />
     <meta name="author" content="" />
     <link href="../../css/stylesfitbg.css" rel="stylesheet" />
-    <title>Hiragana quiz</title>
+    <title>Chigau</title>
     <!-- Favicon-->
     <link rel="shortcut icon" href="../../assets/img/favicon.ico">
-    <link rel="icon" type="image/x-icon" href="../../assets/favihira.ico" />
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -86,44 +86,20 @@ if (isset($_SESSION['email'])) {
 }
     ?>
     </nav>
-
-    <!-- Header-->
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
-<?php
-/* The words on an array and save it into a session variable*/
-$Trasliteracion = ["a", "i", "u", "e", "o", "ka", "ki", "ku", "ke", "ko", "sa", "shi", "su", "se", "so", "ta", "chi", "tsu", "te", "to", "na", "ni", "nu", "ne", "no", "ha", "hi", "fu", "he", "ho", "ma", "mi", "mu", "me", "mo", "ya", "yu", "yo", "ra", "ri", "ru", "re", "ro", "wa", "wo", "n"];
-$_SESSION['Trasliteracion'] = $Trasliteracion;
 
-/* Here the program choose a image and the var select saved into a session variable */
-$select = rand(1,46);
-$img = "Assets/".$select.".png";
-$_SESSION['HiraIMG'] = $select;
+            <h1>CHIAGU!!!! - WRONG!!!<h1>
 
-?>
+            <img src="Assets/Chigau.png">
 
-<h1>HIRAGANA PRACTICE</h1>
-
-<p>What's that syllable?</p>
-
-<?php
-/* Img canvas */
-echo "<div class='canvas'>
-<img src='$img'>
-</div>";
-?>
-
-<!-- User input-->
-<form enctype="multipart/form-data" class="registrarse" action="php/action.php" autocomplete="off" method="POST">
-    <div class="contenedor">
-        <h1 class="login"></h1>
-        <div>
-            <i class="fal fa-dove" style="color: #28c997;"></i>
-            <p><input class="form-control" name="Answer" type="text" required placeholder="Enter here your answer"> </p>
-            <a> <input class="btn btn-primary" type="submit" name="enviar" value="Check" /></a>
-        </div>
-    </div>
-</form>
+            <!-- Button refresh-->
+            <form enctype="multipart/form-data" class="registrarse" action="hira.php" autocomplete="off" method="POST">
+                <div class="contenedor">
+                    <a> <input class="btn btn-primary" type="submit" name="enviar" value="Next" /></a>
+                </div>
+            </div>
+        </form>
 
 </body>
 </html>

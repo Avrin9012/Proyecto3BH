@@ -10,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Usuario flashcards</title>
+    <title>Flashcards user</title>
     <!-- Favicon-->
     <link rel="shortcut icon" href="assets/img/favicon.ico">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -51,8 +51,8 @@ if (isset($_SESSION['email'])) {
     /* NAV HTML if user is logged */     
     echo "<ul class='navbar-nav ms-auto'>
     <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='create.php'>Flashcards</a></li>
-    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='close.php'>Cerrar sesion</a></li>
-    <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='index.php'>Inicio</a></li>
+    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='close.php'>Session close</a></li>
+    <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='index.php'>Home</a></li>
     </ul>
     <div id='userlogin'><li class='nav-item dropdown'><div>
     <a class='nav-link txtlogin' href='user.php' aria-haspopup='true' aria-expanded='false'>".             
@@ -68,8 +68,8 @@ if (isset($_SESSION['email'])) {
     echo '
     <ul class="navbar-nav ms-auto">
     <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Login</a></li>
-    <li class="RegisterButton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="register.php">Registrarse</a></li>
-    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Inicio</a></li>
+    <li class="RegisterButton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="register.php">Register</a></li>
+    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Home</a></li>
     </ul>
     ';
         }
@@ -78,8 +78,8 @@ if (isset($_SESSION['email'])) {
     /* NAV HTML if user is admin */
     echo '
     <ul class="navbar-nav ms-auto">
-    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="soporte.php">Mensajes Soporte</a></li>
-    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="admin/addmem.php">Añadir membresia</a></li>
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="soporte.php">Index messages</a></li>
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="admin/addmem.php">Add mem</a></li>
     </ul>
     ';
 }

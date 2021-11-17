@@ -9,7 +9,7 @@ session_start();
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Cursos de ingles</title>
+        <title>About us</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -49,8 +49,8 @@ if (isset($_SESSION['email'])) {
     /* NAV HTML if user is logged */     
     echo "<ul class='navbar-nav ms-auto'>
     <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='create.php'>Flashcards</a></li>
-    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='close.php'>Cerrar sesion</a></li>
-    <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='index.php'>Inicio</a></li>
+    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='close.php'>Session close</a></li>
+    <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='index.php'>Home</a></li>
     </ul>
     <div id='userlogin'><li class='nav-item dropdown'><div>
     <a class='nav-link txtlogin' href='user.php' aria-haspopup='true' aria-expanded='false'>".             
@@ -66,8 +66,8 @@ if (isset($_SESSION['email'])) {
     echo '
     <ul class="navbar-nav ms-auto">
     <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Login</a></li>
-    <li class="RegisterButton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="register.php">Registrarse</a></li>
-    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Inicio</a></li>
+    <li class="RegisterButton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="register.php">Register</a></li>
+    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Home</a></li>
     </ul>
     ';
         }
@@ -76,13 +76,13 @@ if (isset($_SESSION['email'])) {
     /* NAV HTML if user is admin */
     echo '
     <ul class="navbar-nav ms-auto">
-    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="soporte.php">Mensajes Soporte</a></li>
-    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="admin/addmem.php">Añadir membresia</a></li>
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="soporte.php">Index messages</a></li>
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="admin/addmem.php">Add mem</a></li>
     </ul>
     ';
 }
     ?>
-</nav>
+    </nav>
         <!-- Masthead-->
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
@@ -90,23 +90,23 @@ if (isset($_SESSION['email'])) {
 <center>
 <table border=1 align="center">
     <tr>
-        <td>Membresia Basica</td>
-        <td>Precios</td>
+        <td>Basic membership</td>
+        <td>Price</td>
     </tr>
     <tr>
-        <td>Prueba gratis (1 Mes)</td>
-        <td>Gratis</td>
+        <td>Free try (1 Month)</td>
+        <td>Free</td>
     </tr>
     <tr>
-        <td>3 Meses</td>
+        <td>3 Months</td>
         <td>3.99$</td>
     </tr>
     <tr>
-        <td>6 Meses</td>
+        <td>6 Months</td>
         <td>4.99$</td>
     </tr>
      <tr>
-        <td>1 Año</td>
+        <td>1 Year</td>
         <td>7.99$</td>
     </tr>
 </table>
@@ -115,23 +115,23 @@ if (isset($_SESSION['email'])) {
 <hr>
 <table border=1 align="center">
     <tr>
-        <td>Membresia Media</td>
-        <td>Precios</td>
+        <td>Medium membership</td>
+        <td>Price</td>
     </tr>
     <tr>
-        <td>Prueba gratis (1 Mes)</td>
+        <td>Free try (1 Month)</td>
         <td>Free</td>
     </tr>
     <tr>
-        <td>3 Meses</td>
+        <td>3 Months</td>
         <td>5.99$</td>
     </tr>
     <tr>
-        <td>6 Meses</td>
+        <td>6 Months</td>
         <td>6.99$</td>
     </tr>
     <tr>
-        <td>1 Año</td>
+        <td>1 Year</td>
         <td>9.99$</td>
     </tr>
 </table>
@@ -139,23 +139,23 @@ if (isset($_SESSION['email'])) {
 <hr>
 <table border=1 align="center">
     <tr>
-        <td>Membresia Avanzada</td>
+        <td>Advanced membership</td>
         <td>Precios</td>
     </tr>
     <tr>
-        <td>Prueba gratuita (1 Mes)</td>
+        <td>Free try (1 Month)</td>
         <td>Free</td>
     </tr>
     <tr>
-        <td>3 Meses</td>
+        <td>3 Months</td>
         <td>6.99$</td>
     </tr>
     <tr>
-        <td>6 Meses</td>
+        <td>6 Months</td>
         <td>7.99$</td>
     </tr>
     <tr>
-        <td>1 Año</td>
+        <td>1 Year</td>
         <td>10.99$</td>
     </tr>
 </table>

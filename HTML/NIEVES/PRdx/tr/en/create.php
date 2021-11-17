@@ -93,12 +93,12 @@ if (isset($_SESSION['email'])) {
             
 <!-- Button to flashcards-->
 <center><form action="watchcards.php">
-    <input class="btn btn-primary btn-xl" type="submit" value="Ir a flashcards"/>
+    <input class="btn btn-primary btn-xl" type="submit" value="Go to your flashcards"/>
 </form><center>
 <!-- Button to flashcards-->
 <center>
 <form action="delcards.php">
-    <input class="btn btn-primary btn-xl" type="submit" value="Eliminar flashcards"/>
+    <input class="btn btn-primary btn-xl" type="submit" value="Delete flashcards"/>
 </form><center>
 
 <!-- Create card form-->

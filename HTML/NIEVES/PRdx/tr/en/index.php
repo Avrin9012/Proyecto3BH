@@ -114,15 +114,6 @@ if (isset($_SESSION['email'])) {
             </div>
             <!-- Portfolio Grid Items-->
             <div class="row justify-content-center">
-                <!-- Portfolio Item 1-->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/img2.jpg" alt="..." />
-                    </div>
-                </div>
                 <!-- Portfolio Item 2-->
                 <div class="col-md-6 col-lg-4 mb-5">
                     <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
@@ -132,17 +123,6 @@ if (isset($_SESSION['email'])) {
                         <img class="img-fluid" src="assets/img/img1.jpg" alt="..." />
                     </div>
                 </div>
-                <!-- Portfolio Item 3-->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/img3.jpg" alt="..." />
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
     <!-- About Section-->
     <section class="page-section bg-primary text-white mb-0" id="about">
@@ -247,51 +227,6 @@ if (isset($_SESSION['email'])) {
     </div>
     <!-- Portfolio Modals-->
     <!-- Portfolio Modal 1-->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                <div class="modal-body text-center pb-5">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Nivel I</h2>
-                                <!-- Icon Divider-->
-                                <div class="divider-custom">
-                                    <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                    <div class="divider-custom-line"></div>
-                                </div>
-                                <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="assets/img/img2.jpg" alt="..." />
-                                <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">Este curso tiene las palabras más esenciales para del conocimiento del Inglés. Aprenderás los verbos básicos, preposiciones, sustantivos. Serás capaz de entender textos simples.Este curso tiene consistirá en el aprendizaje
-                                    de las 100 palabras más comunes del idioma Inglés.</p>                    
-                                <?php if ((isset($_SESSION['email'])) and (!isset($_SESSION['membresia']))) { ?>
-                                    <button class="btn btn-primary" role="link" onclick="window.location='mas.php'" data-bs-dismiss="modal">
-                                        <i class="fas fa-sign-in-alt"></i>
-                                        Ver precios de la membresia
-                                    </button>
-                                <?php }else if (!isset($_SESSION['email'])) { ?>
-                                    <button class="btn btn-primary" role="link" onclick="window.location='login.php'" data-bs-dismiss="modal">
-                                        <i class="fas fa-sign-in-alt"></i>
-                                        Login
-                                    </button>
-                                <?php }else if ((isset($_SESSION['email'])) and (isset($_SESSION['membresia']))) { ?>
-                                    <button class="btn btn-primary" role="link" onclick="window.location='course/cb1.php'" data-bs-dismiss="modal">
-                                        <i class="fas fa-sign-in-alt"></i>
-                                        Ingresar al curso
-                                    </button>
-                               <?php } ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Portfolio Modal 2-->
     <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
@@ -301,7 +236,7 @@ if (isset($_SESSION['email'])) {
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Nivel II</h2>
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Hiragana Practice</h2>
                                 <!-- Icon Divider-->
                                 <div class="divider-custom">
                                     <div class="divider-custom-line"></div>
@@ -311,57 +246,11 @@ if (isset($_SESSION['email'])) {
                                 <!-- Portfolio Modal - Image-->
                                 <img class="img-fluid rounded mb-5" src="assets/img/img1.jpg" alt="..." />
                                 <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">Este curso medio tiene un montón de palabras nuevas, aprenderás más sobre verbos, sustantivos y gramatica. Serás capaz de entender textos B1 y B2, e incluso podrás escribir textos simples.</p>
-                                <?php if (isset($_SESSION['email'])) { ?>
-                                    <button class="btn btn-primary" role="link" onclick="window.location='course/cb2.php'" data-bs-dismiss="modal">
+                                <p class="mb-4">This is a simple hiragana practice without any fee, and even without register, 初めましょう!!! - Let's start!!! </p>     
+                                    <button class="btn btn-primary" role="link" onclick="window.location='course/hira/hira.php'" data-bs-dismiss="modal">
                                         <i class="fas fa-sign-in-alt"></i>
-                                        Ingresar a curso
+                                        START
                                     </button>
-                                <?php }else if (!isset($_SESSION['email'])) { ?>
-                                    <button class="btn btn-primary" role="link" onclick="window.location='login.php'" data-bs-dismiss="modal">
-                                        <i class="fas fa-sign-in-alt"></i>
-                                        Login
-                                    </button>
-                               <?php } ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Portfolio Modal 3-->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                <div class="modal-body text-center pb-5">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Nivel III</h2>
-                                <!-- Icon Divider-->
-                                <div class="divider-custom">
-                                    <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                    <div class="divider-custom-line"></div>
-                                </div>
-                                <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="assets/img/img3.jpg" alt="..." />
-                                <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">Tendrás un conocimiento incluso más amplio sobre el idioma Inglés, serás capaz de escribir y entender textos más complejos, podrás seguir piezas de contenido nativo como películas, series, etc. </p>
-                                <?php if (isset($_SESSION['email'])) { ?>
-                                    <button class="btn btn-primary" role="link" onclick="window.location='course/cb3.php'" data-bs-dismiss="modal">
-                                        <i class="fas fa-sign-in-alt"></i>
-                                        Ingresar a curso
-                                    </button>
-                                <?php }else if (!isset($_SESSION['email'])) { ?>
-                                    <button class="btn btn-primary" role="link" onclick="window.location='login.php'" data-bs-dismiss="modal">
-                                        <i class="fas fa-sign-in-alt"></i>
-                                        Login
-                                    </button>
-                               <?php } ?>
                             </div>
                         </div>
                     </div>

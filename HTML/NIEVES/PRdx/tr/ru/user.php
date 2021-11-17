@@ -10,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Editar perfil</title>
+    <title>Edit profile</title>
     <!-- Favicon-->
     <link rel="shortcut icon" href="assets/img/favicon.ico">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -92,7 +92,7 @@ if (isset($_SESSION['email'])) {
 
         <!-- moduser form-->
         <div class="contenedor">
-        <h1 class="login">Editar perfil</h1>
+        <h1 class="login">Edit profile</h1>
         <form enctype="multipart/form-data" class="registrarse" action="php/moduser.php" method="post">
         <center> <div>
                 <i class="fal fa-dove" style="color: #28c997;"></i>
@@ -123,18 +123,18 @@ if (isset($_SESSION['email'])) {
         <!-- Form password -->
         <br>
         </div>
-        <h1 class="login">Cambiar contraseña</h1>
+        <h1 class="login">Change password</h1>
         <form class="registrarse" action="php/ModPassUser.php" method="post">
         <center> <div>
                 <i class="fal fa-dove" style="color: #28c997;"></i>
-                <p>Ingrese su contraseña vieja</p>
+                <p>Type your old password</p>
                 <!-- Password old -->
                 <p><input class="form-control" name="Passold" type="password" required placeholder=""></p>
-                <p>Ingrese su contraseña nueva</p>
+                <p>Type your new password</p>
                 <!-- Passworld new -->
                 <p><input class="form-control" name="Passnew" type="password" required placeholder=""></p>    
                 <!-- Submit -->            
-                <a href="php/ModPassUser.php"> <input class="btn btn-primary" type="submit" name="enviar" value="Enviar" /></a>
+                <a href="php/ModPassUser.php"> <input class="btn btn-primary" type="submit" name="enviar" value="Submit" /></a>
             </div> </center>
         </div>
     </form>
@@ -143,7 +143,7 @@ if (isset($_SESSION['email'])) {
 
 <!-- Button to PREdeluser -->
 <form action="php/PREdeluser.php">
-    <input class="btn btn-primary btn-xl" type="submit" value="Eliminar usuario"/>
+    <input class="btn btn-primary btn-xl" type="submit" value="Delete user"/>
 </form><center>
 
 </body>

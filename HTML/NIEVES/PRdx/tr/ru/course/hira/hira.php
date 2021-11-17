@@ -11,10 +11,10 @@ session_start()
     <meta name="description" content="" />
     <meta name="author" content="" />
     <link href="../../css/stylesfitbg.css" rel="stylesheet" />
-    <title>Curso Basico 1</title>
+    <title>Hiragana quiz</title>
     <!-- Favicon-->
     <link rel="shortcut icon" href="../../assets/img/favicon.ico">
-    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../../assets/favihira.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -45,89 +45,85 @@ if (isset($_SESSION['email'])) {
     }else{
     }
     /* Dir for user img */
-    $dir = '../users_img/'.$_SESSION['my_img'];
+    $dir = 'users_img/'.$_SESSION['my_img'];
     echo '<ul class="navbar-nav mr-auto"> <li class="nav-item active">
     </li>
-    </ul>';  
-    /* NAV HTML if user is logged */   
+    </ul>';
+    /* NAV HTML if user is logged */     
     echo "<ul class='navbar-nav ms-auto'>
-    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='../create.php'>Flashcards</a></li>
-    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='../close.php'>Cerrar sesion</a></li>
-    <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='../index.php'>Inicio</a></li>
+    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='../../create.php'>Flashcards</a></li>
+    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='../../close.php'>Session close</a></li>
+    <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='../../index.php'>Home</a></li>
     </ul>
     <div id='userlogin'><li class='nav-item dropdown'><div>
-    <a class='nav-link txtlogin' href='user.php' aria-haspopup='true' aria-expanded='false'>".             
+    <a class='nav-link txtlogin' href='../user.php' aria-haspopup='true' aria-expanded='false'>".             
     '<img id="imgfreelogin" src="'.$dir.'">' . $_SESSION['email']."</a>
     <div class='dropdown-menu' aria-labelledby='dropdown01'>
-    <a class='dropdown-item' href='user.php?user_ref=$_SESSION[id]'>Mis flashcards</a>
+    <a class='dropdown-item' href='../../user.php?user_ref=$_SESSION[id]'>Mis flashcards</a>
     <a class='dropdown-item' href='opciones.php?my_settings=$_SESSION[id]        
     '>opciones</a>
-    <a class='dropdown-item' href='close.php'>Cerrar sesion</a>
+    <a class='dropdown-item' href='../../close.php'>.Cerrar sesion</a>
     </div> </li> </div>";
 }else if (!isset($_SESSION['email'])) {
     /* NAV HTML if user is not logged */
     echo '
     <ul class="navbar-nav ms-auto">
-    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../login.php">Login</a></li>
-    <li class="RegisterButton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../register.php">Registrarse</a></li>
-    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../index.php">Inicio</a></li>
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../../login.php">Login</a></li>
+    <li class="RegisterButton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../../register.php">Register</a></li>
+    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../../index.php">Home</a></li>
     </ul>
     ';
         }
     ?>
-
 <?php if (isset($_SESSION['admin'])) {
     /* NAV HTML if user is admin */
     echo '
     <ul class="navbar-nav ms-auto">
-    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../soporte.php">Mensajes Soporte</a></li>
-    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../admin/addmem.php">Añadir Membresia</a></li>
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../../soporte.php">Index messages</a></li>
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../../admin/addmem.php">Add mem</a></li>
     </ul>
     ';
 }
     ?>
     </nav>
+
+    <!-- Header-->
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
+<?php
+/* The words on an array and save it into a session variable*/
+$Trasliteracion = ["a", "i", "u", "e", "o", "ka", "ki", "ku", "ke", "ko", "sa", "shi", "su", "se", "so", "ta", "chi", "tsu", "te", "to", "na", "ni", "nu", "ne", "no", "ha", "hi", "fu", "he", "ho", "ma", "mi", "mu", "me", "mo", "ya", "yu", "yo", "ra", "ri", "ru", "re", "ro", "wa", "wo", "n"];
+$_SESSION['Trasliteracion'] = $Trasliteracion;
 
-        <div class="canvas">
+/* Here the program choose a image and the var select saved into a session variable */
+$select = rand(1,46);
+$img = "Assets/".$select.".png";
+$_SESSION['HiraIMG'] = $select;
 
-        </div>
+?>
 
-        <div class="button refresh">
+<h1>HIRAGANA PRACTICE</h1>
 
-        </div>
+<p>What's that syllable?</p>
 
 <?php
-$Trasliteracion= ["a", "i", "u", "e", "o", "ka", "ki", "ku", "ke", "ko", "sa", "shi", "su", "se", "so", "ta", "chi", "tsu", "te", "to", "na", "ni", "nu", "ne", "no", "ha", "hi", "fu", "he", "ho", "ma", "mi", "mu", "me", "mo", "ya", "yu", "yo", "ra", "ri", "ru", "re", "ro", "wa", "wo", "n"];
-/* This thing is python not php, so the structure is there but i must to change it to php */
-$select = rand(1,46);
-
-
-
-while ($life >= 1) {
-    
-    if ($select!=46){
-        Character = random.randint(0,45)
-        #Aqui va el pinche parte de elegir imagen y waeas
-        img = ImageTk.PhotoImage(Image.open(r"C:\Archivos de cosas xd\Cosas\Programas de trabajo\L piton\Poroiekoto\Assets/"+str(Character)+".png"))  
-        canvas.create_image(1, 1, anchor=NW, image=img)
-        Answer = str(input(" "))
-        
-        #Aqui se elige si estas bien o mal wey
-        }if Trasliteracion[Character]!=Answer:
-            print(Character)
-            print(Trasliteracion[Character])
-            Lifes = int(Lifes)-1
-            LifesDrawer()
-            Life_txt.after(1, Life_txt.destroy)
-
-        
-        }if Trasliteracion[Character]==Answer:
-            LifesDrawer()
-            Life_txt.after(1, Life_txt.destroy)
-}
+/* Img canvas */
+echo "<div class='canvas'>
+<img src='$img'>
+</div>";
 ?>
+
+<!-- User input-->
+<form enctype="multipart/form-data" class="registrarse" action="php/action.php" autocomplete="off" method="POST">
+    <div class="contenedor">
+        <h1 class="login"></h1>
+        <div>
+            <i class="fal fa-dove" style="color: #28c997;"></i>
+            <p><input class="form-control" name="Answer" type="text" required placeholder="Enter here your answer"> </p>
+            <a> <input class="btn btn-primary" type="submit" name="enviar" value="Check" /></a>
+        </div>
+    </div>
+</form>
 
 </body>
 </html>

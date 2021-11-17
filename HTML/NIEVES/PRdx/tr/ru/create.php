@@ -10,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Crear flashcards</title>
+    <title>Create flashcards</title>
     <!-- Favicon-->
     <link rel="shortcut icon" href="assets/img/favicon.ico">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -51,8 +51,8 @@ if (isset($_SESSION['email'])) {
     /* NAV HTML if user is logged */     
     echo "<ul class='navbar-nav ms-auto'>
     <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='create.php'>Flashcards</a></li>
-    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='close.php'>Cerrar sesion</a></li>
-    <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='index.php'>Inicio</a></li>
+    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='close.php'>Session close</a></li>
+    <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='index.php'>Home</a></li>
     </ul>
     <div id='userlogin'><li class='nav-item dropdown'><div>
     <a class='nav-link txtlogin' href='user.php' aria-haspopup='true' aria-expanded='false'>".             
@@ -68,8 +68,8 @@ if (isset($_SESSION['email'])) {
     echo '
     <ul class="navbar-nav ms-auto">
     <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Login</a></li>
-    <li class="RegisterButton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="register.php">Registrarse</a></li>
-    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Inicio</a></li>
+    <li class="RegisterButton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="register.php">Register</a></li>
+    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Home</a></li>
     </ul>
     ';
         }
@@ -78,8 +78,8 @@ if (isset($_SESSION['email'])) {
     /* NAV HTML if user is admin */
     echo '
     <ul class="navbar-nav ms-auto">
-    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="soporte.php">Mensajes Soporte</a></li>
-    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="admin/addmem.php">Añadir membresia</a></li>
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="soporte.php">Index messages</a></li>
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="admin/addmem.php">Add mem</a></li>
     </ul>
     ';
 }
@@ -93,12 +93,12 @@ if (isset($_SESSION['email'])) {
             
 <!-- Button to flashcards-->
 <center><form action="watchcards.php">
-    <input class="btn btn-primary btn-xl" type="submit" value="Ir a flashcards"/>
+    <input class="btn btn-primary btn-xl" type="submit" value="Go to your flashcards"/>
 </form><center>
 <!-- Button to flashcards-->
 <center>
 <form action="delcards.php">
-    <input class="btn btn-primary btn-xl" type="submit" value="Eliminar flashcards"/>
+    <input class="btn btn-primary btn-xl" type="submit" value="Delete flashcards"/>
 </form><center>
 
 <!-- Create card form-->
@@ -168,12 +168,12 @@ if (isset($_POST['submit'])) {
 
     /* Query for insert to database */
     if (!$mysqli->query("INSERT INTO sets(title,term,defination,img,user,IdUserCard) VALUES ('$title','$term','$definationC','$img','$owner','$IdUserCard')")) {
-      echo "Falló la creación de la tabla: (" . $mysqli->errno . ") " . $mysqli->error;
+      echo "Error create table: (" . $mysqli->errno . ") " . $mysqli->error;
     }else {
       /* Move file */
       if(move_uploaded_file($_FILES['img']['tmp_name'], $dir)) {
       } else {
-          echo "No se pudo mover el archivo o simplemente no seleccionaste un archivo ";
+          echo "Can't move the file ";
       }}
     }
 }
@@ -182,15 +182,15 @@ if (isset($_POST['submit'])) {
 <!-- If you have the memebership, you can go to flashcards-->
 <?php if (isset($_SESSION['membresia'])) { ?>
 <form action="course/fb.php">
-    <input class="btn btn-primary btn-xl" type="submit" value="Ir a flashcards basicas"/>
+    <input class="btn btn-primary btn-xl" type="submit" value="Go to basic flashcards"/>
 </form><center>
 
 <center><form action="course/fm.php">
-    <input class="btn btn-primary btn-xl" type="submit" value="Ir a flashcards medias"/>
+    <input class="btn btn-primary btn-xl" type="submit" value="Go to medium flashcards"/>
 </form><center>
 
 <form action="course/fa.php">
-    <input class="btn btn-primary btn-xl" type="submit" value="Ir a flashcards avanzadas"/>
+    <input class="btn btn-primary btn-xl" type="submit" value="Go to advanced flashcards"/>
 </form><center>
 
 <?php } ?>

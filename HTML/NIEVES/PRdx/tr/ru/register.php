@@ -9,7 +9,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Cursos de ingles</title>
+    <title>Register</title>
     <!-- Favicon-->
     <link rel="shortcut icon" href="assets/img/favicon.ico">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -50,8 +50,8 @@ if (isset($_SESSION['email'])) {
     /* NAV HTML if user is logged */     
     echo "<ul class='navbar-nav ms-auto'>
     <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='create.php'>Flashcards</a></li>
-    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='close.php'>Cerrar sesion</a></li>
-    <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='index.php'>Inicio</a></li>
+    <li class='RegisterButton nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='close.php'>Session close</a></li>
+    <li class='nav-item mx-0 mx-lg-1'><a class='nav-link py-3 px-0 px-lg-3 rounded' href='index.php'>Home</a></li>
     </ul>
     <div id='userlogin'><li class='nav-item dropdown'><div>
     <a class='nav-link txtlogin' href='user.php' aria-haspopup='true' aria-expanded='false'>".             
@@ -67,8 +67,8 @@ if (isset($_SESSION['email'])) {
     echo '
     <ul class="navbar-nav ms-auto">
     <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.php">Login</a></li>
-    <li class="RegisterButton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="register.php">Registrarse</a></li>
-    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Inicio</a></li>
+    <li class="RegisterButton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="register.php">Register</a></li>
+    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="index.php">Home</a></li>
     </ul>
     ';
         }
@@ -77,8 +77,8 @@ if (isset($_SESSION['email'])) {
     /* NAV HTML if user is admin */
     echo '
     <ul class="navbar-nav ms-auto">
-    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="soporte.php">Mensajes Soporte</a></li>
-    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="admin/addmem.php">Añadir membresia</a></li>
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="soporte.php">Index messages</a></li>
+    <li class="Loginbutton nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="admin/addmem.php">Add mem</a></li>
     </ul>
     ';
 }
@@ -92,21 +92,21 @@ if (isset($_SESSION['email'])) {
                 <form enctype="multipart/form-data" class="registrarse" action="/PRx/php/bdedatos.php" method="post">
                     <!-- Form-->
                     <div class="contenedor">
-                        <h1 class="login">Registro</h1>
+                        <h1 class="login">Register</h1>
                             <div>
                                 <i class="fal fa-dove" style="color: #28c997;"></i>
-                                <p><input class="form-control" name="usuario" type="text" required placeholder="usuario"> </p>
-                                <p><input class="form-control" name="nombre" type="text" required placeholder="nombre"> </p>
-                                <p><input class="form-control" name='contraseña' type="password" required placeholder="contraseña" /> </p>
-                                <p><input class="form-control" name="email" type="email" required placeholder="mail"> </p>
+                                <p><input class="form-control" name="usuario" type="text" required placeholder="User"> </p>
+                                <p><input class="form-control" name="nombre" type="text" required placeholder="Name"> </p>
+                                <p><input class="form-control" name='contraseña' type="password" required placeholder="password" /> </p>
+                                <p><input class="form-control" name="email" type="email" required placeholder="E-MAIL"> </p>
                                 <div class="form-group">
                                 <input type="hidden" name = "hidden" class="form-control" id="exampleInputPassword1" size=100000>
                                 <input type="file" class="form-control" id="exampleInputPassword1" name="img">
                                 </div>
-                                <a href="login.html"> <input class="btn btn-primary" type="submit" name="enviar" value="Enviar" /></a>
-                                <input class="btn btn-primary" type="reset" name="restablecer" value="restablecer" /></p>
+                                <a href="login.html"> <input class="btn btn-primary" type="submit" name="enviar" value="Submit" /></a>
+                                <input class="btn btn-primary" type="reset" name="restablecer" value="Rest" /></p>
                             </div>
-            <p class="IS">Al registrarte, aceptas nuestras <a style="color: #F3F1F0;" href="politicas.php"> Condiciones de uso y Política de privacidad.</a></p>
+            <p class="IS">You accept our <a style="color: #F3F1F0;" href="politicas.php"> Terms and conditions.</a></p>
         </div>
     </form>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>

@@ -10,10 +10,10 @@
 <html>
    <head>
       <!-- Messege-->
-      <title>Cerrando sesion</title>
+      <title>Session close</title>
       <meta http-equiv = "refresh" content = "0.1; url = index.php" />
    </head>
    <body>
-      <p>Cerrando sesion</p>
+      <p>Session close</p>
    </body>
 </html>
