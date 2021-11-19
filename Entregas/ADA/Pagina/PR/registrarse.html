@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Registrarse</title>
+    <link href="css/estilos.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="indexS.html">Inicio</a></li>
+                <li><a href="cursos.html">Cursos</a>
+                    <ul>
+                        <li><a href="cursos.html">Basico</a></li>
+                        <li><a href="cursos.html">Intermedio</a></li>
+                        <li><a href="cursos.html">Avanzado</a></li>
+                    </ul>
+                </li>
+                <li><a>Mas</a>
+                    <ul>
+                        <li><a href="profesores.html">Profesores</a></li>
+                        <li><a href="sobrenosotros.html">Sobre nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="ayuda.html">Ayuda</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <img src="Logo.png" class="logo">
+    </header>
+
+    <form class="registrarse" , action="/PR/php/bdedatos.php" method="post">
+        <div class="contenedor">
+            <h1 class="login">Registro</h1>
+            <div>
+                <i class="fal fa-dove" style="color: #28c997;"></i>
+                <p><input name="usuario" type="text" required placeholder="usuario"> </p>
+                <p><input name="nombre" type="text" required placeholder="nombre"> </p>
+                <p><input name='contraseña' type="password" required placeholder="contraseña" /> </p>
+                <p><input name="email" type="email" required placeholder="mail"> </p>
+
+                <p>
+                    <a href="iniciarsesion.html"> <input class="button" type="submit" name="enviar" value="Enviar" /></a>
+                    <input class="button" type="reset" name="restablecer" value="restablecer" /></p>
+            </div>
+            <p class="IS">Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+            <p class="IS">¿Ya tienes una cuenta? <a class="link" href="iniciarsesion.html">Iniciar Sesion </a></p>
+        </div>
+    </form>
+    <br><br>
+    <footer>
+        Proyecto de UTU creador por: Bautista Nieves,Yonathan Bengoa,Ismael Zás,Rodrigo Mena,Robert Leal,Angel Cosentino,Name Ape
+    </footer>
+</body>
+
+</html>

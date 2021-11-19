@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Iniciar Sesion</title>
+    <link href="css/estilos.css" rel="stylesheet" />
+</head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="indexS.html">Inicio</a></li>
+            <li><a href="cursos.html">Cursos</a>
+                <ul>
+                    <li><a href="cursos.html">Basico</a></li>
+                    <li><a href="cursos.html">Intermedio</a></li>
+                    <li><a href="cursos.html">Avanzado</a></li>
+                </ul>
+            </li>
+            <li><a>Mas</a>
+                <ul>
+                    <li><a href="profesores.html">Profesores</a></li>
+                    <li><a href="sobrenosotros.html">Sobre nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="ayuda.html">Ayuda</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <img src="Logo.png" class="logo">
+</header>
+
+<body>
+    <form action="/pr/php/login.php" method="post">
+
+        <h1 class="login">Login</h1>
+        <div class="contenedor">
+
+            <div class="input-contenedor">
+                <i class="fas fa-envelope icon"></i>
+                <input name="emailogin" type="email" placeholder="Correo Electronico" required="">
+
+            </div>
+
+            <div class="input-contenedor">
+                <i class="fas fa-key icon"></i>
+                <input name="clavelogin" type="password" placeholder="Contraseña" required="">
+
+            </div>
+            <input type="submit" value="Login" class="button">
+            <p class="IS">Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+            <p class="IS">¿No tienes una cuenta? <a class="link" href="registrarse.html">Registrate </a></p>
+        </div>
+    </form>
+    <br><br>
+    <footer>
+        Proyecto de UTU creador por: Bautista Nieves,Yonathan Bengoa,Ismael Zás,Rodrigo Mena,Robert Leal,Angel Cosentino,Name Ape
+    </footer>
+</body>
+
+</html>
